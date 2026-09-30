@@ -33,6 +33,12 @@ python genetico.py --inicio "Belém/PA" --capitais        # algoritmo genético 
 python teste_rota.py                                     # testes
 ```
 
+## Testar ao vivo
+```bash
+python ../bancada/servidor.py   # http://127.0.0.1:8765, projeto 02
+```
+Escolha a partida (ou clique no mapa), as cidades (capitais, estados ou o Brasil inteiro) e o método (heurística, exato ou genético). O painel desenha a rota e mostra a distância, o tempo e a qualidade: "ótimo comprovado" no exato, ou o quanto a rota pode estar acima do ótimo.
+
 ## Como funciona
 | Arquivo | Método |
 |---|---|
@@ -40,3 +46,4 @@ python teste_rota.py                                     # testes
 | `exato.py` | programação linear inteira: cada ligação é 0/1, cada cidade tem duas ligações; toda sub-rota que aparece vira uma restrição proibindo ela, até sobrar uma rota só (o ótimo, com prova). |
 | `genetico.py` | o mesmo algoritmo genético da cobrinha, com rotas no lugar de cérebros: torneio, crossover OX (feito para permutações), mutação por inversão e por troca de lugar, elitismo. Bom para dezenas de cidades; nas capitais chegou ao ótimo comprovado. |
 | `dados.py` | base do IBGE + auditor de coordenadas suspeitas |
+| `demo.py` + `painel/` | painel da bancada |
