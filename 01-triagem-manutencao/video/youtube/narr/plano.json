@@ -32,5 +32,5 @@
   ["rodar", "parte04", "para rodar", 5.0, {}],
   ["outro", "parte04", "o código completo", 6.0, {}]
  ],
- "musicas": ["tranquil_mindscape.mp3", "lucid.mp3", "tokyo_sunset.mp3", "when_i_was_human.mp3"]
+ "musicas": ["tranquil_mindscape.mp3", "lucid.mp3"]
 }

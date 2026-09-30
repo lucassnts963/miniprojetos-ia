@@ -16,6 +16,6 @@ Ideias e regras da série: [IDEIAS.md](IDEIAS.md).
 | `ferramentas/youtube/` | tema elucas.dev para os vídeos (Pygame) |
 | `ferramentas/narracao/` | transcrição, sincronia com as cenas e mixagem da narração (`pipeline.py`) |
 | `ferramentas/gravacao/` | grava a bancada em vídeo (Playwright) |
-| `ferramentas/musica/` | lo-fi CC0 de HoliznaCC0 (*Public Domain Lofi*, domínio público) |
+| `ferramentas/musica/` | lo-fi CC0 de HoliznaCC0 (*Public Domain Lofi*, domínio público) e `trilha.py`, que coloca a música num vídeo |
 
 Cada projeto tem o próprio README e `requirements.txt`.
