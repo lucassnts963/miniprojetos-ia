@@ -77,3 +77,15 @@
   .rt .mapa { min-height: 420px; }
   .rt canvas#rt-canvas { min-height: 380px; }
 }
+
+/* comparação linha reta x estrada */
+.rt table.comp { width: 100%; border-collapse: collapse; margin: 4px 0 10px; font-size: 13px; }
+.rt table.comp th { text-align: right; font: 500 11px var(--mono); color: var(--mute); text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 6px; }
+.rt table.comp td { white-space: nowrap; text-align: right; padding: 6px 4px; color: var(--body); font-family: var(--mono); border-top: 1px solid var(--line); }
+.rt table.comp td:first-child { white-space: normal; text-align: left; font-family: var(--sans); color: var(--fg); }
+.rt table.comp b { color: var(--red-soft); font-weight: 600; }
+.rt table.comp i { display: inline-block; width: 14px; height: 3px; border-radius: 2px; vertical-align: 3px; margin-right: 7px; }
+.rt table.comp i.cinza { background: rgba(150, 150, 162, 0.9); }
+.rt table.comp i.verm { background: var(--red); }
+.rt .dica b { color: var(--fg); }
+.rt .credito { margin: 12px 0 0; font-size: 11px; color: var(--mute); }

@@ -62,8 +62,8 @@ def preparar():
     return len(linhas)
 
 
-def carregar(estados=None, incluir_ilhas=False, so_capitais=False):
-    """Nomes 'Cidade/UF', lat e lon. estados: lista de UFs para filtrar."""
+def carregar(estados=None, incluir_ilhas=False, so_capitais=False, com_codigos=False):
+    """Nomes 'Cidade/UF', lat e lon (e os códigos IBGE, se pedido). estados: lista de UFs para filtrar."""
     caminho = os.path.join(DADOS, "cidades.csv")
     if not os.path.exists(caminho):
         preparar()
@@ -79,6 +79,8 @@ def carregar(estados=None, incluir_ilhas=False, so_capitais=False):
     nomes = [f"{r['cidade']}/{r['estado']}" for r in linhas]
     lat = np.array([float(r["lat"]) for r in linhas])
     lon = np.array([float(r["lon"]) for r in linhas])
+    if com_codigos:
+        return nomes, lat, lon, [int(r["codigo_ibge"]) for r in linhas]
     return nomes, lat, lon
 
 

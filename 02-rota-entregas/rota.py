@@ -4,7 +4,11 @@
     python rota.py --inicio "Curitiba/PR" --estados PR SC   # só alguns estados
     python rota.py --inicio "Belém/PA" --volta              # volta para a cidade de partida no final
 
-Distância em linha reta sobre a Terra (haversine), não por estrada.
+    python rota.py --inicio "Belém/PA" --modo estrada       # distância pelas rodovias (matriz OSRM)
+    python rota.py --inicio "Belém/PA" --modo comparar      # linha reta x estrada, nas mesmas cidades
+
+Distância: por padrão, em linha reta sobre a Terra (haversine). Com --modo estrada, pelas rodovias
+(ver estradas.py). A linha reta continua como comparativo.
 
 Como funciona:
   1. vizinho mais próximo: sai da cidade inicial e vai sempre para a mais perto ainda não visitada;
@@ -34,28 +38,74 @@ VIZINHOS = 10
 
 
 class Mapa:
-    def __init__(self, nomes, lat, lon):
+    """Cidades e distâncias entre elas.
+
+    Sem D: distância em linha reta sobre a Terra. Com D (matriz em km): distância pela estrada,
+    e horas (opcional) guarda o tempo estimado de viagem entre cada par.
+    """
+
+    def __init__(self, nomes, lat, lon, D=None, horas=None):
         self.nomes, self.lat, self.lon = nomes, lat, lon
         self.P = xyz(lat, lon)
         self.n = len(nomes)
+        self.D, self.horas = D, horas
         k = min(VIZINHOS + 1, self.n)
-        _, viz = cKDTree(self.P).query(self.P, k=k)
-        self.viz = viz[:, 1:].tolist()
+        if D is None:
+            _, viz = cKDTree(self.P).query(self.P, k=k)
+            self.viz = viz[:, 1:].tolist()
+        else:
+            sem_diag = D + np.diag(np.full(self.n, np.inf))
+            viz = np.argpartition(sem_diag, k - 2, axis=1)[:, :k - 1]
+            ordem = np.take_along_axis(sem_diag, viz, 1).argsort(1)
+            self.viz = np.take_along_axis(viz, ordem, 1).tolist()
         self._p = self.P.tolist()
 
     def d(self, i, j):
-        """Distância em km pelo arco da Terra (i ou j = -1 significa 'fim do caminho': distância zero)."""
+        """Distância em km (i ou j = -1 significa 'fim do caminho': distância zero)."""
         if i < 0 or j < 0:
             return 0.0
+        if self.D is not None:
+            return float(self.D[i, j])
         a, b = self._p[i], self._p[j]
         corda = math.sqrt((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2 + (a[2] - b[2]) ** 2)
         return 2 * RAIO * math.asin(min(1.0, corda / 2))
 
     def comprimento(self, rota, volta=False):
-        P = self.P[rota]
-        corda = np.linalg.norm(np.diff(P, axis=0), axis=1)
-        total = (2 * RAIO * np.arcsin(np.clip(corda / 2, 0, 1))).sum()
-        return total + (self.d(rota[-1], rota[0]) if volta else 0.0)
+        rota = np.asarray(rota)
+        if self.D is not None:
+            total = self.D[rota[:-1], rota[1:]].sum()
+        else:
+            corda = np.linalg.norm(np.diff(self.P[rota], axis=0), axis=1)
+            total = (2 * RAIO * np.arcsin(np.clip(corda / 2, 0, 1))).sum()
+        return float(total + (self.d(int(rota[-1]), int(rota[0])) if volta else 0.0))
+
+    def horas_total(self, rota, volta=False):
+        if self.horas is None:
+            return None
+        rota = np.asarray(rota)
+        total = self.horas[rota[:-1], rota[1:]].sum()
+        return float(total + (self.horas[rota[-1], rota[0]] if volta else 0.0))
+
+
+def montar_mapa(modo="reta", estados=None, incluir_ilhas=False, capitais=False):
+    """Mapa no modo pedido. No modo estrada, cidades sem rota na matriz ficam de fora (e são listadas)."""
+    nomes, lat, lon, cods = carregar(estados, incluir_ilhas, capitais, com_codigos=True)
+    if modo == "reta":
+        return Mapa(nomes, lat, lon), []
+    import estradas
+    tem = estradas.disponiveis()
+    ok = [i for i, c in enumerate(cods) if c in tem]
+    D = estradas.matriz([cods[i] for i in ok])
+    # sem rota para quase ninguém (só por rio, sem balsa no mapa): fica de fora
+    ruins = set(np.where(np.isnan(D).sum(1) > len(ok) / 2)[0].tolist())
+    ok2 = [ok[k] for k in range(len(ok)) if k not in ruins]
+    fora = [nomes[i] for i in range(len(nomes)) if i not in set(ok2)]
+    D = estradas.matriz([cods[i] for i in ok2])
+    H = estradas.matriz([cods[i] for i in ok2], "horas")
+    if np.isnan(D).any():  # pares isolados sem rota: tratados como muito longe
+        D = np.where(np.isnan(D), 1e6, D)
+        H = np.where(np.isnan(H), 1e4, H)
+    return Mapa([nomes[i] for i in ok2], lat[ok2], lon[ok2], D, H), fora
 
 
 def achar(mapa, texto):
@@ -76,6 +126,15 @@ def achar(mapa, texto):
 
 # ---------------- 1. vizinho mais próximo ----------------
 def vizinho_mais_proximo(mapa, inicio):
+    if mapa.D is not None:  # distância pela estrada: procura na linha da matriz
+        livre = np.ones(mapa.n, bool)
+        livre[inicio] = False
+        rota, atual = [inicio], inicio
+        for _ in range(mapa.n - 1):
+            atual = int(np.argmin(np.where(livre, mapa.D[atual], np.inf)))
+            livre[atual] = False
+            rota.append(atual)
+        return rota
     arvore = cKDTree(mapa.P)
     livre = np.ones(mapa.n, bool)
     rota = [inicio]
@@ -272,7 +331,19 @@ def iterar(r, segundos, seed=0, janela=60):
 
 # ---------------- limite inferior ----------------
 def mst_km(mapa):
-    """Árvore geradora mínima exata na esfera (as arestas dela estão na triangulação de Delaunay esférica)."""
+    """Árvore geradora mínima exata: nenhum caminho que passa por todas as cidades é menor que ela."""
+    if mapa.D is not None:  # Prim direto na matriz de distâncias
+        dentro = np.zeros(mapa.n, bool)
+        dentro[0] = True
+        melhor = mapa.D[0].copy()
+        total = 0.0
+        for _ in range(mapa.n - 1):
+            j = int(np.argmin(np.where(dentro, np.inf, melhor)))
+            total += melhor[j]
+            dentro[j] = True
+            melhor = np.minimum(melhor, mapa.D[j])
+        return float(total)
+    # na esfera, as arestas da árvore mínima estão na triangulação de Delaunay esférica
     P, inv = np.unique(np.round(mapa.P, 12), axis=0, return_inverse=True)
     hull = ConvexHull(P)
     ar = set()
@@ -310,6 +381,40 @@ def resolver(mapa, inicio, volta=False, verboso=True, segundos=30):
     return r.t.tolist(), km0, km1
 
 
+def salvar(mapa, rota, caminho):
+    with open(caminho, "w", encoding="utf-8", newline="") as f:
+        f.write("ordem,cidade,lat,lon,km_acumulado" + (",horas_acumuladas" if mapa.horas is not None else "") + "\n")
+        km_, h_ = 0.0, 0.0
+        for k, c in enumerate(rota):
+            if k:
+                km_ += mapa.d(rota[k - 1], c)
+                if mapa.horas is not None:
+                    h_ += float(mapa.horas[rota[k - 1], c])
+            extra = f",{h_:.1f}" if mapa.horas is not None else ""
+            f.write(f'{k + 1},"{mapa.nomes[c]}",{mapa.lat[c]:.6f},{mapa.lon[c]:.6f},{km_:.1f}{extra}\n')
+
+
+def comparar(reta, estrada, inicio_txt, volta, segundos):
+    """Mesmo conjunto de cidades: a rota planejada em linha reta, rodada na estrada, contra a planejada na estrada."""
+    ir = achar(reta, inicio_txt)
+    ie = achar(estrada, inicio_txt)
+    print("planejando em linha reta...", flush=True)
+    rr, _, km_reta = resolver(reta, ir, volta, verboso=False, segundos=segundos)
+    print("planejando pela estrada...", flush=True)
+    re_, _, km_est = resolver(estrada, ie, volta, verboso=False, segundos=segundos)
+    # a ordem da linha reta, percorrida de verdade pela estrada
+    pos = {n: i for i, n in enumerate(estrada.nomes)}
+    rr_na_estrada = [pos[reta.nomes[c]] for c in rr]
+    km_reta_estrada = estrada.comprimento(rr_na_estrada, volta)
+    print(f"\n{'':<34}{'km no mapa':>14}{'km na estrada':>16}{'horas':>9}")
+    print(f"{'planejada em linha reta':<34}{km_reta:>14,.0f}{km_reta_estrada:>16,.0f}"
+          f"{estrada.horas_total(rr_na_estrada, volta):>9,.0f}")
+    print(f"{'planejada pela estrada':<34}{'':>14}{km_est:>16,.0f}{estrada.horas_total(re_, volta):>9,.0f}")
+    print(f"\nplanejar pela estrada economiza {km_reta_estrada - km_est:,.0f} km "
+          f"({1 - km_est / km_reta_estrada:.1%}) em relação a planejar em linha reta")
+    print(f"a linha reta subestima a viagem real em {km_est / km_reta - 1:.0%}")
+
+
 def main():
     sys.stdout.reconfigure(encoding="utf-8")
     ap = argparse.ArgumentParser()
@@ -318,29 +423,41 @@ def main():
     ap.add_argument("--volta", action="store_true", help="volta para a cidade de partida no final")
     ap.add_argument("--incluir-ilhas", action="store_true", help="inclui Fernando de Noronha (não se chega por terra)")
     ap.add_argument("--capitais", action="store_true", help="só as capitais")
+    ap.add_argument("--modo", choices=["reta", "estrada", "comparar"], default="reta",
+                    help="distância em linha reta, pelas rodovias, ou as duas lado a lado")
     ap.add_argument("--tempo", type=float, default=30, help="segundos de busca local iterada (0 desliga)")
     ap.add_argument("--saida", default="rota.csv")
     args = ap.parse_args()
 
-    nomes, lat, lon = carregar(args.estados, args.incluir_ilhas, args.capitais)
-    mapa = Mapa(nomes, lat, lon)
+    if args.modo == "comparar":
+        estrada, fora = montar_mapa("estrada", args.estados, args.incluir_ilhas, args.capitais)
+        nomes_ok = set(estrada.nomes)
+        nomes, lat, lon = carregar(args.estados, args.incluir_ilhas, args.capitais)
+        ix = [i for i, n in enumerate(nomes) if n in nomes_ok]
+        reta = Mapa([nomes[i] for i in ix], lat[ix], lon[ix])
+        print(f"{estrada.n} cidades nos dois modos" + (f" ({len(fora)} sem rota por estrada ficaram de fora)" if fora else ""))
+        comparar(reta, estrada, args.inicio, args.volta, args.tempo)
+        return
+
+    mapa, fora = montar_mapa(args.modo, args.estados, args.incluir_ilhas, args.capitais)
+    if fora:
+        print(f"sem rota por estrada (ficaram de fora): {', '.join(fora)}")
     inicio = achar(mapa, args.inicio)
-    print(f"{mapa.n} cidades, partindo de {mapa.nomes[inicio]}{' (com volta)' if args.volta else ''}")
+    tipo = "pela estrada" if args.modo == "estrada" else "em linha reta"
+    print(f"{mapa.n} cidades {tipo}, partindo de {mapa.nomes[inicio]}{' (com volta)' if args.volta else ''}")
     rota, km0, km1 = resolver(mapa, inicio, args.volta, segundos=args.tempo)
     assert rota[0] == inicio and sorted(rota) == list(range(mapa.n)), "rota inválida"
+    if mapa.horas is not None:
+        print(f"   tempo estimado de direção: {mapa.horas_total(rota, args.volta):,.0f} h")
 
     lim = mst_km(mapa)
     print(f"   limite inferior (árvore geradora mínima): {lim:,.0f} km")
     print(f"   a rota está no máximo {km1 / lim - 1:.1%} acima da ótima (garantido; na prática bem menos)")
-
-    with open(args.saida, "w", encoding="utf-8", newline="") as f:
-        f.write("ordem,cidade,lat,lon,km_acumulado\n")
-        acum = 0.0
-        for k, c in enumerate(rota):
-            if k:
-                acum += mapa.d(rota[k - 1], c)
-            f.write(f'{k + 1},"{mapa.nomes[c]}",{mapa.lat[c]:.6f},{mapa.lon[c]:.6f},{acum:.1f}\n')
+    salvar(mapa, rota, args.saida)
     print(f"rota salva em {args.saida}")
+    if args.modo == "estrada":
+        import estradas
+        print(estradas.CREDITO)
 
 
 if __name__ == "__main__":

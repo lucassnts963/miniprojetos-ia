@@ -18,11 +18,13 @@ import time
 
 import numpy as np
 
-from dados import carregar, km, xyz
-from rota import Mapa, achar
+from dados import km
+from rota import achar, montar_mapa
 
 
 def matriz(mapa):
+    if mapa.D is not None:  # modo estrada: a matriz já vem pronta
+        return mapa.D
     P = mapa.P
     return km(np.linalg.norm(P[:, None, :] - P[None, :, :], axis=2))
 
@@ -94,12 +96,14 @@ def main():
     ap.add_argument("--estados", nargs="*")
     ap.add_argument("--capitais", action="store_true")
     ap.add_argument("--volta", action="store_true")
+    ap.add_argument("--modo", choices=["reta", "estrada"], default="reta", help="linha reta ou pelas rodovias")
     ap.add_argument("--geracoes", type=int, default=1500)
     ap.add_argument("--populacao", type=int, default=200)
     args = ap.parse_args()
 
-    nomes, lat, lon = carregar(args.estados, so_capitais=args.capitais)
-    mapa = Mapa(nomes, lat, lon)
+    mapa, fora = montar_mapa(args.modo, args.estados, capitais=args.capitais)
+    if fora:
+        print(f"sem rota por estrada (ficaram de fora): {', '.join(fora)}")
     if mapa.n > 300:
         sys.exit(f"{mapa.n} cidades é muito para o genético; use rota.py")
     inicio = achar(mapa, args.inicio)

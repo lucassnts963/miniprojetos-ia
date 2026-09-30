@@ -12,3 +12,7 @@ still_*.png
 # áudio bruto da narração (ElevenLabs): fica só local
 01-triagem-manutencao/video/youtube/narr/*.mp3
 01-triagem-manutencao/video/youtube/narr/*.m4a
+
+# matriz de distâncias rodoviárias (154 MB + 190 MB): refeita com python 02-rota-entregas/estradas.py
+02-rota-entregas/dados/dist_brasil.zip
+02-rota-entregas/dados/estradas.npz

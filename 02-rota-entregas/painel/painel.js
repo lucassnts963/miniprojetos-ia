@@ -20,6 +20,12 @@ const HTML = `
     </div>
     <div class="ufs" id="rt-ufs" hidden></div>
 
+    <span class="rot">Distância</span>
+    <div class="seg" id="rt-dist">
+      <button data-v="reta" class="on">Linha reta</button><button data-v="estrada">Estrada</button><button data-v="comparar">Comparar</button>
+    </div>
+    <p class="dica" id="rt-dist-dica"></p>
+
     <span class="rot">Método</span>
     <div class="seg" id="rt-metodo">
       <button data-v="heuristica" class="on">Heurística</button><button data-v="exato">Exato</button><button data-v="genetico">Genético</button>
@@ -60,7 +66,7 @@ export async function montar(raiz, api) {
   const $ = s => raiz.querySelector(s);
   const info = await api.chamar("info");
   const st = {
-    escopo: api.ler("escopo", "capitais"), metodo: api.ler("metodo", "heuristica"),
+    escopo: api.ler("escopo", "capitais"), metodo: api.ler("metodo", "heuristica"), dist: api.ler("dist", "reta"),
     estados: api.ler("estados", ["PR"]), cid: null, res: null, anim: 0, hover: -1,
   };
   const canvas = $("#rt-canvas");
@@ -71,7 +77,13 @@ export async function montar(raiz, api) {
     `<button data-uf="${u}" title="${info.por_uf[u]} municípios">${u}<em>${info.por_uf[u]}</em></button>`).join("");
 
   function segs() {
-    for (const [id, v] of [["#rt-escopo", st.escopo], ["#rt-metodo", st.metodo]])
+    const fora = st.cid && st.cid.fora ? st.cid.fora.length : 0;
+    $("#rt-dist-dica").textContent = {
+      reta: "Em linha reta sobre a Terra. Simples, mas subestima a viagem real.",
+      estrada: `Pelas rodovias (OSRM + OpenStreetMap, com balsas mapeadas).${fora ? ` ${fora} cidade(s) sem rota ficam de fora.` : ""}`,
+      comparar: "Planeja em linha reta e pela estrada, e mede as duas rotas na estrada.",
+    }[st.dist];
+    for (const [id, v] of [["#rt-escopo", st.escopo], ["#rt-metodo", st.metodo], ["#rt-dist", st.dist]])
       for (const b of raiz.querySelectorAll(`${id} button`)) b.classList.toggle("on", b.dataset.v === v);
     $("#rt-ufs").hidden = st.escopo !== "estados";
     for (const b of raiz.querySelectorAll("#rt-ufs button")) b.classList.toggle("on", st.estados.includes(b.dataset.uf));
@@ -90,7 +102,7 @@ export async function montar(raiz, api) {
     if (st.escopo === "estados" && !est.length) {
       st.cid = { nomes: [], lat: [], lon: [], n: 0 };
     } else {
-      st.cid = await api.chamar("cidades", { escopo: st.escopo, estados: est });
+      st.cid = await api.chamar("cidades", { escopo: st.escopo, estados: est, distancia: st.dist });
     }
     $("#rt-lista-cidades").innerHTML = st.cid.nomes.map(n => `<option value="${esc(n)}">`).join("");
     const atual = $("#rt-inicio").value;
@@ -110,6 +122,13 @@ export async function montar(raiz, api) {
     if (!v) return;
     st.escopo = v;
     api.gravar("escopo", v);
+    carregarCidades();
+  };
+  $("#rt-dist").onclick = ev => {
+    const v = ev.target.closest("button")?.dataset.v;
+    if (!v) return;
+    st.dist = v;
+    api.gravar("dist", v);
     carregarCidades();
   };
   $("#rt-metodo").onclick = ev => {
@@ -137,7 +156,7 @@ export async function montar(raiz, api) {
     try {
       st.res = await api.chamar("resolver", {
         escopo: st.escopo, estados: st.escopo === "estados" ? st.estados : [], inicio: $("#rt-inicio").value,
-        metodo: st.metodo, volta: $("#rt-volta").checked, tempo: Number($("#rt-tempo").value),
+        metodo: st.metodo, volta: $("#rt-volta").checked, tempo: Number($("#rt-tempo").value), distancia: st.dist,
       });
       status("");
       st.anim = performance.now();
@@ -196,6 +215,20 @@ export async function montar(raiz, api) {
     if (res && res.n === c.n) {
       const o = res.ordem;
       const ate = Math.max(1, Math.floor((o.length - 1) * frac));
+      if (res.comparar) {  // rota planejada em linha reta, por baixo, em cinza
+        const oc = res.comparar.ordem;
+        const ate2 = Math.max(1, Math.floor((oc.length - 1) * frac));
+        ctx.strokeStyle = "rgba(150,150,162,0.75)";
+        ctx.lineWidth = c.n > 2000 ? 0.6 : c.n > 300 ? 1 : 2;
+        ctx.setLineDash(c.n > 300 ? [] : [6, 5]);
+        ctx.beginPath();
+        for (let k = 0; k <= ate2; k++) {
+          const [x, y] = proj(oc[k]);
+          k ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+        }
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
       ctx.strokeStyle = RED;
       ctx.lineWidth = c.n > 2000 ? 0.7 : c.n > 300 ? 1.1 : 2;
       ctx.lineJoin = "round";
@@ -281,14 +314,31 @@ export async function montar(raiz, api) {
            ? "Para saber a distância real do ótimo, rode o Exato com as mesmas cidades."
            : "Na prática fica bem mais perto: nos estados onde o ótimo foi provado, a heurística ficou a 0,4–1,4%."}</p>`;
     const ganho = r.km_inicial ? `<div class="kpi"><b>${fmt((1 - r.km / r.km_inicial) * 100, 1)}%</b><span>mais curta que ${r.metodo === "genetico" ? "a 1ª geração" : "o vizinho mais próximo"}</span></div>` : "";
+    const pelaEstrada = r.distancia !== "reta";
+    const horas = r.horas != null ? `<div class="kpi"><b>${fmt(r.horas)} h</b><span>dirigindo (estimativa)</span></div>` : "";
+    let comp = "";
+    if (r.comparar) {
+      const c = r.comparar;
+      comp = `
+        <table class="comp">
+          <tr><th></th><th>no mapa</th><th>na estrada</th><th>horas</th></tr>
+          <tr><td><i class="cinza"></i>planejada em linha reta</td><td>${fmt(c.km_no_mapa)} km</td><td>${fmt(c.km)} km</td><td>${fmt(c.horas)} h</td></tr>
+          <tr><td><i class="verm"></i>planejada pela estrada</td><td></td><td><b>${fmt(r.km)} km</b></td><td><b>${fmt(r.horas)} h</b></td></tr>
+        </table>
+        <p class="dica">Planejar pela estrada economiza <b>${fmt(c.km - r.km)} km</b> (${fmt((1 - r.km / c.km) * 100, 1)}%) e
+          ${fmt(c.horas - r.horas)} h. A linha reta subestima a viagem real em ${fmt((r.km / c.km_no_mapa - 1) * 100)}%.</p>`;
+    }
     el.innerHTML = `
-      <span class="rot">Resultado · ${esc({ heuristica: "heurística", exato: "exato", genetico: "genético" }[r.metodo])}</span>
+      <span class="rot">Resultado · ${esc({ heuristica: "heurística", exato: "exato", genetico: "genético" }[r.metodo])} · ${esc({ reta: "linha reta", estrada: "estrada", comparar: "comparação" }[r.distancia])}</span>
       <div class="kpis">
-        <div class="kpi grande"><b>${fmt(r.km)} km</b><span>${fmt(r.n)} cidades${r.volta ? ", com volta" : ""}</span></div>
+        <div class="kpi grande"><b>${fmt(r.km)} km</b><span>${fmt(r.n)} cidades${pelaEstrada ? " pela estrada" : " em linha reta"}${r.volta ? ", com volta" : ""}</span></div>
+        ${horas}
         <div class="kpi"><b>${fmt(r.segundos, 1)} s</b><span>para calcular</span></div>
         ${ganho}
       </div>
+      ${comp}
       ${qual}
+      ${pelaEstrada ? `<p class="credito">${esc(info.credito_estradas)}</p>` : ""}
       ${r.historico ? `<span class="rot" style="margin-top:14px">Melhor rota por geração</span><canvas id="rt-hist"></canvas>` : ""}`;
     if (r.historico) {
       const cv = $("#rt-hist"), c2 = cv.getContext("2d");

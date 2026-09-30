@@ -17,9 +17,8 @@ import numpy as np
 from scipy.optimize import Bounds, LinearConstraint, milp
 from scipy.sparse import lil_matrix
 
-from dados import carregar
 from genetico import matriz
-from rota import Mapa, achar
+from rota import achar, montar_mapa
 
 
 def resolver_exato(D, inicio, volta=False, max_iter=200):
@@ -91,9 +90,11 @@ def main():
     ap.add_argument("--estados", nargs="*")
     ap.add_argument("--capitais", action="store_true")
     ap.add_argument("--volta", action="store_true")
+    ap.add_argument("--modo", choices=["reta", "estrada"], default="reta", help="linha reta ou pelas rodovias")
     args = ap.parse_args()
-    nomes, lat, lon = carregar(args.estados, so_capitais=args.capitais)
-    mapa = Mapa(nomes, lat, lon)
+    mapa, fora = montar_mapa(args.modo, args.estados, capitais=args.capitais)
+    if fora:
+        print(f"sem rota por estrada (ficaram de fora): {', '.join(fora)}")
     if mapa.n > 1000:
         sys.exit(f"{mapa.n} cidades é muito para o método exato aqui; use rota.py")
     inicio = achar(mapa, args.inicio)
