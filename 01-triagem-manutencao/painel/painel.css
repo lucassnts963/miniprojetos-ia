@@ -1,0 +1,153 @@
+.tri {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-areas:
+    "entrada entrada entrada"
+    "equipe  prio    termos"
+    "leitura leitura termos"
+    "rede    rede    ensinar"
+    "rede    rede    hist"
+    "rodape  rodape  rodape";
+  gap: 16px;
+  max-width: 1240px;
+}
+.tri .entrada { grid-area: entrada; }
+.tri .equipe { grid-area: equipe; }
+.tri .prio { grid-area: prio; }
+.tri .termos { grid-area: termos; }
+.tri .leitura { grid-area: leitura; }
+.tri .rede { grid-area: rede; }
+.tri .ensinar { grid-area: ensinar; }
+.tri .hist { grid-area: hist; }
+.tri .rodape { grid-area: rodape; }
+
+.tri h1 { margin: 0 0 4px; color: var(--fg); font-size: 22px; font-weight: 600; letter-spacing: -0.015em; }
+.tri .entrada { padding: 20px 20px 16px; box-shadow: 0 0 0 1px var(--line), 0 20px 60px -30px var(--glow); }
+.tri textarea {
+  width: 100%; resize: none; background: var(--ink); border: 1px solid var(--line); border-radius: 12px;
+  padding: 14px 16px; color: var(--fg); font: 20px/1.45 var(--sans); outline: none; min-height: 64px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.tri textarea:focus { border-color: rgba(229, 72, 77, 0.6); box-shadow: 0 0 0 4px var(--glow); }
+.tri textarea::placeholder { color: #55555c; }
+.tri .exemplos { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.tri .exemplos button {
+  background: var(--card-2); border: 1px solid var(--line); color: var(--body); border-radius: 999px;
+  padding: 4px 11px; font-size: 13px; cursor: pointer; max-width: 100%; text-align: left;
+}
+.tri .exemplos button:hover { color: var(--fg); border-color: rgba(255, 255, 255, 0.2); }
+.tri .ms { font: 12px var(--mono); color: var(--mute); }
+.tri .ms b { color: var(--red-soft); font-weight: 500; }
+
+/* decisão */
+.tri .decisao .grande {
+  color: var(--fg); font-size: 26px; font-weight: 700; letter-spacing: -0.02em; margin: 8px 0 2px;
+  display: flex; align-items: center; gap: 10px; min-height: 40px;
+}
+.tri .chip-prio { font: 600 13px/1 var(--mono); padding: 6px 10px; border-radius: 7px; color: #111; letter-spacing: 0.04em; }
+.tri .conf { color: var(--mute); font-size: 13px; margin-bottom: 14px; }
+.tri .barras { display: grid; gap: 7px; }
+.tri .barra { display: grid; grid-template-columns: 118px 1fr 44px; align-items: center; gap: 10px; font-size: 13px; }
+.tri .barra .n { color: var(--mute); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tri .barra.top .n { color: var(--fg); font-weight: 500; }
+.tri .barra .trilho { display: block; height: 8px; border-radius: 4px; background: rgba(255, 255, 255, 0.06); overflow: hidden; }
+.tri .barra .enche { display: block; height: 100%; border-radius: 4px; background: #3a3a42; transition: width 0.25s ease, background 0.2s; }
+.tri .barra .v { font: 12px var(--mono); color: var(--mute); text-align: right; }
+
+/* leitura do texto */
+.tri .seg { display: inline-flex; background: var(--ink); border: 1px solid var(--line); border-radius: 9px; padding: 2px; }
+.tri .seg button { background: none; border: 0; padding: 4px 10px; border-radius: 7px; color: var(--mute); cursor: pointer; font-size: 13px; }
+.tri .seg button.on { background: var(--card-2); color: var(--fg); }
+.tri .frase { font-size: 21px; line-height: 2; color: var(--fg); margin: 4px 0 10px; min-height: 42px; }
+.tri .frase span.w { padding: 2px 3px; border-radius: 5px; transition: background 0.2s; cursor: default; }
+.tri .frase span.w.neg { text-decoration: underline dashed var(--neg); text-underline-offset: 6px; color: var(--body); }
+.tri .legenda { display: flex; gap: 16px; flex-wrap: wrap; color: var(--mute); font-size: 12px; }
+.tri .legenda i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: -2px; margin-right: 5px; }
+
+/* termos */
+.tri .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 16px; }
+.tri .termo {
+  font: 12.5px/1 var(--mono); padding: 5px 8px; border-radius: 6px; border: 1px solid var(--line);
+  color: var(--fg); position: relative; overflow: hidden;
+}
+.tri .termo em { font-style: normal; color: var(--mute); margin-left: 6px; font-size: 11px; }
+.tri .termo.nunca { color: var(--mute); border-style: dashed; }
+.tri .termos .dica { margin-top: -8px; margin-bottom: 8px; }
+
+/* rede */
+.tri svg { width: 100%; height: auto; display: block; }
+.tri svg text { font-family: var(--mono); font-size: 11px; fill: var(--body); }
+.tri svg .rot-saida { font-family: var(--sans); font-size: 12px; }
+.tri svg .rot-grupo { fill: var(--mute); font-size: 10px; letter-spacing: 0.12em; }
+
+/* ensinar */
+.tri .ensinar .linha { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 10px; }
+.tri .ensinar select { flex: 1 1 130px; }
+.tri .status { font-size: 13px; color: var(--mute); }
+.tri .status.ok { color: #7ee2a0; }
+.tri .status.erro { color: var(--red-soft); }
+.tri .spin {
+  display: inline-block; width: 12px; height: 12px; border: 2px solid var(--line); border-top-color: var(--red);
+  border-radius: 50%; animation: tri-gira 0.8s linear infinite; vertical-align: -2px; margin-right: 6px;
+}
+@keyframes tri-gira { to { transform: rotate(360deg); } }
+
+/* histórico */
+.tri .hist ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; max-height: 330px; overflow: auto; }
+.tri .hist li {
+  display: grid; grid-template-columns: 4px 1fr; gap: 10px; padding: 8px 10px; border-radius: 9px; background: var(--card-2);
+  cursor: pointer; border: 1px solid transparent;
+}
+.tri .hist li:hover { border-color: var(--line); }
+.tri .hist li .cor { border-radius: 2px; }
+.tri .hist li .t { color: var(--fg); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tri .hist li .s { color: var(--mute); font: 11px var(--mono); }
+.tri .hist .nada { color: var(--mute); font-size: 13px; }
+
+.tri .rodape { display: flex; flex-wrap: wrap; gap: 8px 22px; color: var(--mute); font-size: 12.5px; padding: 4px 4px 20px; }
+.tri .rodape b { color: var(--fg); font-weight: 500; font-family: var(--mono); }
+
+.tri.carregando .decisao, .tri.carregando .leitura { opacity: 0.85; }
+
+@media (max-width: 1100px) {
+  .tri {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas: "entrada entrada" "equipe prio" "leitura leitura" "termos termos" "rede rede" "ensinar hist" "rodape rodape";
+  }
+}
+@media (max-width: 700px) {
+  .tri { grid-template-columns: minmax(0, 1fr); grid-template-areas: "entrada" "equipe" "prio" "leitura" "termos" "rede" "ensinar" "hist" "rodape"; }
+  .tri textarea, .tri .frase { font-size: 17px; }
+  .tri .barra { grid-template-columns: 100px 1fr 40px; }
+}
+
+/* ---------- modo vídeo: só o essencial, cabendo em 1080x1080, sem números ---------- */
+body.modo-video .tri {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  grid-template-areas: "entrada entrada" "equipe rede" "prio rede" "leitura leitura";
+  gap: 14px;
+}
+body.modo-video .tri .termos, body.modo-video .tri .ensinar, body.modo-video .tri .hist,
+body.modo-video .tri .rodape, body.modo-video .tri .exemplos, body.modo-video .tri .entrada .c-topo,
+body.modo-video .tri .barra .v, body.modo-video .tri .conf, body.modo-video .tri .legenda span:last-child,
+body.modo-video .tri .rede .dica { display: none; }
+body.modo-video .tri .c { padding: 16px 18px; }
+body.modo-video .tri .entrada { padding: 14px 16px 16px; }
+body.modo-video .tri .entrada::before {
+  content: "NOVO CHAMADO"; display: block; margin: 0 0 10px 2px;
+  font: 500 11px/1 var(--mono); letter-spacing: 0.12em; color: var(--mute);
+}
+body.modo-video .tri textarea { font-size: 23px; padding: 12px 16px; min-height: 0; }
+body.modo-video .tri .decisao .grande { margin: 8px 0 12px; font-size: 25px; min-height: 36px; }
+body.modo-video .tri .barra { grid-template-columns: 124px 1fr; font-size: 14px; }
+body.modo-video .tri .rede .c-topo { margin-bottom: 4px; }
+body.modo-video .tri .frase { font-size: 23px; margin: 0 0 6px; min-height: 46px; }
+body.modo-video .tri .leitura .c-topo { margin-bottom: 6px; }
+body.modo-video .tri .barras { gap: 3px; }
+body.modo-video .tri .decisao .grande { margin: 4px 0 8px; }
+body.modo-video .tri .legenda { display: none; }
+body.modo-video .tri .frase { margin: 0; }
+body.modo-video .tri .frase span.w.neg { text-decoration: none; color: var(--body); }
+body.modo-video .tri svg text { font-size: 16px; }
+body.modo-video .tri svg .rot-saida { font-size: 17px; }
+body.modo-video .tri svg .rot-grupo { font-size: 13px; }

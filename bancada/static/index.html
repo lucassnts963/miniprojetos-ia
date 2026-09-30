@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bancada · elucas.dev</title>
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+<header class="topo">
+  <div class="marca"><span class="logo"></span>elucas.dev<span class="barra">/</span><span class="fraco">bancada</span></div>
+  <div class="topo-dir" id="topo-dir">miniprojetos de IA · teste ao vivo</div>
+</header>
+<div class="layout">
+  <nav class="lateral">
+    <div class="lateral-rot">Projetos</div>
+    <ul id="projetos"></ul>
+    <div class="lateral-pe">Uma pasta <code>NN-nome/</code> com <code>demo.py</code> aparece aqui sozinha.</div>
+  </nav>
+  <main id="palco"><div class="vazio">Carregando…</div></main>
+</div>
+<!-- moldura do modo vídeo (?video=1): identidade elucas.dev, controlada por window.bancada -->
+<div class="vid" aria-hidden="true">
+  <div class="vid-marca"><span class="vid-logo"></span>elucas.dev</div>
+  <div class="vid-selo" id="vid-selo"></div>
+  <div class="vid-titulo"><div class="vid-eyebrow" id="vid-eyebrow"></div><div class="vid-h" id="vid-h"></div></div>
+  <div class="vid-legenda" id="vid-legenda"><div id="vid-l1"></div><div id="vid-l2"></div></div>
+  <div class="vid-pe"><span>@elucas.dev</span><span id="vid-cap"></span></div>
+</div>
+<script type="module" src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,317 @@
+texto;equipe;prioridade
+Vazamento grande de óleo hidráulico na prensa 3 espalhando no piso;MECÂNICA;URGENTE
+Eixo do redutor da moenda quebrou e a linha parou;MECÂNICA;URGENTE
+Correia do transportador principal rompeu e parou a produção;MECÂNICA;URGENTE
+Bomba de água de resfriamento travou e o forno está sem refrigeração;MECÂNICA;URGENTE
+Rolamento do ventilador do forno estourou e está saindo fumaça;MECÂNICA;URGENTE
+Tubulação de vapor rompida jorrando vapor no corredor;MECÂNICA;URGENTE
+Proteção da polia caiu e a polia está exposta com a máquina girando;MECÂNICA;URGENTE
+Compressor de ar parou com barulho de batida metálica e a fábrica ficou sem ar;MECÂNICA;URGENTE
+Vazamento de amônia na tubulação da câmara fria;MECÂNICA;URGENTE
+Bomba de alimentação da caldeira parou com o eixo travado;MECÂNICA;URGENTE
+Guarda-corpo da passarela soltou e tem gente trabalhando lá em cima;MECÂNICA;URGENTE
+Válvula de segurança do vaso de pressão travada aberta chiando muito;MECÂNICA;URGENTE
+Corrente da elevadora partiu e a carga caiu;MECÂNICA;URGENTE
+Acoplamento da bomba de combustível quebrou e o gerador parou;MECÂNICA;URGENTE
+Mancal da extrusora fundiu e a máquina travou;MECÂNICA;URGENTE
+Vazamento de ácido no flange da bomba dosadora;MECÂNICA;URGENTE
+Cabo de aço da ponte rolante desfiando com carga suspensa;MECÂNICA;URGENTE
+Vazamento de óleo na prensa;MECÂNICA;ALTA
+Rolamento do exaustor fazendo barulho alto e esquentando;MECÂNICA;ALTA
+Bomba centrífuga com vibração forte mas ainda operando;MECÂNICA;ALTA
+Correia do transportador patinando e perdendo velocidade;MECÂNICA;ALTA
+Redutor da esteira vazando óleo pelo retentor;MECÂNICA;ALTA
+Selo mecânico da bomba de processo pingando bastante;MECÂNICA;ALTA
+Válvula manual da linha de vapor travada e não fecha;MECÂNICA;ALTA
+Compressor de ar com pressão baixa não está segurando a rede;MECÂNICA;ALTA
+Cilindro hidráulico da injetora com vazamento na haste;MECÂNICA;ALTA
+Corrente do transportador de caixas pulando dente;MECÂNICA;ALTA
+Vibração alta no ventilador da torre de resfriamento;MECÂNICA;ALTA
+Engrenagem do misturador com ruído de dente quebrado;MECÂNICA;ALTA
+Mangueira hidráulica da empilhadeira com o revestimento estourando;MECÂNICA;ALTA
+Freio da ponte rolante escorregando com carga;MECÂNICA;ALTA
+Folga grande no eixo do agitador do tanque;MECÂNICA;ALTA
+Vazamento de ar comprimido forte na linha principal;MECÂNICA;ALTA
+Acoplamento do motor da bomba desalinhado e vibrando muito;MECÂNICA;ALTA
+Rolete da esteira travado rasgando a correia;MECÂNICA;ALTA
+Parafusos da base do moinho soltando com a vibração;MECÂNICA;ALTA
+Trocador de calor com vazamento entre as placas;MECÂNICA;ALTA
+Bomba de vácuo perdendo vácuo e a embaladora falhando;MECÂNICA;ALTA
+Ruído no rolamento do exaustor;MECÂNICA;MÉDIA
+Correia do transportador solta;MECÂNICA;MÉDIA
+Gaxeta da bomba reserva pingando água;MECÂNICA;MÉDIA
+Porta do forno empenada fechando com dificuldade;MECÂNICA;MÉDIA
+Graxeira do mancal entupida;MECÂNICA;MÉDIA
+Vazamento pequeno de ar no engate rápido da linha 2;MECÂNICA;MÉDIA
+Mola da porta da câmara fria quebrada;MECÂNICA;MÉDIA
+Chapa de proteção da esteira amassada raspando;MECÂNICA;MÉDIA
+Válvula de retenção batendo na partida da bomba;MECÂNICA;MÉDIA
+Filtro de ar do compressor muito sujo;MECÂNICA;MÉDIA
+Roda da ponte rolante com ruído leve no rolamento;MECÂNICA;MÉDIA
+Tampa do redutor com parafuso faltando;MECÂNICA;MÉDIA
+Cabo de aço da talha manual com um pouco de desgaste;MECÂNICA;MÉDIA
+Solda trincada no suporte da tubulação;MECÂNICA;MÉDIA
+Rodízio do carrinho de transporte travado;MECÂNICA;MÉDIA
+Rasgo pequeno na lona do transportador;MECÂNICA;MÉDIA
+Vazamento de água na conexão da mangueira de lavagem;MECÂNICA;MÉDIA
+Nível de óleo do redutor abaixo do mínimo;MECÂNICA;MÉDIA
+Estrutura do silo com pontos de ferrugem forte;MECÂNICA;MÉDIA
+Grade de proteção do ventilador solta de um lado;MECÂNICA;MÉDIA
+Purgador de vapor soltando vapor sem parar;MECÂNICA;MÉDIA
+Mancal da bomba reserva com folga;MECÂNICA;MÉDIA
+Lubrificação programada dos mancais da linha 1;MECÂNICA;BAIXA
+Trocar óleo do redutor conforme plano preventivo;MECÂNICA;BAIXA
+Pintar a estrutura do mezanino;MECÂNICA;BAIXA
+Porta do armário de ferramentas emperrando;MECÂNICA;BAIXA
+Ajustar a tensão das correias na próxima parada;MECÂNICA;BAIXA
+Substituir as borrachas de vedação da porta do almoxarifado;MECÂNICA;BAIXA
+Fazer inspeção preventiva nas bombas da estação de tratamento;MECÂNICA;BAIXA
+Trocar filtro do compressor na preventiva do mês;MECÂNICA;BAIXA
+Instalar suporte novo para as mangueiras;MECÂNICA;BAIXA
+Consertar a dobradiça da porta da sala de controle;MECÂNICA;BAIXA
+Revisar o plano de lubrificação da fábrica;MECÂNICA;BAIXA
+Limpeza do trocador de calor na parada programada;MECÂNICA;BAIXA
+Fabricar suporte para a lixeira da linha;MECÂNICA;BAIXA
+Verificar alinhamento das bombas na preventiva;MECÂNICA;BAIXA
+Trocar as rodas gastas do carrinho de ferramentas;MECÂNICA;BAIXA
+Retirar tubulação antiga desativada do galpão 2;MECÂNICA;BAIXA
+Fabricar uma bancada nova para a oficina;MECÂNICA;BAIXA
+Reapertar parafusos da estrutura do telhado na próxima parada;MECÂNICA;BAIXA
+Substituir mangueira ressecada da lavadora;MECÂNICA;BAIXA
+Troca preventiva do selo da bomba reserva;MECÂNICA;BAIXA
+Nivelar a máquina de envase na parada de fim de ano;MECÂNICA;BAIXA
+Cheiro de queimado e fumaça saindo do painel elétrico;ELÉTRICA;URGENTE
+Cabo desencapado energizado no chão da linha de produção;ELÉTRICA;URGENTE
+Faltou energia na subestação e a fábrica inteira parou;ELÉTRICA;URGENTE
+Operador levou choque ao encostar na carcaça da máquina;ELÉTRICA;URGENTE
+Disjuntor geral da linha 2 desarmou e não rearma com a linha parada;ELÉTRICA;URGENTE
+Motor da bomba de incêndio queimado;ELÉTRICA;URGENTE
+Transformador da subestação com estalos e cheiro de queimado;ELÉTRICA;URGENTE
+Tomada industrial soltando faísca e derretendo o plugue;ELÉTRICA;URGENTE
+Motor do compressor principal queimou e a fábrica ficou sem ar;ELÉTRICA;URGENTE
+Iluminação de emergência não acendeu na falta de energia;ELÉTRICA;URGENTE
+Curto-circuito no quadro de distribuição da câmara fria;ELÉTRICA;URGENTE
+Gerador de emergência não partiu na queda de energia;ELÉTRICA;URGENTE
+Barramento do painel aquecendo muito e mudando de cor;ELÉTRICA;URGENTE
+Inversor de frequência da esteira principal queimou e a linha parou;ELÉTRICA;URGENTE
+Fio solto dando choque no corrimão da escada;ELÉTRICA;URGENTE
+Ponte rolante ficou sem energia com carga suspensa;ELÉTRICA;URGENTE
+Chuva entrando no painel elétrico energizado;ELÉTRICA;URGENTE
+Motor da esteira aquecendo;ELÉTRICA;ALTA
+Disjuntor desarmando no painel;ELÉTRICA;ALTA
+Motor da bomba com corrente acima do normal;ELÉTRICA;ALTA
+Contator do motor do exaustor colando;ELÉTRICA;ALTA
+Queda de tensão nas máquinas da linha 3 toda tarde;ELÉTRICA;ALTA
+Motor fazendo zumbido e não parte direito;ELÉTRICA;ALTA
+Inversor da bomba dando falha de sobrecorrente;ELÉTRICA;ALTA
+Cabo de alimentação do misturador aquecendo na emenda;ELÉTRICA;ALTA
+Banco de capacitores com fusíveis queimados e fator de potência caindo;ELÉTRICA;ALTA
+Resistência do forno queimada e o forno não chega na temperatura;ELÉTRICA;ALTA
+Relé térmico do motor da moenda atuando direto;ELÉTRICA;ALTA
+Motor do ventilador da torre com isolamento baixo no megômetro;ELÉTRICA;ALTA
+Falta de fase no painel da embaladora e os motores esquentando;ELÉTRICA;ALTA
+Nobreak da sala elétrica apitando com bateria fraca;ELÉTRICA;ALTA
+Aterramento do painel da linha 1 rompido;ELÉTRICA;ALTA
+Motor da ponte rolante perdendo força ao subir carga;ELÉTRICA;ALTA
+Chave de partida do motor queimando fusível toda hora;ELÉTRICA;ALTA
+Transformador da linha 2 com temperatura alta;ELÉTRICA;ALTA
+Resistência do secador aberta secando pela metade;ELÉTRICA;ALTA
+Lâmpadas do corredor do almoxarifado piscando;ELÉTRICA;MÉDIA
+Tomada da bancada da oficina sem energia;ELÉTRICA;MÉDIA
+Ventilador do painel elétrico parado;ELÉTRICA;MÉDIA
+Motor do portão da expedição parando no meio;ELÉTRICA;MÉDIA
+Refletor do pátio queimado;ELÉTRICA;MÉDIA
+Canaleta de cabos aberta no teto da linha 2;ELÉTRICA;MÉDIA
+Chuveiro do vestiário não esquenta;ELÉTRICA;MÉDIA
+Motor do exaustor do banheiro queimado;ELÉTRICA;MÉDIA
+Tomada solta da parede na sala de reuniões;ELÉTRICA;MÉDIA
+Luz de sinalização da máquina queimada;ELÉTRICA;MÉDIA
+Botão de liga da serra com mau contato;ELÉTRICA;MÉDIA
+Cabo da extensão da oficina com isolamento danificado;ELÉTRICA;MÉDIA
+Lâmpadas queimadas na área de estoque;ELÉTRICA;MÉDIA
+Disjuntor do escritório desarmando quando liga o micro-ondas;ELÉTRICA;MÉDIA
+Motor da cortina de ar da câmara fria não liga;ELÉTRICA;MÉDIA
+Iluminação do estacionamento não acende à noite;ELÉTRICA;MÉDIA
+Motor do exaustor do refeitório esquentando;ELÉTRICA;MÉDIA
+Luminária pendurada pelo fio no depósito;ELÉTRICA;MÉDIA
+Emenda de cabo com fita isolante no motor da bomba reserva;ELÉTRICA;MÉDIA
+Quadro de iluminação sem identificação dos circuitos;ELÉTRICA;MÉDIA
+Trocar lâmpada do galpão;ELÉTRICA;BAIXA
+Instalar tomada nova na sala de treinamento;ELÉTRICA;BAIXA
+Termografia preventiva nos painéis elétricos;ELÉTRICA;BAIXA
+Trocar lâmpadas fluorescentes por LED no escritório;ELÉTRICA;BAIXA
+Reapertar conexões dos painéis na parada programada;ELÉTRICA;BAIXA
+Identificar os cabos do quadro de iluminação;ELÉTRICA;BAIXA
+Instalar ponto de energia para a nova impressora;ELÉTRICA;BAIXA
+Medir resistência de aterramento conforme plano anual;ELÉTRICA;BAIXA
+Limpeza dos painéis elétricos da linha 2 na preventiva;ELÉTRICA;BAIXA
+Teste mensal do gerador de emergência;ELÉTRICA;BAIXA
+Trocar interruptor quebrado da sala de reunião;ELÉTRICA;BAIXA
+Instalar refletor extra no pátio de carga;ELÉTRICA;BAIXA
+Organizar cabos soltos atrás do quadro do laboratório;ELÉTRICA;BAIXA
+Atualizar diagrama unifilar da subestação;ELÉTRICA;BAIXA
+Medir isolamento dos motores reservas do almoxarifado;ELÉTRICA;BAIXA
+Instalar tomada para carregador de empilhadeira;ELÉTRICA;BAIXA
+Ajustar o timer da iluminação externa;ELÉTRICA;BAIXA
+Sinalizar as portas dos painéis elétricos;ELÉTRICA;BAIXA
+Substituir luminária amarelada da portaria;ELÉTRICA;BAIXA
+Inspeção preventiva dos motores da linha 3;ELÉTRICA;BAIXA
+Teste das luminárias de emergência do prédio administrativo;ELÉTRICA;BAIXA
+Instalar sensor de presença na iluminação do banheiro;ELÉTRICA;BAIXA
+Revisar a proteção dos disjuntores do CCM na parada;ELÉTRICA;BAIXA
+Transmissor de nível da caldeira sem leitura com a caldeira em operação;INSTRUMENTAÇÃO;URGENTE
+Pressostato de segurança do vaso de pressão não atua;INSTRUMENTAÇÃO;URGENTE
+Detector de gás da casa de amônia em falha;INSTRUMENTAÇÃO;URGENTE
+Termopar do forno aberto e o controle de temperatura disparou;INSTRUMENTAÇÃO;URGENTE
+Manômetro da caldeira travado com a pressão subindo;INSTRUMENTAÇÃO;URGENTE
+Sensor de chama do queimador falhando e o forno apagando;INSTRUMENTAÇÃO;URGENTE
+Transmissor de pressão da linha de gás indicando zero com a linha pressurizada;INSTRUMENTAÇÃO;URGENTE
+Válvula de controle de vapor travada aberta e a temperatura do reator subindo;INSTRUMENTAÇÃO;URGENTE
+Analisador de oxigênio da caldeira com leitura errada e a queima descontrolada;INSTRUMENTAÇÃO;URGENTE
+Chave de nível alto do tanque de ácido não atuou e o tanque está transbordando;INSTRUMENTAÇÃO;URGENTE
+Sensor de temperatura do reator com leitura congelada durante a reação;INSTRUMENTAÇÃO;URGENTE
+Medidor de vazão da dosagem de cloro parou e a água está saindo sem tratamento;INSTRUMENTAÇÃO;URGENTE
+Posicionador da válvula de alívio sem resposta;INSTRUMENTAÇÃO;URGENTE
+Sensor de nível do silo indicando vazio com o silo cheio e risco de transbordar;INSTRUMENTAÇÃO;URGENTE
+Detector de fumaça da sala elétrica em falha;INSTRUMENTAÇÃO;URGENTE
+Transmissor de temperatura do pasteurizador sem sinal e o produto sem pasteurizar;INSTRUMENTAÇÃO;URGENTE
+Termopar do forno oscilando;INSTRUMENTAÇÃO;ALTA
+Transmissor de vazão da linha de vapor com leitura instável;INSTRUMENTAÇÃO;ALTA
+Balança da linha de envase pesando errado com pacotes fora do peso;INSTRUMENTAÇÃO;ALTA
+Válvula de controle do trocador oscilando muito;INSTRUMENTAÇÃO;ALTA
+Sensor de nível do tanque pulando de valor;INSTRUMENTAÇÃO;ALTA
+Medidor de pH do efluente fora da faixa;INSTRUMENTAÇÃO;ALTA
+Transmissor de pressão da bomba indicando valor impossível;INSTRUMENTAÇÃO;ALTA
+Termopar da extrusora com leitura baixa e o produto saindo queimado;INSTRUMENTAÇÃO;ALTA
+Posicionador da válvula não obedece o sinal de 4 a 20 mA;INSTRUMENTAÇÃO;ALTA
+Célula de carga da balança rodoviária dando diferença;INSTRUMENTAÇÃO;ALTA
+Rotâmetro da dosagem travado;INSTRUMENTAÇÃO;ALTA
+Sensor de temperatura da câmara fria marcando errado e o produto esquentando;INSTRUMENTAÇÃO;ALTA
+Medidor de condutividade da caldeira sem leitura;INSTRUMENTAÇÃO;ALTA
+Transmissor de nível do tanque de combustível com erro de medição;INSTRUMENTAÇÃO;ALTA
+Válvula de controle de água gelada travada fechada;INSTRUMENTAÇÃO;ALTA
+Sensor de umidade do secador marcando errado e o produto saindo úmido;INSTRUMENTAÇÃO;ALTA
+Medidor de vazão magnético sem sinal na saída;INSTRUMENTAÇÃO;ALTA
+Chave de fluxo da bomba não comuta;INSTRUMENTAÇÃO;ALTA
+Medidor de nível por radar com eco falso;INSTRUMENTAÇÃO;ALTA
+Sensor de oxigênio dissolvido do tanque de aeração sem leitura;INSTRUMENTAÇÃO;ALTA
+Sensor de pressão sem leitura;INSTRUMENTAÇÃO;MÉDIA
+Manômetro da bomba reserva com vidro quebrado;INSTRUMENTAÇÃO;MÉDIA
+Termômetro do tanque de água quente embaçado sem leitura;INSTRUMENTAÇÃO;MÉDIA
+Indicador de temperatura local apagado;INSTRUMENTAÇÃO;MÉDIA
+Transmissor de pressão com pequena diferença para o manômetro;INSTRUMENTAÇÃO;MÉDIA
+Sensor de nível da caixa d'água marcando errado;INSTRUMENTAÇÃO;MÉDIA
+Tomada de impulso do transmissor entupida;INSTRUMENTAÇÃO;MÉDIA
+Manômetro da linha de ar com ponteiro solto;INSTRUMENTAÇÃO;MÉDIA
+Balança do laboratório com leitura oscilando;INSTRUMENTAÇÃO;MÉDIA
+Termopar reserva do forno danificado;INSTRUMENTAÇÃO;MÉDIA
+Sensor de temperatura do óleo do redutor sem leitura;INSTRUMENTAÇÃO;MÉDIA
+Indicador de vazão local da linha de água parado;INSTRUMENTAÇÃO;MÉDIA
+Válvula de controle com vazamento pelo engaxetamento;INSTRUMENTAÇÃO;MÉDIA
+Pressostato do compressor atuando fora do ponto;INSTRUMENTAÇÃO;MÉDIA
+Termostato da estufa de secagem descalibrado;INSTRUMENTAÇÃO;MÉDIA
+Medidor de pH do laboratório com eletrodo lento;INSTRUMENTAÇÃO;MÉDIA
+Sinal do sensor de temperatura com ruído;INSTRUMENTAÇÃO;MÉDIA
+Transmissor de nível com display sem iluminação;INSTRUMENTAÇÃO;MÉDIA
+Rotâmetro da linha de água com escala ilegível;INSTRUMENTAÇÃO;MÉDIA
+Transmissor de temperatura novo precisa ser configurado na faixa correta;INSTRUMENTAÇÃO;MÉDIA
+Calibrar balança da expedição;INSTRUMENTAÇÃO;BAIXA
+Calibração anual dos manômetros da caldeira;INSTRUMENTAÇÃO;BAIXA
+Aferir os termômetros da câmara fria;INSTRUMENTAÇÃO;BAIXA
+Trocar o manômetro velho do compressor por um novo;INSTRUMENTAÇÃO;BAIXA
+Levantar a lista de instrumentos para o plano de calibração;INSTRUMENTAÇÃO;BAIXA
+Etiquetar os transmissores da área de utilidades;INSTRUMENTAÇÃO;BAIXA
+Calibrar os transmissores de pressão na parada programada;INSTRUMENTAÇÃO;BAIXA
+Verificação periódica das balanças do laboratório;INSTRUMENTAÇÃO;BAIXA
+Instalar manômetro na saída da nova bomba;INSTRUMENTAÇÃO;BAIXA
+Atualizar folha de dados dos instrumentos da linha 2;INSTRUMENTAÇÃO;BAIXA
+Calibração preventiva do medidor de vazão de água;INSTRUMENTAÇÃO;BAIXA
+Aferição semestral do detector de gás;INSTRUMENTAÇÃO;BAIXA
+Trocar sensor de temperatura antigo por modelo novo na preventiva;INSTRUMENTAÇÃO;BAIXA
+Organizar os certificados de calibração;INSTRUMENTAÇÃO;BAIXA
+Instalar termômetro no tanque de água de reuso;INSTRUMENTAÇÃO;BAIXA
+Limpar eletrodo do medidor de pH na rotina semanal;INSTRUMENTAÇÃO;BAIXA
+Checar o zero das células de carga na parada;INSTRUMENTAÇÃO;BAIXA
+Verificar o setpoint dos pressostatos na preventiva;INSTRUMENTAÇÃO;BAIXA
+Calibrar termopares do forno na parada anual;INSTRUMENTAÇÃO;BAIXA
+Instalar visor de nível no tanque de diesel;INSTRUMENTAÇÃO;BAIXA
+Substituir manômetro com escala desbotada;INSTRUMENTAÇÃO;BAIXA
+Aferir o medidor de vazão do efluente para o relatório ambiental;INSTRUMENTAÇÃO;BAIXA
+CLP perdeu comunicação;AUTOMAÇÃO;URGENTE
+CLP da linha de envase em falha e a linha toda parou;AUTOMAÇÃO;URGENTE
+Supervisório caiu e os operadores estão sem visão da planta;AUTOMAÇÃO;URGENTE
+Botão de emergência não para a esteira porque a lógica ignora o sinal;AUTOMAÇÃO;URGENTE
+Intertravamento da prensa desativado no programa e a máquina operando sem proteção;AUTOMAÇÃO;URGENTE
+Rede Profibus da linha 2 caiu e todos os inversores pararam;AUTOMAÇÃO;URGENTE
+Robô de paletização travou no meio do ciclo com erro no controlador;AUTOMAÇÃO;URGENTE
+IHM da caldeira apagou e não dá para operar;AUTOMAÇÃO;URGENTE
+Programa do CLP corrompido depois da queda de energia;AUTOMAÇÃO;URGENTE
+Cortina de luz da prensa não bloqueia a máquina;AUTOMAÇÃO;URGENTE
+Servidor do supervisório fora do ar e sem registro dos alarmes;AUTOMAÇÃO;URGENTE
+Switch da rede industrial queimou e a linha ficou sem comunicação;AUTOMAÇÃO;URGENTE
+Sistema de controle do forno reiniciando sozinho;AUTOMAÇÃO;URGENTE
+Cartão de entrada do CLP queimado e a máquina não parte;AUTOMAÇÃO;URGENTE
+Alarmes críticos não aparecem no supervisório;AUTOMAÇÃO;URGENTE
+Receita errada carregada no CLP e o produto saindo fora do padrão;AUTOMAÇÃO;URGENTE
+Comunicação entre CLP e supervisório caindo várias vezes por dia;AUTOMAÇÃO;ALTA
+Robô de solda saindo da trajetória programada;AUTOMAÇÃO;ALTA
+Lógica da esteira não reconhece a caixa e trava a linha de vez em quando;AUTOMAÇÃO;ALTA
+Rede Ethernet industrial com perda de pacotes na linha 3;AUTOMAÇÃO;ALTA
+IHM da embaladora não aceita toque;AUTOMAÇÃO;ALTA
+Inversor da esteira não recebe o comando do CLP pela rede;AUTOMAÇÃO;ALTA
+Módulo de saída do CLP com canal queimado;AUTOMAÇÃO;ALTA
+Alarme falso de parada no supervisório a cada hora;AUTOMAÇÃO;ALTA
+Sequência automática do misturador pulando etapa;AUTOMAÇÃO;ALTA
+Bateria do CLP fraca com risco de perder o programa;AUTOMAÇÃO;ALTA
+Tempo de ciclo da máquina aumentou depois da mudança no programa;AUTOMAÇÃO;ALTA
+Malha PID do forno instável depois da atualização do programa;AUTOMAÇÃO;ALTA
+Leitor de código de barras da expedição não comunica com o sistema;AUTOMAÇÃO;ALTA
+Servo motor da cortadeira com erro de posição;AUTOMAÇÃO;ALTA
+Contagem de peças no supervisório não bate com a produção;AUTOMAÇÃO;ALTA
+Sistema de visão rejeitando peças boas;AUTOMAÇÃO;ALTA
+Remota de entradas e saídas desconectando da rede;AUTOMAÇÃO;ALTA
+Receita do produto B com parâmetro de velocidade errado;AUTOMAÇÃO;ALTA
+Encoder da esteira perdendo pulsos;AUTOMAÇÃO;ALTA
+Tela da IHM travando;AUTOMAÇÃO;MÉDIA
+Tela do supervisório lenta para atualizar;AUTOMAÇÃO;MÉDIA
+Tag errada no supervisório mostrando a bomba como ligada;AUTOMAÇÃO;MÉDIA
+Relógio do CLP com horário errado nos registros;AUTOMAÇÃO;MÉDIA
+Relatório de produção do supervisório saindo em branco;AUTOMAÇÃO;MÉDIA
+Aviso de preventiva não some da tela da IHM;AUTOMAÇÃO;MÉDIA
+Texto da tela da IHM cortado;AUTOMAÇÃO;MÉDIA
+Gráfico de tendência do supervisório sem dados de ontem;AUTOMAÇÃO;MÉDIA
+Botão da IHM da linha 1 sem função;AUTOMAÇÃO;MÉDIA
+Senha do operador não funciona na IHM;AUTOMAÇÃO;MÉDIA
+Notebook de programação não conecta no CLP;AUTOMAÇÃO;MÉDIA
+Comunicação com a impressora de etiquetas falhando às vezes;AUTOMAÇÃO;MÉDIA
+Histórico de alarmes do supervisório cheio;AUTOMAÇÃO;MÉDIA
+Ajustar o tempo da sirene da esteira no programa do CLP;AUTOMAÇÃO;MÉDIA
+Contador de peças da IHM zerando sozinho;AUTOMAÇÃO;MÉDIA
+Rede Wi-Fi dos coletores caindo no depósito;AUTOMAÇÃO;MÉDIA
+Tela de receita da IHM mostrando valores antigos;AUTOMAÇÃO;MÉDIA
+Cadência do robô abaixo da programada;AUTOMAÇÃO;MÉDIA
+Alarme de porta aberta aparecendo sem motivo na IHM;AUTOMAÇÃO;MÉDIA
+Criar alarme de nível alto no supervisório para o tanque novo;AUTOMAÇÃO;MÉDIA
+Fazer backup dos programas dos CLPs;AUTOMAÇÃO;BAIXA
+Criar nova tela no supervisório para a linha 4;AUTOMAÇÃO;BAIXA
+Atualizar firmware da IHM na próxima parada;AUTOMAÇÃO;BAIXA
+Documentar a lógica da máquina de envase;AUTOMAÇÃO;BAIXA
+Incluir tag de consumo de energia no supervisório;AUTOMAÇÃO;BAIXA
+Traduzir os textos de alarme da IHM para português;AUTOMAÇÃO;BAIXA
+Criar relatório semanal de paradas no supervisório;AUTOMAÇÃO;BAIXA
+Padronizar os nomes das tags do CLP;AUTOMAÇÃO;BAIXA
+Criar usuário no supervisório para o novo supervisor;AUTOMAÇÃO;BAIXA
+Mudar a cor dos alarmes na tela do supervisório;AUTOMAÇÃO;BAIXA
+Integrar o contador de produção ao sistema de gestão;AUTOMAÇÃO;BAIXA
+Atualizar a versão do software de programação dos CLPs;AUTOMAÇÃO;BAIXA
+Adicionar gráfico de tendência de temperatura na IHM;AUTOMAÇÃO;BAIXA
+Revisar comentários do programa do CLP da linha 2;AUTOMAÇÃO;BAIXA
+Configurar backup automático do servidor do supervisório;AUTOMAÇÃO;BAIXA
+Estudar a automação do abastecimento do silo;AUTOMAÇÃO;BAIXA
+Organizar o armário de rede da sala de controle;AUTOMAÇÃO;BAIXA
+Treinar operadores na nova tela da IHM;AUTOMAÇÃO;BAIXA
+Instalar licença nova do supervisório;AUTOMAÇÃO;BAIXA
+Colocar o logo da empresa na tela inicial da IHM;AUTOMAÇÃO;BAIXA
+Atualizar o inventário de CLPs e remotas;AUTOMAÇÃO;BAIXA
+Programar a receita do produto que lança mês que vem;AUTOMAÇÃO;BAIXA
+Trocar bateria do CLP na preventiva;AUTOMAÇÃO;BAIXA

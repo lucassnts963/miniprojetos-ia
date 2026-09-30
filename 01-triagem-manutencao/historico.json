@@ -1,0 +1,618 @@
+{
+ "params": {
+  "n_oculta": 32,
+  "epocas": 100,
+  "lr": 0.002,
+  "l2": 0.003,
+  "dropout": 0.5
+ },
+ "metricas": {
+  "acc_equipe": 0.9129662522202486,
+  "acc_prioridade": 0.6785079928952042,
+  "prioridade_1_nivel": 0.9218472468916519
+ },
+ "n_termos": 6356,
+ "n_parametros": 203688,
+ "epocas": [
+  {
+   "epoca": 1,
+   "perda": 2.5948,
+   "acc_equipe": 0.8153,
+   "acc_prioridade": 0.6661
+  },
+  {
+   "epoca": 2,
+   "perda": 2.2914,
+   "acc_equipe": 0.9272,
+   "acc_prioridade": 0.794
+  },
+  {
+   "epoca": 3,
+   "perda": 1.996,
+   "acc_equipe": 0.9645,
+   "acc_prioridade": 0.8401
+  },
+  {
+   "epoca": 4,
+   "perda": 1.73,
+   "acc_equipe": 0.984,
+   "acc_prioridade": 0.8988
+  },
+  {
+   "epoca": 5,
+   "perda": 1.5065,
+   "acc_equipe": 0.9911,
+   "acc_prioridade": 0.9165
+  },
+  {
+   "epoca": 6,
+   "perda": 1.3301,
+   "acc_equipe": 0.9911,
+   "acc_prioridade": 0.913
+  },
+  {
+   "epoca": 7,
+   "perda": 1.1938,
+   "acc_equipe": 0.9964,
+   "acc_prioridade": 0.9414
+  },
+  {
+   "epoca": 8,
+   "perda": 1.0868,
+   "acc_equipe": 0.9982,
+   "acc_prioridade": 0.9396
+  },
+  {
+   "epoca": 9,
+   "perda": 1.0007,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9591
+  },
+  {
+   "epoca": 10,
+   "perda": 0.9259,
+   "acc_equipe": 0.9982,
+   "acc_prioridade": 0.9645
+  },
+  {
+   "epoca": 11,
+   "perda": 0.8626,
+   "acc_equipe": 0.9982,
+   "acc_prioridade": 0.9716
+  },
+  {
+   "epoca": 12,
+   "perda": 0.813,
+   "acc_equipe": 0.9982,
+   "acc_prioridade": 0.9734
+  },
+  {
+   "epoca": 13,
+   "perda": 0.7751,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9716
+  },
+  {
+   "epoca": 14,
+   "perda": 0.7361,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9787
+  },
+  {
+   "epoca": 15,
+   "perda": 0.7107,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9858
+  },
+  {
+   "epoca": 16,
+   "perda": 0.688,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9769
+  },
+  {
+   "epoca": 17,
+   "perda": 0.6608,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9858
+  },
+  {
+   "epoca": 18,
+   "perda": 0.6387,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9893
+  },
+  {
+   "epoca": 19,
+   "perda": 0.6186,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9876
+  },
+  {
+   "epoca": 20,
+   "perda": 0.5919,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9876
+  },
+  {
+   "epoca": 21,
+   "perda": 0.5764,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9893
+  },
+  {
+   "epoca": 22,
+   "perda": 0.5594,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9876
+  },
+  {
+   "epoca": 23,
+   "perda": 0.5457,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9876
+  },
+  {
+   "epoca": 24,
+   "perda": 0.5346,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9911
+  },
+  {
+   "epoca": 25,
+   "perda": 0.5239,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9929
+  },
+  {
+   "epoca": 26,
+   "perda": 0.5156,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9947
+  },
+  {
+   "epoca": 27,
+   "perda": 0.5034,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9982
+  },
+  {
+   "epoca": 28,
+   "perda": 0.4949,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9893
+  },
+  {
+   "epoca": 29,
+   "perda": 0.486,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9947
+  },
+  {
+   "epoca": 30,
+   "perda": 0.4757,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9929
+  },
+  {
+   "epoca": 31,
+   "perda": 0.467,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9929
+  },
+  {
+   "epoca": 32,
+   "perda": 0.4565,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9964
+  },
+  {
+   "epoca": 33,
+   "perda": 0.4497,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 34,
+   "perda": 0.4416,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9982
+  },
+  {
+   "epoca": 35,
+   "perda": 0.432,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9982
+  },
+  {
+   "epoca": 36,
+   "perda": 0.4279,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9964
+  },
+  {
+   "epoca": 37,
+   "perda": 0.4174,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9982
+  },
+  {
+   "epoca": 38,
+   "perda": 0.4077,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9964
+  },
+  {
+   "epoca": 39,
+   "perda": 0.4001,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9964
+  },
+  {
+   "epoca": 40,
+   "perda": 0.396,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9964
+  },
+  {
+   "epoca": 41,
+   "perda": 0.3905,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9964
+  },
+  {
+   "epoca": 42,
+   "perda": 0.3887,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9982
+  },
+  {
+   "epoca": 43,
+   "perda": 0.3834,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 44,
+   "perda": 0.374,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 45,
+   "perda": 0.3725,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9982
+  },
+  {
+   "epoca": 46,
+   "perda": 0.3687,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 47,
+   "perda": 0.3678,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9982
+  },
+  {
+   "epoca": 48,
+   "perda": 0.3586,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9982
+  },
+  {
+   "epoca": 49,
+   "perda": 0.3556,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9982
+  },
+  {
+   "epoca": 50,
+   "perda": 0.349,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 51,
+   "perda": 0.3529,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9982
+  },
+  {
+   "epoca": 52,
+   "perda": 0.3439,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 53,
+   "perda": 0.3414,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 54,
+   "perda": 0.3407,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 55,
+   "perda": 0.3376,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 56,
+   "perda": 0.3291,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 57,
+   "perda": 0.3316,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 58,
+   "perda": 0.3298,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9982
+  },
+  {
+   "epoca": 59,
+   "perda": 0.3276,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9982
+  },
+  {
+   "epoca": 60,
+   "perda": 0.3255,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 61,
+   "perda": 0.3174,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 62,
+   "perda": 0.3169,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 63,
+   "perda": 0.3117,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9982
+  },
+  {
+   "epoca": 64,
+   "perda": 0.3076,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9982
+  },
+  {
+   "epoca": 65,
+   "perda": 0.3079,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 66,
+   "perda": 0.311,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 67,
+   "perda": 0.3092,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9982
+  },
+  {
+   "epoca": 68,
+   "perda": 0.3019,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9982
+  },
+  {
+   "epoca": 69,
+   "perda": 0.3024,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9982
+  },
+  {
+   "epoca": 70,
+   "perda": 0.2973,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 71,
+   "perda": 0.2988,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 72,
+   "perda": 0.2937,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 73,
+   "perda": 0.2943,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 74,
+   "perda": 0.2964,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9982
+  },
+  {
+   "epoca": 75,
+   "perda": 0.2913,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 76,
+   "perda": 0.2908,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 77,
+   "perda": 0.286,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 78,
+   "perda": 0.2891,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 79,
+   "perda": 0.2844,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 80,
+   "perda": 0.2812,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 81,
+   "perda": 0.2828,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 82,
+   "perda": 0.2847,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 83,
+   "perda": 0.2786,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 84,
+   "perda": 0.2762,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 85,
+   "perda": 0.2768,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 86,
+   "perda": 0.2744,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9982
+  },
+  {
+   "epoca": 87,
+   "perda": 0.2711,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 88,
+   "perda": 0.2736,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 89,
+   "perda": 0.2738,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9982
+  },
+  {
+   "epoca": 90,
+   "perda": 0.2711,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 91,
+   "perda": 0.2681,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 92,
+   "perda": 0.2643,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9982
+  },
+  {
+   "epoca": 93,
+   "perda": 0.2629,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 0.9982
+  },
+  {
+   "epoca": 94,
+   "perda": 0.2604,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 95,
+   "perda": 0.2629,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 96,
+   "perda": 0.262,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 97,
+   "perda": 0.2579,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 98,
+   "perda": 0.262,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 99,
+   "perda": 0.2615,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  },
+  {
+   "epoca": 100,
+   "perda": 0.257,
+   "acc_equipe": 1.0,
+   "acc_prioridade": 1.0
+  }
+ ]
+}

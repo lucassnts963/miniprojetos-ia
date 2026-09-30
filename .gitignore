@@ -1,0 +1,14 @@
+# ambientes e cache
+venv/
+__pycache__/
+*.pyc
+
+# renders e arquivos gerados que se refazem com os scripts
+01-triagem-manutencao/video/youtube/out/
+*.log
+quadro_*.png
+still_*.png
+
+# áudio bruto da narração (ElevenLabs): fica só local
+01-triagem-manutencao/video/youtube/narr/*.mp3
+01-triagem-manutencao/video/youtube/narr/*.m4a
