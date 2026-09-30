@@ -36,7 +36,7 @@ Neste vídeo a gente escreve, linha por linha, uma rede neural que lê o texto d
 
 Passo a passo: limpeza do texto, termos (palavras, pares e pedaços de letras), TF-IDF, inicialização de He, forward com ReLU e softmax, uma rede com duas saídas, entropia cruzada, backprop na mão, dropout, L2 e Adam, e o teste honesto com dados separados.
 
-📄 Código completo e o CSV com os 561 chamados de exemplo: [LINK]
+📄 Código completo e o CSV com os 561 chamados de exemplo: https://github.com/lucassnts963/miniprojetos-ia/tree/main/01-triagem-manutencao/tutorial
 
 Capítulos
 0:00 Intro
