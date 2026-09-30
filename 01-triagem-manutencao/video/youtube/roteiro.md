@@ -1,6 +1,6 @@
 # YouTube: Rede neural do zero em Python: triagem de chamados de manutenção
 
-Vídeo tutorial 1920x1080, tema elucas.dev. Quem assistir deve conseguir reproduzir o código sozinho: todas as linhas de `tutorial/triagem_do_zero.py` aparecem na tela, com o número real da linha.
+Vídeo tutorial 1920x1080, tema elucas.dev. Versão final: `out/triagem_do_zero_narrado.mp4` (6:55, narração + trilha lo-fi). Quem assistir deve conseguir reproduzir o código sozinho: todas as linhas de `tutorial/triagem_do_zero.py` aparecem na tela, com o número real da linha.
 
 - Render: `render.py` (nesta pasta). Sem narração, usa as durações padrão de cada cena. Com `narr/timing.json`, segue a fala.
 - Código mostrado: `01-triagem-manutencao/tutorial/triagem_do_zero.py` + `tutorial/chamados.csv` (vão no link da descrição). Os destaques do render apontam para trechos do código, não para números de linha: dá para mexer no tutorial e renderizar de novo.
@@ -38,7 +38,22 @@ Passo a passo: limpeza do texto, termos (palavras, pares e pedaços de letras), 
 
 📄 Código completo e o CSV com os 561 chamados de exemplo: [LINK]
 
-Capítulos: (preencher com os tempos do `timing.json` depois da narração)
+Capítulos
+0:00 Intro
+0:19 O caminho: do texto à decisão
+0:44 Preparando o arquivo
+1:05 Passo 1 · Os dados
+1:31 Passo 2 · Limpando o texto
+1:55 Passo 3 · Termos: palavras, pares e pedaços
+2:23 Passo 4 · TF-IDF
+3:05 Passo 5 · Os pesos da rede
+3:38 Passo 6 · Forward, camada por camada
+4:15 Passo 7 · A perda (entropia cruzada)
+4:35 Passo 8 · Backprop
+5:19 Passo 9 · Treino com Adam
+5:53 Passo 10 · Testando de verdade
+6:18 Resultado honesto
+6:37 Como rodar
 
 Música: HoliznaCC0, álbum *Public Domain Lofi* (CC0, domínio público).
 
