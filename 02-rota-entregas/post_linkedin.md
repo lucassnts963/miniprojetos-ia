@@ -1,4 +1,6 @@
-# Post LinkedIn: menor rota pelas cidades
+# Post LinkedIn: menor rota pelas cidades (vai junto com `video/linkedin_rota.mp4`)
+
+Vídeo de 54 s, com trilha lo-fi: o método (rotas evoluindo e a melhor rota com prova) → o dado certo (mapa x estrada, Brasil inteiro) → na prática (separação de pedidos no armazém).
 
 Quanto a sua operação gasta por dia rodando mais do que precisava?
 
@@ -20,6 +22,7 @@ A lição que eu levo para qualquer projeto:
 ✅ IA entra quando ela é, de fato, o melhor caminho.
 
 🏭 Na indústria
+• Separação de pedidos no armazém: o separador anda menos entre as prateleiras e o pedido fica pronto antes.
 • Rotas de manutenção em campo e visitas técnicas.
 • Sequência de coleta de matéria-prima entre fornecedores.
 
@@ -52,9 +55,10 @@ Nem tudo precisa de IA. A sua imaginação é o limite. 🚀
 - "Economizou muito mais do que qualquer ajuste de algoritmo": no Brasil inteiro, planejar pela estrada rodou bem menos que seguir, na estrada, a ordem planejada em linha reta; entre os métodos, as diferenças foram pequenas perto disso.
 - Sem números no texto (regra dos posts). Os números estão no README do projeto, se alguém perguntar nos comentários.
 
-# Vídeo sugerido (ainda não existe; manter coerente com o texto)
-1. Rotas embaralhadas evoluindo geração a geração até ficarem limpas (o método da cobrinha).
-2. A melhor rota aparecendo de uma vez, com o selo "melhor rota possível".
-3. As duas rotas sobrepostas: a planejada no mapa (cinza) e a planejada pela estrada (vermelha), a do mapa desviando pelos rios.
-4. Fechamento: "Nem tudo precisa de IA. A sua imaginação é o limite."
-Dá para gravar as cenas 2 e 3 direto do painel da bancada (modo vídeo) e a cena 1 com o histórico do genético.
+# Vídeo (`video/linkedin_rota.mp4`) e o que ele mostra
+1. **O método** (`cena_metodo.mp4`): a melhor rota de cada geração do genético pelas capitais, encolhendo; depois a melhor rota possível, com o selo "com prova" (método exato).
+2. **O dado certo** (`cena_estrada.mp4`): Brasil inteiro, rota planejada no mapa x planejada pela estrada; barras com os quilômetros rodados na estrada pelas duas (mesma escala).
+3. **Na prática** (`cena_picking.mp4`): dois armazéns, mesmo pedido e mesma velocidade; o algoritmo calcula a ordem antes de o separador sair; o da rota otimizada termina antes e anda bem menos.
+- Tudo calculado de verdade (`cenas_mapa.py`, `cena_picking.py`); nenhuma rota é desenhada à mão. Sem números na tela.
+- Coerência com o texto: "o mesmo método da cobrinha funcionou" (cena 1), "melhor rota possível, com prova" (cena 1), "distância real pelas estradas" (cena 2), "separação de pedidos" (cena 3), fechamento com a frase de assinatura (cena 3).
+- No armazém, a lista chega em ordem de código de produto (aleatória em relação às prateleiras). Entre pedidos sorteados, a rota otimizada andou de 52% a 60% menos; na prática, o ganho depende de como a lista já vem ordenada.

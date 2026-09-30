@@ -1,0 +1,298 @@
+{
+ "scenes": {
+  "hook": {
+   "dur": 15.01,
+   "start": 0.0,
+   "cues": {
+    "sem": 7.97,
+    "cada": 11.31
+   },
+   "speech": 13.56
+  },
+  "titulo": {
+   "dur": 4.41,
+   "start": 15.01,
+   "cues": {},
+   "speech": 2.96
+  },
+  "mapa": {
+   "dur": 24.89,
+   "start": 19.42,
+   "cues": {
+    "palavras": 1.79,
+    "tfidf": 5.07,
+    "oculta": 9.17,
+    "saidas": 13.17,
+    "treino": 18.05
+   },
+   "speech": 23.44
+  },
+  "setup": {
+   "dur": 20.75,
+   "start": 44.31,
+   "cues": {
+    "numpy": 3.71,
+    "imports": 7.53,
+    "classes": 13.11
+   },
+   "speech": 19.3
+  },
+  "dados": {
+   "dur": 26.37,
+   "start": 65.06,
+   "cues": {
+    "csv": 5.05,
+    "carregar": 14.87,
+    "y": 22.23
+   },
+   "speech": 24.92
+  },
+  "palavras": {
+   "dur": 23.77,
+   "start": 91.43,
+   "cues": {
+    "lower": 3.39,
+    "acento": 7.21,
+    "regex": 16.11
+   },
+   "speech": 22.32
+  },
+  "termos": {
+   "dur": 28.07,
+   "start": 115.2,
+   "cues": {
+    "w": 2.89,
+    "b": 8.81,
+    "c": 12.99,
+    "comp": 15.65
+   },
+   "speech": 26.62
+  },
+  "tfidf": {
+   "dur": 42.07,
+   "start": 143.27,
+   "cues": {
+    "df": 5.61,
+    "mindf": 10.95,
+    "idf": 15.11,
+    "transform": 21.83,
+    "tf": 30.05,
+    "norma": 34.99
+   },
+   "speech": 40.62
+  },
+  "pesos": {
+   "dur": 33.03,
+   "start": 185.34,
+   "cues": {
+    "w1": 5.41,
+    "saidas": 10.07,
+    "he": 17.93,
+    "total": 28.61
+   },
+   "speech": 31.58
+  },
+  "forward": {
+   "dur": 37.09,
+   "start": 218.37,
+   "cues": {
+    "z1": 4.49,
+    "relu": 12.97,
+    "saidas": 20.15,
+    "compart": 28.09
+   },
+   "speech": 35.64
+  },
+  "perda": {
+   "dur": 19.73,
+   "start": 255.46,
+   "cues": {
+    "log": 3.31,
+    "p90": 9.49,
+    "p10": 10.95,
+    "soma": 15.15
+   },
+   "speech": 18.28
+  },
+  "backprop": {
+   "dur": 44.43,
+   "start": 275.19,
+   "cues": {
+    "dsaida": 4.41,
+    "gsaida": 12.41,
+    "dh": 17.67,
+    "mascara": 26.67,
+    "gw1": 33.09,
+    "esparso": 37.79
+   },
+   "speech": 42.98
+  },
+  "adam": {
+   "dur": 33.79,
+   "start": 319.62,
+   "cues": {
+    "lote": 3.03,
+    "l2": 8.83,
+    "mv": 14.55,
+    "hat": 23.17,
+    "curva": 28.73
+   },
+   "speech": 32.34
+  },
+  "teste": {
+   "dur": 25.01,
+   "start": 353.41,
+   "cues": {
+    "split": 3.65,
+    "fit": 6.99,
+    "acc": 14.29,
+    "exemplo": 21.97
+   },
+   "speech": 23.56
+  },
+  "honesto": {
+   "dur": 19.19,
+   "start": 378.42,
+   "cues": {
+    "cv": 4.19,
+    "prio": 8.33,
+    "mais": 14.15
+   },
+   "speech": 17.74
+  },
+  "rodar": {
+   "dur": 8.77,
+   "start": 397.61,
+   "cues": {},
+   "speech": 7.32
+  },
+  "outro": {
+   "dur": 8.63,
+   "start": 406.38,
+   "cues": {},
+   "speech": 7.18
+  }
+ },
+ "segments": [
+  {
+   "scene": "hook",
+   "part": "parte01",
+   "a": 0.0,
+   "b": 13.8,
+   "at": 0.55
+  },
+  {
+   "scene": "titulo",
+   "part": "parte01",
+   "a": 13.92,
+   "b": 17.19,
+   "at": 15.44
+  },
+  {
+   "scene": "mapa",
+   "part": "parte01",
+   "a": 17.26,
+   "b": 41.01,
+   "at": 19.85
+  },
+  {
+   "scene": "setup",
+   "part": "parte01",
+   "a": 41.08,
+   "b": 60.7,
+   "at": 44.74
+  },
+  {
+   "scene": "dados",
+   "part": "parte01",
+   "a": 60.78,
+   "b": 86.0,
+   "at": 65.49
+  },
+  {
+   "scene": "palavras",
+   "part": "parte02",
+   "a": 0.0,
+   "b": 22.53,
+   "at": 91.98
+  },
+  {
+   "scene": "termos",
+   "part": "parte02",
+   "a": 22.62,
+   "b": 49.59,
+   "at": 115.63
+  },
+  {
+   "scene": "tfidf",
+   "part": "parte02",
+   "a": 49.7,
+   "b": 90.48,
+   "at": 143.7
+  },
+  {
+   "scene": "pesos",
+   "part": "parte02",
+   "a": 90.48,
+   "b": 122.4,
+   "at": 185.85
+  },
+  {
+   "scene": "forward",
+   "part": "parte03",
+   "a": 0.0,
+   "b": 35.75,
+   "at": 218.92
+  },
+  {
+   "scene": "perda",
+   "part": "parte03",
+   "a": 35.75,
+   "b": 54.14,
+   "at": 255.9
+  },
+  {
+   "scene": "backprop",
+   "part": "parte03",
+   "a": 54.14,
+   "b": 97.36,
+   "at": 275.74
+  },
+  {
+   "scene": "adam",
+   "part": "parte04",
+   "a": 0.0,
+   "b": 32.59,
+   "at": 320.17
+  },
+  {
+   "scene": "teste",
+   "part": "parte04",
+   "a": 32.78,
+   "b": 56.46,
+   "at": 353.84
+  },
+  {
+   "scene": "honesto",
+   "part": "parte04",
+   "a": 56.46,
+   "b": 74.42,
+   "at": 378.97
+  },
+  {
+   "scene": "rodar",
+   "part": "parte04",
+   "a": 74.52,
+   "b": 81.96,
+   "at": 398.04
+  },
+  {
+   "scene": "outro",
+   "part": "parte04",
+   "a": 81.96,
+   "b": 89.36,
+   "at": 406.93
+  }
+ ],
+ "total": 415.01
+}
