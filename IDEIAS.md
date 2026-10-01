@@ -27,23 +27,25 @@ Série de posts no LinkedIn e vídeos no YouTube (@elucas.dev) mostrando aplica�
 - **Visual:** gif ou vídeo da rota começando embaralhada e ficando limpa geração a geração.
 - **Gancho:** "A mesma lógica que ensinou a cobrinha a jogar agora planeja rotas de entrega."
 
-#### 03 · Visão computacional no armazém: segurança e operação
-Mesmo cenário do 02 (armazém e logística), agora com câmera. Um modelo de visão enxerga o que as regras e as planilhas não enxergam.
+#### 03 · Pessoa em área de risco (visão computacional, sem treinar nada)
+Mesmo cenário do 02 (armazém e logística), agora com câmera. Versão simples: um modelo pronto que já sabe achar pessoas + uma regra de geometria.
 
-- **Segurança do trabalho (o que a empresa é obrigada a cumprir):**
-  - **Uso de EPI (NR-6):** a pessoa na área operacional está de capacete e colete refletivo? Alerta quando falta.
-  - **Pedestre em área de empilhadeira (NR-11):** pessoa dentro da zona de circulação de máquina, ou perto demais de uma empilhadeira em movimento.
-- **Operação (o que dá resultado no dia a dia):**
-  - **Ocupação das docas:** qual doca está livre, ocupada ou parada há muito tempo.
-  - **Contagem de paletes/caixas** numa área de espera, sem ninguém contar na mão.
+- **O que faz:** você desenha no chão da imagem a área de risco (o corredor da empilhadeira, a zona de uma máquina). O sistema marca cada pessoa no vídeo e avisa quando alguém entra na área.
+  - **Segurança do trabalho (obrigação legal):** separar pedestre de máquina em movimento (NR-11, movimentação de materiais; NR-12, zonas de perigo de máquinas).
+  - **Operação (o mesmo código, outra regra):** quantas pessoas há em cada área e por quanto tempo; doca ou corredor ocupado ou livre.
 - **Como:**
-  - Detecção de objetos (pessoa, capacete, colete, empilhadeira, palete) com um modelo pequeno pré-treinado, ajustado com poucas imagens próprias. Rodando local, sem mandar imagem para fora.
-  - As regras em cima da detecção são código simples: "pessoa sem capacete dentro do polígono da área operacional", "pessoa e empilhadeira a menos de X metros", "doca com palete há mais de N minutos".
-  - Dados: começar com datasets públicos de EPI e de armazém; depois, imagens próprias ou vídeo sintético.
-- **Por que aqui a IA faz sentido (ponte com o 02):** no 02, a matemática clássica ganhou porque o problema tinha fórmula. Aqui não existe fórmula para "isso é um capacete": o padrão está nos pixels, e é isso que uma rede aprende.
-- **Limitações para dizer com honestidade:** oclusão e ângulo de câmera, falso alarme, luz ruim; e a parte legal: câmera filma pessoas, então entra LGPD (finalidade, aviso, não identificar o rosto, guardar só o evento). A IA apoia a segurança do trabalho, não substitui o técnico de segurança nem o treinamento.
-- **Visual:** imagem da câmera com as caixas desenhadas (verde = ok, vermelho = sem EPI), a zona da empilhadeira como polígono no chão e um painel de eventos: "doca 3 livre", "pessoa sem capacete na área B".
-- **Gancho:** "A sua empresa já é obrigada a garantir o EPI e a separar gente de empilhadeira. E se a câmera que já está lá avisasse na hora?"
+  - Detector de pessoas já treinado (classe "pessoa" do COCO). Não precisa de dataset nem de treino.
+  - Regra: o ponto dos pés da pessoa (meio da base da caixa) está dentro do polígono? É conta de geometria, sem IA.
+  - Roda local, quadro a quadro, num vídeo.
+- **Material disponível na internet para simular e testar:**
+  - **Vídeos:** Pexels e Pixabay têm vídeos de armazém, empilhadeira e doca com licença livre (uso comercial, sem atribuição). Atenção: há pessoas identificáveis; para o vídeo do canal, preferir planos abertos ou borrar rostos.
+  - **Modelo:** torchvision (BSD) traz detectores pré-treinados no COCO (`ssdlite320_mobilenet_v3_large`, `fasterrcnn_mobilenet_v3_large_fpn`). Alternativa mais fácil de usar: Ultralytics YOLO, mas a licença é AGPL (ok para demo, exige cuidado em produto).
+  - **Para medir acerto:** COCO val2017 tem as caixas de pessoa anotadas (dá para calcular quantas pessoas o modelo acha e quantas inventa).
+- **Por que aqui a IA faz sentido (ponte com o 02):** não existe fórmula para "isso é uma pessoa". O padrão está nos pixels. Já "está dentro da área?" é geometria: a parte que tem fórmula continua sem IA.
+- **Limitações para dizer com honestidade:** pessoa encoberta ou longe da câmera, falso alarme, câmera baixa (os pés somem atrás de paletes); LGPD (finalidade, aviso, guardar só o evento, não identificar ninguém). Apoia o técnico de segurança, não substitui.
+- **Visual:** o vídeo com a área de risco desenhada no chão; caixas verdes fora, vermelhas dentro; contador de eventos e uma linha do tempo dos alertas.
+- **Gancho:** "A sua empresa já é obrigada a separar gente de empilhadeira. E se a câmera que já está lá avisasse na hora?"
+- **Depois (se quiser ir além):** detecção de EPI (capacete e colete, NR-6). Aí precisa treinar, e há datasets públicos prontos: Hard Hat Workers (Roboflow, 7.035 imagens, domínio público) e Safety Helmet Detection (Kaggle, 5.000 imagens). Também: empilhadeira (não existe no COCO), contagem de paletes.
 - **Era:** escala de turnos com algoritmo genético. Saiu porque o 02 já mostrou que otimização desse tipo se resolve melhor sem IA.
 
 ### Médias (2 a 3 dias)
@@ -65,7 +67,7 @@ Mesmo cenário do 02 (armazém e logística), agora com câmera. Um modelo de vi
 - Marca pedidos com quantidade, valor ou horário estranhos (fraude ou erro de digitação).
 - **Visual:** lista de pedidos passando, com os suspeitos piscando em vermelho.
 
-**Sequência sugerida da série:** 01 → 02 → 03 → 05 → 04 → 06 → 07 (01 e 02 feitos; o 03 fecha o trio do armazém)
+**Sequência sugerida da série:** 01 → 02 → 03 → 05 → 04 → 06 → 07 (01 e 02 feitos; o 03 fecha o trio do armazém, em versão simples: modelo pronto + regra)
 
 ---
 
