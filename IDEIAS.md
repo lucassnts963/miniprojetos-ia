@@ -48,6 +48,12 @@ Mesmo cenário do 02 (armazém e logística), agora com câmera. Versão simples
 - **Depois (se quiser ir além):** detecção de EPI (capacete e colete, NR-6). Aí precisa treinar, e há datasets públicos prontos: Hard Hat Workers (Roboflow, 7.035 imagens, domínio público) e Safety Helmet Detection (Kaggle, 5.000 imagens). Também: empilhadeira (não existe no COCO), contagem de paletes.
 - **Era:** escala de turnos com algoritmo genético. Saiu porque o 02 já mostrou que otimização desse tipo se resolve melhor sem IA.
 
+#### 04 · Espelho do trocador de calor: contar tubos, achar obstruídos e tamponados (em exploração)
+- **O que faz:** a partir de uma foto do espelho de um trocador casco e tubo, conta os tubos e separa aberto, obstruído e tamponado.
+- **Estado:** exploração com 2 fotos em `04-espelho-trocador/` (resultado e próximos passos no README de lá). Contar é viável numa foto de frente; tamponado é o padrão mais fácil; obstruído depende de fotos melhores e de exemplos rotulados.
+- **Como (proposta):** localizar os tubos (círculos + grade regular), recortar cada um e classificar o recorte com uma rede pequena. Cada foto rende cerca de mil recortes.
+- **Gancho:** "Quantas horas alguém passa contando tubo por tubo com uma lanterna na mão?"
+
 ### Médias (2 a 3 dias)
 
 #### 04 · Manutenção preditiva simulada

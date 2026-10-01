@@ -23,3 +23,7 @@ still_*.png
 # 03: vídeos de banco de imagens (a licença não deixa redistribuir soltos) e quadros com pessoas identificáveis
 03-area-de-risco/videos/
 03-area-de-risco/testes/
+
+# fotos e arquivos recebidos (podem ser de equipamento de terceiros): ficam só locais
+inbox/
+04-espelho-trocador/saida/
