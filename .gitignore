@@ -19,3 +19,7 @@ still_*.png
 02-rota-entregas/video/cache_mapa.npz
 02-rota-entregas/video/quadro_*.png
 */video/youtube/cache_render.json
+
+# 03: vídeos de banco de imagens (a licença não deixa redistribuir soltos) e quadros com pessoas identificáveis
+03-area-de-risco/videos/
+03-area-de-risco/testes/
