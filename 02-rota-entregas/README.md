@@ -65,3 +65,5 @@ Escolha a partida (ou clique no mapa), as cidades (capitais, estados ou o Brasil
 | `dados.py` | base do IBGE + auditor de coordenadas suspeitas |
 | `estradas.py` | matriz de distâncias e tempos pelas rodovias (modo estrada) |
 | `demo.py` + `painel/` | painel da bancada |
+| `tutorial/` | `rota_do_zero.py`: os cinco métodos num arquivo só, o código do vídeo "Nem tudo precisa de IA" |
+| `video/` | cenas do LinkedIn (`cenas_mapa.py`, `cena_picking.py`) e o vídeo do YouTube (`youtube/`) |

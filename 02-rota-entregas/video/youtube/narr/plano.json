@@ -1,0 +1,23 @@
+{
+ "_comentario": "cena, parte, âncora (primeiras palavras da fala da cena), duração mínima (s), cues {nome: frase}. Números falados casam com dígitos na transcrição.",
+ "cenas": [
+  ["hook", "parte01", "qual é a menor rota", 8.0, {"ia": "eu tentei com", "perdeu": "e ela perdeu"}],
+  ["titulo", "parte01", "nem tudo precisa de", 3.5, {}],
+  ["problema", "parte01", "esse é o problema", 8.0, {"testar": "é só testar", "explode": "só que com", "universo": "no meu computador"}],
+  ["dados", "parte01", "passo um os dados", 6.0, {"csv": "um csv com", "matriz": "a função matriz", "comp": "e a função comprimento"}],
+  ["bruta", "parte01", "passo dois a força", 6.0, {"perm": "gera todas as", "nove": "com nove cidades", "cresce": "mas cada cidade"}],
+  ["vizinho", "parte02", "passo três a ideia", 6.0, {"anda": "sai de belém", "saltos": "mas deixa as", "km": "treze mil trezentos"}],
+  ["doisopt", "parte02", "passo quatro consertar", 6.0, {"cruza": "quando dois trechos", "testa": "esse é o", "km": "caiu para"}],
+  ["genetico", "parte02", "passo cinco agora", 6.0, {"pop": "uma população de", "ox": "o detalhe está", "filho": "então o filho", "roda": "seiscentas gerações"}],
+  ["limites", "parte03", "e aqui aparecem", 6.0, {"l1": "primeira ele não", "doze": "rodei doze vezes", "l2": "segunda cada rodada", "l3": "terceira é lento", "l4": "quarta tem vários", "prova": "e nenhuma dessas"}],
+  ["exato", "parte03", "passo seis a matemática", 6.0, {"var": "cada ligação entre", "grau": "a regra é", "r1": "e ela vem errada", "proibe": "então a gente proíbe", "r2": "três circuitos", "piso": "repara que o custo", "prova": "quando o piso", "dfj": "dantzig"}],
+  ["placar", "parte03", "o placar", 6.0, {"nn": "vizinho mais próximo rápido", "opt": "dois-opt rápido", "ga": "genético lento", "ex": "exato doze mil"}],
+  ["escala", "parte04", "mas o método exato", 6.0, {"pb": "provei o ótimo", "pr": "o paraná com", "br": "para os mais de", "heur": "aí entra a", "cal": "e nos estados"}],
+  ["estrada", "parte04", "e o maior ganho", 6.0, {"reta": "até aqui a distância", "troca": "quando troquei", "plano": "e planejar direto", "dado": "o dado certo"}],
+  ["quando_ia", "parte04", "então quando usar", 6.0, {"sem": "quando não existe", "ex": "ler um chamado", "aqui": "aqui o objetivo", "pede": "problema assim pede"}],
+  ["armazem", "parte04", "e isso sai do mapa", 6.0, {}],
+  ["rodar", "parte04", "para rodar", 5.0, {}],
+  ["outro", "parte04", "no próximo vídeo", 6.0, {}]
+ ],
+ "musicas": ["tranquil_mindscape.mp3", "lucid.mp3"]
+}

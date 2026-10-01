@@ -11,7 +11,7 @@ Série de posts no LinkedIn e vídeos no YouTube (@elucas.dev) mostrando aplica�
 
 ### ⭐ Rápidas (1 dia ou menos)
 
-#### 01 · Triagem automática de ordens de manutenção ← começar por aqui
+#### 01 · Triagem automática de ordens de manutenção (feito: `01-triagem-manutencao/`)
 - **O que faz:** recebe o texto do chamado ("vazamento de óleo na prensa") e devolve a **equipe** (mecânica, elétrica, instrumentação, automação) e a **prioridade** (urgente, alta, média, baixa).
 - **Como:**
   - Gerar ~300 frases de exemplo uma única vez (com uma LLM ou à mão).
@@ -21,16 +21,30 @@ Série de posts no LinkedIn e vídeos no YouTube (@elucas.dev) mostrando aplica�
 - **Gancho:** "Paguei a LLM uma vez para gerar exemplos. Agora classifico chamados sem pagar nada por chamado."
 - **Por que primeiro:** fecha a história do post da cobrinha, que já citava ordens de manutenção.
 
-#### 02 · Otimizador de rota de entregas (algoritmo genético)
+#### 02 · Menor rota pelas cidades (feito: `02-rota-entregas/`)
 - **O que faz:** recebe de 20 a 30 pontos num mapa e acha a melhor ordem de visita (problema do caixeiro-viajante).
 - **Como:** o mesmo GA da cobrinha (seleção, crossover, mutação), mas cada indivíduo é uma rota. Usar crossover do tipo OX ou PMX, porque a rota é uma permutação.
 - **Visual:** gif ou vídeo da rota começando embaralhada e ficando limpa geração a geração.
 - **Gancho:** "A mesma lógica que ensinou a cobrinha a jogar agora planeja rotas de entrega."
 
-#### 03 · Escala de turnos (algoritmo genético)
-- **O que faz:** monta a escala semanal de uma equipe respeitando folgas, turnos e ao menos um eletricista por turno.
-- **Visual:** grade da escala com conflitos em vermelho, ficando verde a cada geração.
-- **Gancho:** "Quanto tempo a sua liderança gasta montando escala todo mês?"
+#### 03 · Visão computacional no armazém: segurança e operação
+Mesmo cenário do 02 (armazém e logística), agora com câmera. Um modelo de visão enxerga o que as regras e as planilhas não enxergam.
+
+- **Segurança do trabalho (o que a empresa é obrigada a cumprir):**
+  - **Uso de EPI (NR-6):** a pessoa na área operacional está de capacete e colete refletivo? Alerta quando falta.
+  - **Pedestre em área de empilhadeira (NR-11):** pessoa dentro da zona de circulação de máquina, ou perto demais de uma empilhadeira em movimento.
+- **Operação (o que dá resultado no dia a dia):**
+  - **Ocupação das docas:** qual doca está livre, ocupada ou parada há muito tempo.
+  - **Contagem de paletes/caixas** numa área de espera, sem ninguém contar na mão.
+- **Como:**
+  - Detecção de objetos (pessoa, capacete, colete, empilhadeira, palete) com um modelo pequeno pré-treinado, ajustado com poucas imagens próprias. Rodando local, sem mandar imagem para fora.
+  - As regras em cima da detecção são código simples: "pessoa sem capacete dentro do polígono da área operacional", "pessoa e empilhadeira a menos de X metros", "doca com palete há mais de N minutos".
+  - Dados: começar com datasets públicos de EPI e de armazém; depois, imagens próprias ou vídeo sintético.
+- **Por que aqui a IA faz sentido (ponte com o 02):** no 02, a matemática clássica ganhou porque o problema tinha fórmula. Aqui não existe fórmula para "isso é um capacete": o padrão está nos pixels, e é isso que uma rede aprende.
+- **Limitações para dizer com honestidade:** oclusão e ângulo de câmera, falso alarme, luz ruim; e a parte legal: câmera filma pessoas, então entra LGPD (finalidade, aviso, não identificar o rosto, guardar só o evento). A IA apoia a segurança do trabalho, não substitui o técnico de segurança nem o treinamento.
+- **Visual:** imagem da câmera com as caixas desenhadas (verde = ok, vermelho = sem EPI), a zona da empilhadeira como polígono no chão e um painel de eventos: "doca 3 livre", "pessoa sem capacete na área B".
+- **Gancho:** "A sua empresa já é obrigada a garantir o EPI e a separar gente de empilhadeira. E se a câmera que já está lá avisasse na hora?"
+- **Era:** escala de turnos com algoritmo genético. Saiu porque o 02 já mostrou que otimização desse tipo se resolve melhor sem IA.
 
 ### Médias (2 a 3 dias)
 
@@ -51,7 +65,7 @@ Série de posts no LinkedIn e vídeos no YouTube (@elucas.dev) mostrando aplica�
 - Marca pedidos com quantidade, valor ou horário estranhos (fraude ou erro de digitação).
 - **Visual:** lista de pedidos passando, com os suspeitos piscando em vermelho.
 
-**Sequência sugerida da série:** 01 → 02 → 05 → 04 → 03 → 06 → 07
+**Sequência sugerida da série:** 01 → 02 → 03 → 05 → 04 → 06 → 07 (01 e 02 feitos; o 03 fecha o trio do armazém)
 
 ---
 
