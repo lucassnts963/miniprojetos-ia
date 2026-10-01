@@ -8,6 +8,7 @@ Série do [@elucas.dev](https://youtube.com/@elucas.dev) mostrando aplicações 
 | 02 | [Menor rota pelas cidades](02-rota-entregas/) | ordem de visita de todos os municípios (ou de alguns estados) pela menor distância: heurística para milhares de cidades, ótimo comprovado para centenas, distância pelas rodovias e o algoritmo genético da cobrinha. Inclui o [tutorial "nem tudo precisa de IA"](02-rota-entregas/tutorial/). |
 | 03 | [Pessoa em área de risco](03-area-de-risco/) | visão computacional com um detector pronto: avisa quando alguém entra numa área desenhada na imagem (em andamento). |
 | 04 | [Espelho do trocador](04-espelho-trocador/) | conta os tubos numa foto do espelho e separa aberto, obstruído e tamponado; com painel para corrigir e rotular (em exploração). |
+| 05 | [Carro autônomo](05-carro-autonomo/) | uma rede neural pequena aprende a dirigir sozinha numa pista, por neuroevolução. Roda no [mundo simulado](mundo/), um motor 2D reaproveitável (paredes, obstáculos, sensores e colisão). |
 
 Ideias e regras da série: [IDEIAS.md](IDEIAS.md).
 

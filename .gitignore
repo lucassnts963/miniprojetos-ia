@@ -29,3 +29,6 @@ inbox/
 04-espelho-trocador/saida/
 04-espelho-trocador/fotos/
 04-espelho-trocador/rotulos/
+
+# cérebro treinado do carro (gerado por treinar.py ou pelo painel)
+05-carro-autonomo/cerebro.npz

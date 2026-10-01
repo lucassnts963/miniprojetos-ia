@@ -1,0 +1,63 @@
+/* o atributo hidden vence o display dos blocos abaixo */
+.ca [hidden] { display: none !important; }
+
+.ca {
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas: "ctrl tela tela" "ctrl stats rede";
+  gap: 16px;
+  max-width: 1500px;
+  align-items: start;
+}
+.ca .ctrl { grid-area: ctrl; display: flex; flex-direction: column; gap: 8px; }
+.ca .tela { grid-area: tela; min-width: 0; }
+.ca .stats { grid-area: stats; min-width: 0; }
+.ca .rede { grid-area: rede; min-width: 0; }
+
+.ca h1 { margin: 0; color: var(--fg); font-size: 21px; font-weight: 600; letter-spacing: -0.015em; }
+.ca .ctrl .dica { margin: 0; }
+.ca .ctrl .rot { margin-top: 10px; }
+.ca select { width: 100%; min-width: 0; }
+.ca .linha { display: flex; align-items: center; gap: 8px; }
+.ca .ctrl .linha .dica { flex: 0 0 62px; white-space: nowrap; }
+.ca input[type="range"] { flex: 1; min-width: 0; accent-color: var(--red); }
+.ca .ms { font: 12px var(--mono); color: var(--mute); min-width: 40px; text-align: right; white-space: nowrap; }
+.ca #ca-evoluir { margin-top: 8px; padding: 11px; font-size: 15px; }
+.ca .acoes .btn, .ca .ctrl > .btn.sec { flex: 1; font-size: 13px; padding: 8px 6px; }
+.ca #ca-testar { flex: 0 0 auto; font-size: 13px; padding: 8px 14px; }
+.ca .check { display: flex; gap: 6px; align-items: center; font-size: 13px; color: var(--body); cursor: pointer; }
+.ca .check input { accent-color: var(--red); }
+.ca .status { font-size: 13px; color: var(--mute); min-height: 18px; }
+.ca .status.erro { color: var(--red-soft); }
+.ca .status.ok { color: #7ee2a0; }
+.ca .spin {
+  display: inline-block; width: 12px; height: 12px; border: 2px solid var(--line); border-top-color: var(--red);
+  border-radius: 50%; animation: ca-gira 0.8s linear infinite; vertical-align: -2px; margin-right: 6px;
+}
+@keyframes ca-gira { to { transform: rotate(360deg); } }
+
+.ca .seg { display: inline-flex; background: var(--ink); border: 1px solid var(--line); border-radius: 9px; padding: 3px; }
+.ca .seg button { flex: 1; background: none; border: 0; padding: 6px 10px; border-radius: 7px; color: var(--mute); cursor: pointer; font-size: 13px; }
+.ca .seg button.on { background: var(--card-2); color: var(--fg); }
+
+.ca .tela .c-topo { align-items: center; gap: 12px; }
+.ca .tela .c-topo .dica { flex: 1; min-width: 120px; font: 12px var(--mono); }
+.ca #ca-pular { font-size: 13px; padding: 6px 12px; }
+.ca #ca-mundo { display: block; width: 100%; box-sizing: border-box; background: rgba(0, 0, 0, 0.25); border-radius: 10px; border: 1px solid var(--line); }
+
+.ca .kpis { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 0 0 12px; align-items: flex-end; }
+.ca .kpi { display: flex; flex-direction: column; }
+.ca .kpi b { color: var(--fg); font: 600 22px var(--mono); }
+.ca .kpi.grande b { font-size: 30px; }
+.ca .kpi span { color: var(--mute); font-size: 12px; }
+.ca #ca-grafico, .ca #ca-rede { display: block; width: 100%; margin-top: 8px; }
+.ca #ca-grafico { height: 130px; }
+.ca #ca-rede { height: 250px; }
+.ca .leg { margin: 8px 0 0; font-size: 12px; }
+.ca .leg i { display: inline-block; width: 14px; height: 3px; border-radius: 2px; vertical-align: middle; margin: 0 5px 0 0; }
+.ca .leg .l1 { background: var(--red); }
+.ca .leg .l2 { background: #6b7385; margin-left: 12px; }
+
+@media (max-width: 1100px) {
+  .ca { grid-template-columns: minmax(0, 1fr); grid-template-areas: "tela" "ctrl" "stats" "rede"; }
+}

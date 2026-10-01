@@ -54,26 +54,32 @@ Mesmo cenário do 02 (armazém e logística), agora com câmera. Versão simples
 - **Como (proposta):** localizar os tubos (círculos + grade regular), recortar cada um e classificar o recorte com uma rede pequena. Cada foto rende cerca de mil recortes.
 - **Gancho:** "Quantas horas alguém passa contando tubo por tubo com uma lanterna na mão?"
 
+#### 05 · Carro autônomo no mundo simulado (feito: `05-carro-autonomo/` + `mundo/`)
+- **O que faz:** uma população de redes neurais pequenas aprende a dirigir um carro numa pista, sem ninguém ensinar: os carros que vão mais longe deixam filhos (o mesmo princípio da cobrinha).
+- **Mundo simulado:** `mundo/` é um motor 2D simples (paredes, obstáculos, sensores de distância, colisão), feito para ser reaproveitado. Próximos usos possíveis: empilhadeira ou AGV num armazém, robô desviando de pessoas, braço ou esteira.
+- **Visual:** a pista vista de cima, a população inteira correndo, os sensores do líder e a rede acendendo.
+- **Gancho:** o mesmo raciocínio serve para AGV, empilhadeira autônoma e robô de limpeza: treinar no simulado antes de arriscar o equipamento de verdade.
+
 ### Médias (2 a 3 dias)
 
-#### 04 · Manutenção preditiva simulada
+#### 06 · Manutenção preditiva simulada
 - Simular vibração e temperatura de um motor. Uma rede pequena aprende a avisar **antes** da falha.
 - **Visual:** gráfico ao vivo com o alerta acendendo antes da quebra.
 
-#### 05 · Roteador de LLM (modelo pequeno antes da API)
+#### 07 · Roteador de LLM (modelo pequeno antes da API)
 - Um classificador decide se a pergunta é simples (ele mesmo responde) ou complexa (vai para o ChatGPT ou o Claude).
 - **Visual:** contador de custo, "tudo na LLM" contra "roteado".
 - É o argumento de custo do post da cobrinha, provado na prática.
 
-#### 06 · Previsão de demanda para reposição de estoque
+#### 08 · Previsão de demanda para reposição de estoque
 - Uma rede pequena prevê a venda da próxima semana e sugere o ponto de reposição.
 - **Visual:** curva prevista contra a real, com a reposição marcada.
 
-#### 07 · Detector de pedido fora do padrão
+#### 09 · Detector de pedido fora do padrão
 - Marca pedidos com quantidade, valor ou horário estranhos (fraude ou erro de digitação).
 - **Visual:** lista de pedidos passando, com os suspeitos piscando em vermelho.
 
-**Sequência sugerida da série:** 01 → 02 → 03 → 05 → 04 → 06 → 07 (01 e 02 feitos; o 03 fecha o trio do armazém, em versão simples: modelo pronto + regra)
+**Sequência sugerida da série:** 01 → 02 → 03 → 04 → 05 → 07 → 06 → 08 → 09 (01 e 02 feitos; 05 com código e painel prontos; o 03 fecha o trio do armazém, em versão simples: modelo pronto + regra)
 
 ---
 
