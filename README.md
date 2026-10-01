@@ -6,6 +6,7 @@ Série do [@elucas.dev](https://youtube.com/@elucas.dev) mostrando aplicações 
 |---|---|---|
 | 01 | [Triagem de ordens de manutenção](01-triagem-manutencao/) | lê o texto do chamado e decide a equipe e a prioridade, explicando o porquê. Rede neural em NumPy puro. Inclui o [tutorial do zero](01-triagem-manutencao/tutorial/) do vídeo. |
 | 02 | [Menor rota pelas cidades](02-rota-entregas/) | ordem de visita de todos os municípios (ou de alguns estados) pela menor distância: heurística para milhares de cidades, ótimo comprovado para centenas, distância pelas rodovias e o algoritmo genético da cobrinha. Inclui o [tutorial "nem tudo precisa de IA"](02-rota-entregas/tutorial/). |
+| 03 | [Pessoa em área de risco](03-area-de-risco/) | visão computacional com um detector pronto: avisa quando alguém entra numa área desenhada na imagem (em andamento). |
 
 Ideias e regras da série: [IDEIAS.md](IDEIAS.md).
 

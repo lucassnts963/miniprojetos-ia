@@ -1,0 +1,64 @@
+/* o atributo hidden vence o display dos blocos abaixo */
+.ar [hidden] { display: none !important; }
+
+.ar {
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1fr);
+  grid-template-areas: "ctrl tela" "stats tela";
+  grid-template-rows: auto 1fr;
+  gap: 16px;
+  max-width: 1400px;
+  align-items: start;
+}
+.ar .ctrl { grid-area: ctrl; display: flex; flex-direction: column; gap: 9px; }
+.ar .tela { grid-area: tela; }
+.ar .stats { grid-area: stats; }
+
+.ar h1 { margin: 0; color: var(--fg); font-size: 21px; font-weight: 600; letter-spacing: -0.015em; }
+.ar .ctrl .dica { margin: 0; }
+.ar .ctrl .rot { margin-top: 8px; }
+.ar select { width: 100%; }
+.ar .linha select { flex: 1; width: auto; }
+.ar .seg { display: flex; background: var(--ink); border: 1px solid var(--line); border-radius: 9px; padding: 3px; }
+.ar .seg button { flex: 1; background: none; border: 0; padding: 7px 8px; border-radius: 7px; color: var(--mute); cursor: pointer; font-size: 13px; }
+.ar .seg button.on { background: var(--card-2); color: var(--fg); }
+.ar .linha { display: flex; align-items: center; gap: 8px; }
+.ar .linha .rot { margin: 0; white-space: nowrap; }
+.ar .linha .dica { white-space: nowrap; }
+.ar .linha .btn { flex: 1; padding: 7px 6px; font-size: 13px; }
+.ar .btn.ativo { background: var(--red); color: #fff; border-color: transparent; }
+.ar input[type="range"] { flex: 1; min-width: 0; accent-color: var(--red); }
+.ar .ms { font: 12px var(--mono); color: var(--mute); min-width: 40px; text-align: right; white-space: nowrap; }
+.ar .ms b { color: var(--red-soft); font-weight: 500; }
+.ar #ar-analisar { margin-top: 6px; padding: 11px; font-size: 15px; }
+.ar .status { font-size: 13px; color: var(--mute); min-height: 18px; }
+.ar .status.erro { color: var(--red-soft); }
+.ar .spin {
+  display: inline-block; width: 12px; height: 12px; border: 2px solid var(--line); border-top-color: var(--red);
+  border-radius: 50%; animation: ar-gira 0.8s linear infinite; vertical-align: -2px; margin-right: 6px;
+}
+@keyframes ar-gira { to { transform: rotate(360deg); } }
+
+.ar .palco { display: flex; justify-content: center; background: rgba(0, 0, 0, 0.25); border-radius: 10px; overflow: hidden; min-height: 240px; }
+.ar #ar-canvas { display: block; cursor: default; }
+.ar .transporte { margin-top: 12px; }
+.ar .transporte .btn { flex: 0 0 44px; padding: 7px 0; }
+.ar #ar-linha { display: block; width: 100%; height: 64px; margin-top: 10px; border-radius: 8px; background: rgba(0, 0, 0, 0.18); cursor: pointer; }
+
+.ar .kpis { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 10px 0 14px; }
+.ar .kpi { display: flex; flex-direction: column; }
+.ar .kpi b { color: var(--fg); font: 600 24px var(--mono); }
+.ar .kpi.alerta b { color: var(--red-soft); }
+.ar .kpi span { color: var(--mute); font-size: 12px; max-width: 170px; }
+.ar .eventos { display: flex; flex-wrap: wrap; gap: 6px; }
+.ar .eventos button {
+  background: rgba(229, 72, 77, 0.12); border: 1px solid rgba(229, 72, 77, 0.3); color: var(--red-soft); border-radius: 7px;
+  padding: 5px 9px; cursor: pointer; font: 500 12px var(--mono);
+}
+.ar .eventos button em { font-style: normal; color: var(--body); margin-left: 7px; }
+.ar .eventos button:hover { background: rgba(229, 72, 77, 0.2); }
+.ar .limite { margin: 14px 0 0; padding-top: 12px; border-top: 1px solid var(--line); font-size: 12px; }
+
+@media (max-width: 900px) {
+  .ar { grid-template-columns: minmax(0, 1fr); grid-template-areas: "ctrl" "tela" "stats"; grid-template-rows: none; }
+}

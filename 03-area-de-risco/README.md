@@ -2,7 +2,7 @@
 
 Um detector de pessoas pronto (pré-treinado, nada é treinado aqui) mais uma regra de geometria: avisar quando alguém entra numa área de risco desenhada no chão da imagem, como o corredor de uma empilhadeira (NR-11) ou a zona de uma máquina (NR-12). O mesmo código, com outra regra, conta pessoas por área.
 
-**Estado:** primeiro teste feito (os detectores nos vídeos). Falta a regra da área, o painel na bancada e os vídeos.
+**Estado:** detector testado nos vídeos, regra da área e painel na bancada prontos. Faltam os vídeos (LinkedIn e YouTube) e uma medição com gabarito.
 
 ## Como rodar
 ```bash
@@ -12,6 +12,16 @@ venv\Scripts\python baixar_videos.py       # 3 vídeos de teste (ficam fora do g
 venv\Scripts\python testar_detectores.py   # quadros anotados em testes/
 ```
 Nesta máquina, o `venv` reaproveita o PyTorch com GPU de `C:\dev\venv` (arquivo `venv_geral.pth`) e instala só `torchvision==0.26.0` (com `--no-deps`) e o OpenCV.
+
+## Testar ao vivo
+```bash
+python ../bancada/servidor.py   # http://127.0.0.1:8765, projeto 03
+```
+Escolha o vídeo e o modelo, desenhe a área de risco clicando na imagem (ou use a de exemplo) e veja as pessoas em verde (fora) ou vermelho (dentro). "Analisar o vídeo" percorre o vídeo inteiro e mostra a linha do tempo e a lista de alertas; o botão ▶ reproduz os quadros analisados.
+
+- **A regra:** vale o ponto dos pés (o meio da base da caixa). Se ele cai dentro do polígono, a pessoa está na área. É geometria, sem IA.
+- **Contra falso alarme:** o alerta só dispara depois de alguns quadros seguidos com gente na área.
+- **Câmera fixa:** a área é desenhada na imagem, então só vale para câmera parada. Os vídeos de banco de imagens têm movimento de câmera: neles a área sai do lugar ao longo do vídeo, o que numa câmera de segurança real não acontece.
 
 ## Primeiro teste: o que os detectores prontos acertam e erram
 Três modelos do torchvision pré-treinados no COCO, confiança mínima de 0,5, 12 quadros espalhados por vídeo, GPU MX570.
@@ -40,3 +50,4 @@ Os números de quantas pessoas existem de verdade em cada quadro ainda não fora
 | `detector.py` | carrega o modelo pronto e devolve as caixas das pessoas num quadro |
 | `baixar_videos.py` | baixa os vídeos de teste (Pexels e Mixkit, licença livre) |
 | `testar_detectores.py` | o teste acima |
+| `demo.py` + `painel/` | painel da bancada: quadro com detecções, área de risco, análise do vídeo e alertas |
