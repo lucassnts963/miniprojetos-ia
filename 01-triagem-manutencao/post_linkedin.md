@@ -2,6 +2,8 @@
 
 Vídeo de 50 s: a cena animada (visão geral e escala) seguida do painel da bancada em uso (por dentro, sem caixa-preta). Gerado juntando `video/cena_triagem.mp4` + `video/painel_triagem_continua.mp4` (`python video/gravar_painel.py --juntar`).
 
+Miniatura: `video/miniatura_linkedin.png` (quadro aos 13,2 s do vídeo): um chamado sendo decidido, com a equipe, a prioridade e o porquê, a lista de chamados já triados e as filas das equipes. É o quadro que responde à pergunta de abertura (quem vai atender e o que é mais urgente).
+
 Quanto tempo a sua equipe perde lendo chamado por chamado só para decidir quem vai atender e o que é mais urgente?
 
 No meu último post, mostrei uma IA aprendendo sozinha a jogar o jogo da cobrinha. 🐍 E deixei uma promessa no ar: o mesmo princípio serve para triar ordens de manutenção.

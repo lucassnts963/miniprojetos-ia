@@ -2,6 +2,8 @@
 
 Vídeo de 54 s, com trilha lo-fi: o método (rotas evoluindo e a melhor rota com prova) → o dado certo (mapa x estrada, Brasil inteiro) → na prática (separação de pedidos no armazém).
 
+Miniatura: `video/miniatura_linkedin.png` (quadro aos 45 s do vídeo): os dois armazéns, com a rota otimizada já em "pedido separado" e a outra ainda andando, e as barras de caminhada. É o quadro que responde à pergunta de abertura (rodando mais do que precisava).
+
 Quanto a sua operação gasta por dia rodando mais do que precisava?
 
 Entregas, visitas técnicas, rotas de vendedores, coleta de amostras, manutenção em campo. Toda empresa que coloca gente na estrada enfrenta a mesma pergunta: em que ordem visitar cada lugar para rodar o mínimo possível?
