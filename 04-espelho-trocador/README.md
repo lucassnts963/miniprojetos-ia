@@ -5,9 +5,21 @@ Ideia: a partir de uma foto do espelho de um trocador casco e tubo, contar os tu
 **Estado:** exploração com 2 fotos e visão clássica (OpenCV, sem treinar nada). Serve para saber até onde o caminho simples vai e o que pedir das próximas fotos. As fotos e as saídas ficam fora do git.
 
 ```bash
-python explorar.py "caminho/da/foto.jpeg" raio_min raio_max   # raios em pixels
+venv\Scripts\python explorar.py "caminho/da/foto.jpeg" raio_min raio_max   # raios em pixels
 # foto de cima (1200x1600):  8 16      foto em ângulo (1600x1204): 10 22
 ```
+
+## Testar ao vivo
+```bash
+python ../bancada/servidor.py   # http://127.0.0.1:8765, projeto 04
+```
+O painel lê as fotos de `inbox/` e de `04-espelho-trocador/fotos/` (dá para enviar outras pelo próprio painel).
+
+- **Detectar:** ajuste o tamanho do tubo na foto (raio mínimo e máximo, em pixels), a exigência da detecção, o filtro de vizinhos e os limites de brilho da classificação. Os ajustes ficam guardados por foto.
+- **Corrigir:** clique num tubo para trocar a classe (aberto → obstruído → tamponado), clique no vazio para criar um tubo, botão direito para remover. Zoom de 1× a 3×.
+- **Salvar rótulos:** grava o que você conferiu em `rotulos/` (fora do git). É o gabarito que falta para medir o acerto e, depois, treinar um classificador de recortes.
+
+O projeto usa um `venv/` próprio com OpenCV; a bancada escolhe esse Python sozinha.
 
 ## O que foi testado
 1. **Achar os tubos:** círculos de Hough, com a iluminação igualada (CLAHE).
@@ -33,7 +45,7 @@ A conferência foi visual, em recortes ampliados (`saida/`). Não existe gabarit
 ## Caminho proposto
 1. **Localizar** os tubos: círculos + ajuste da grade (clássico). Se não bastar, um detector treinado.
 2. **Recortar** cada tubo e **classificar o recorte** em aberto / obstruído / tamponado com uma rede pequena. Cada foto rende cerca de mil recortes, então poucas fotos já dão um conjunto de treino razoável.
-3. **Rotular:** uma tela na bancada para clicar nos tubos e marcar a classe (o método atual já deixa os tamponados pré-marcados para conferir).
+3. **Rotular:** já dá para fazer no painel (modo Corrigir). O método atual deixa os tubos pré-marcados para você conferir.
 
 ## O que pedir das próximas fotos
 - **De frente**, com a câmera perpendicular ao espelho e o espelho inteiro no quadro.

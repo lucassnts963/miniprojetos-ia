@@ -1,0 +1,58 @@
+/* o atributo hidden vence o display dos blocos abaixo */
+.et [hidden] { display: none !important; }
+
+.et {
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1fr);
+  grid-template-areas: "ctrl tela" "stats tela";
+  grid-template-rows: auto 1fr;
+  gap: 16px;
+  max-width: 1500px;
+  align-items: start;
+}
+.et .ctrl { grid-area: ctrl; display: flex; flex-direction: column; gap: 8px; }
+.et .tela { grid-area: tela; min-width: 0; }
+.et .stats { grid-area: stats; }
+
+.et h1 { margin: 0; color: var(--fg); font-size: 21px; font-weight: 600; letter-spacing: -0.015em; }
+.et .ctrl .dica { margin: 0; }
+.et .ctrl .rot { margin-top: 10px; }
+.et select { width: 100%; }
+.et .envio { text-align: center; cursor: pointer; font-size: 13px; padding: 7px; }
+.et .linha { display: flex; align-items: center; gap: 8px; }
+.et .linha .dica { flex: 0 0 74px; white-space: nowrap; cursor: help; }
+.et input[type="range"] { flex: 1; min-width: 0; accent-color: var(--red); }
+.et .ms { font: 12px var(--mono); color: var(--mute); min-width: 44px; text-align: right; white-space: nowrap; }
+.et #et-detectar { margin-top: 10px; padding: 11px; font-size: 15px; }
+.et .status { font-size: 13px; color: var(--mute); min-height: 18px; }
+.et .status.erro { color: var(--red-soft); }
+.et .status.ok { color: #7ee2a0; }
+.et .spin {
+  display: inline-block; width: 12px; height: 12px; border: 2px solid var(--line); border-top-color: var(--red);
+  border-radius: 50%; animation: et-gira 0.8s linear infinite; vertical-align: -2px; margin-right: 6px;
+}
+@keyframes et-gira { to { transform: rotate(360deg); } }
+
+.et .seg { display: inline-flex; background: var(--ink); border: 1px solid var(--line); border-radius: 9px; padding: 3px; }
+.et .seg button { background: none; border: 0; padding: 6px 12px; border-radius: 7px; color: var(--mute); cursor: pointer; font-size: 13px; }
+.et .seg button.on { background: var(--card-2); color: var(--fg); }
+.et .tela .c-topo { align-items: center; }
+.et .tela .c-topo .dica { flex: 1; min-width: 120px; font-size: 12px; }
+.et .zoom { gap: 12px; }
+.et .check { display: flex; gap: 6px; align-items: center; font-size: 13px; color: var(--body); cursor: pointer; white-space: nowrap; }
+.et .check input { accent-color: var(--red); }
+.et .palco { overflow: auto; max-height: 78vh; background: rgba(0, 0, 0, 0.25); border-radius: 10px; border: 1px solid var(--line); }
+.et #et-canvas { display: block; margin: 0 auto; }
+
+.et .kpis { display: flex; flex-wrap: wrap; gap: 10px 20px; margin: 10px 0 12px; }
+.et .kpi { display: flex; flex-direction: column; }
+.et .kpi b { color: var(--fg); font: 600 22px var(--mono); }
+.et .kpi.grande b { font-size: 30px; }
+.et .kpi span { color: var(--mute); font-size: 12px; }
+.et .acoes { margin-top: 6px; }
+.et .acoes .btn { flex: 1; font-size: 13px; padding: 8px 6px; }
+.et .limite { margin: 14px 0 0; padding-top: 12px; border-top: 1px solid var(--line); font-size: 12px; }
+
+@media (max-width: 900px) {
+  .et { grid-template-columns: minmax(0, 1fr); grid-template-areas: "ctrl" "tela" "stats"; grid-template-rows: none; }
+}

@@ -56,19 +56,19 @@ def medir_interior(img, circulos):
     return np.array(medidas)
 
 
-def classificar(medidas):
-    """Regras simples em cima do brilho e da saturação, relativas à própria foto.
+def classificar(medidas, p_escuro=55, p_claro=93, p_saturacao=45):
+    """Regras simples em cima do brilho e da saturação, relativas à própria foto (percentis).
 
     aberto: miolo escuro (dá para ver o fundo do tubo);
     tamponado: miolo claro e pouco saturado (disco de metal liso);
     obstruído: o resto (miolo de brilho médio, cor de depósito).
     """
+    classes = np.full(len(medidas), "obstruido", dtype=object)
+    if not len(medidas):
+        return classes
     v, s = medidas[:, 0], medidas[:, 1]
-    escuro = np.percentile(v, 55)
-    claro = np.percentile(v, 93)
-    classes = np.full(len(v), "obstruido", dtype=object)
-    classes[v <= escuro] = "aberto"
-    classes[(v >= claro) & (s < np.percentile(s, 45))] = "tamponado"
+    classes[v <= np.percentile(v, p_escuro)] = "aberto"
+    classes[(v >= np.percentile(v, p_claro)) & (s < np.percentile(s, p_saturacao))] = "tamponado"
     return classes
 
 
