@@ -1,11 +1,11 @@
 # Post LinkedIn: "IA sem mistério", parte 1 (terça 06/10, vai com o carrossel)
 
-**Carrossel:** `carrossel/01.png` a `08.png` (1080x1350), `carrossel.pdf` e `panorama.png`. Escrito para quem nunca ouviu falar do assunto. Para refazer: `python carrossel/carrossel.py`.
+**Carrossel:** `parte1/01.png` a `08.png` (1080x1350), `carrossel.pdf` e `panorama.png`. Escrito para quem nunca ouviu falar do assunto. Para refazer: `python posts/serie_ia/parte1.py`. **Já agendado no LinkedIn:** não refazer as imagens sem necessidade.
 - Quadros: capa → o teclado do celular → adivinhar a próxima palavra → escolhe uma e repete → de onde vêm os palpites → o cuidado (ela escreve na hora, pode errar) → na prática → fechamento.
 - No rodapé, uma frase só atravessa os 8 quadros, palavra por palavra: "Uma IA que escreve é uma máquina que adivinha a próxima palavra, uma de cada vez, até o texto ficar pronto." É a explicação e o exemplo ao mesmo tempo.
 - Poste as 8 imagens na ordem, para o efeito contínuo.
 
-**Vídeo (versão anterior, não usada no post):** `video/linkedin_completar.mp4`. Fica guardado; a ideia pode virar o vídeo do YouTube.
+**Vídeo (versão anterior, não usada no post):** `06-completar-texto/video/linkedin_completar.mp4`. Fica guardado; a ideia pode virar o vídeo do YouTube.
 
 Você já pediu algo para uma IA e recebeu uma resposta genérica, que servia para qualquer empresa menos para a sua?
 

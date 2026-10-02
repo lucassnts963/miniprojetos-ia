@@ -73,7 +73,7 @@ Cada post entrega: texto (`posts/serie_llm/epNN.md`), a peça visual, a legenda 
 | Dia | Parte | Situação | Onde está |
 |---|---|---|---|
 | seg 05/10 | Base de conhecimento viva (carrossel) | agendado | `posts/carrossel_llm_wiki/` |
-| ter 06/10 | 1 · Como a IA escreve um texto | **agendado** | `06-completar-texto/post_linkedin.md` + `carrossel/` |
+| ter 06/10 | 1 · Como a IA escreve um texto | **agendado** | `posts/serie_ia/parte1.md` + `parte1/` |
 | qua 07/10 | 2 · Por que a IA erra contas (ela lê pedaços) | pronto para agendar | `posts/serie_ia/parte2.md` + `parte2/` |
 | qui 08/10 | 3 · Por que ela esquece o que você disse (só vê a conversa) | pronto, aguardando aprovação | `posts/serie_ia/parte3.md` + `parte3/` |
 | sex 09/10 | 4 · Como ela decide o que importa (atenção) | pronto, aguardando aprovação | `posts/serie_ia/parte4.md` + `parte4/` |
