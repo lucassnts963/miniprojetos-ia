@@ -4,7 +4,9 @@ Post fora da numeração dos miniprojetos: não tem código nem painel, é um m�
 
 **Carrossel:** `carrossel_llm_wiki/01.png` a `08.png` (1080x1350), mais `carrossel.pdf` e `panorama.png`. É um painel contínuo cortado em 8: a linha vermelha e as ilustrações atravessam as emendas. Para refazer: `python posts/carrossel_llm_wiki.py`.
 - Para o efeito contínuo, poste as **8 imagens, na ordem**, como post de várias fotos. O PDF (documento) mostra uma página por vez, com espaço entre elas.
-- **Vídeo:** `carrossel_llm_wiki/video.mp4` (1080x1350, 58 s, com a trilha lo-fi): a câmera desliza pelo mesmo painel, parando em cada quadro. Para refazer: `python posts/video_llm_wiki.py`. Use o carrossel **ou** o vídeo no post, não os dois; o vídeo serve também para Stories/Reels.
+- **Vídeo:** `carrossel_llm_wiki/video.mp4` (1080x1080, 47 s, com a trilha lo-fi), animado: documentos soltos (e-mail, anotação, ata, relatório, foto, planilha) → cada um passa pela aprovação e vira uma página ligada às outras → a rede cresce → uma pergunta no chat → a IA percorre as páginas ligadas → resposta com a fonte → fechamento. Para refazer: `ferramentas/venv-video/Scripts/python.exe posts/video_llm_wiki.py`. Use o carrossel **ou** o vídeo no post, não os dois.
+- **O exemplo do vídeo é fictício** (a bomba que parou, o selo mecânico): é uma encenação do método, não a gravação de uma base real. Se perguntarem, diga isso.
+- **Coerência com o texto:** "o material novo espera a minha aprovação" (a entrada com o visto), "ligado ao que já existia" (as ligações da rede), "toda afirmação aponta para a fonte" (as etiquetas de fonte na resposta). Sem números na tela.
 - Quadros: capa → o problema → a ideia → como funciona → adaptações (gente aprova) → adaptações (acompanha o trabalho) → onde se aplica → fechamento.
 
 Onde está o conhecimento da sua empresa: num lugar que qualquer pessoa consulta, ou na cabeça de quem está há mais tempo na casa?

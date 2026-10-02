@@ -79,6 +79,23 @@ Mesmo cenário do 02 (armazém e logística), agora com câmera. Versão simples
 - Marca pedidos com quantidade, valor ou horário estranhos (fraude ou erro de digitação).
 - **Visual:** lista de pedidos passando, com os suspeitos piscando em vermelho.
 
+### Fora da numeração (método de trabalho, sem miniprojeto)
+
+#### Base de conhecimento viva (LLM Wiki): post feito, vídeo do YouTube a produzir
+- **Post do LinkedIn:** `posts/linkedin_llm_wiki.md`, com carrossel contínuo e vídeo animado em `posts/carrossel_llm_wiki/`.
+- **Vídeo do YouTube (a fazer):** demonstrar o uso e ensinar a configurar e manter uma wiki mantida por IA. Quem assistir deve conseguir montar a sua.
+- **Roteiro proposto:**
+  1. O problema e a ideia do Karpathy: a IA mantém uma wiki em vez de reler tudo a cada pergunta.
+  2. Demonstração de uso: uma pergunta feita no chat, a IA percorrendo as páginas e respondendo com a fonte.
+  3. Configurar do zero: as pastas (entrada, fontes originais, wiki), o arquivo de regras para o agente, o índice e o registro cronológico.
+  4. O primeiro documento: entra, é aprovado, vira página, e o índice e o registro são atualizados.
+  5. Manter: perguntar, arquivar respostas que valem, rodar a auditoria (contradição, página vencida, órfã, lacuna).
+  6. As adaptações do Lucas: aprovação humana antes de virar fonte, fidelidade à fonte, estado vivo (foco e pendências), regras duráveis, uma base por projeto subindo para a central.
+  7. Limites e cuidados: dado sensível, o que não colocar, quando a wiki não compensa.
+- **Material:** gravar numa **base de demonstração com conteúdo fictício** (por exemplo, a manutenção de uma bomba, a mesma história do vídeo do LinkedIn). Não gravar o vault real: tem dados pessoais e de terceiros.
+- **Entregável junto do vídeo:** um repositório-modelo com as pastas, o arquivo de regras e dois ou três documentos de exemplo, para quem assiste copiar.
+- **Reaproveitar:** a cena animada de `posts/video_llm_wiki.py` (documentos virando páginas, a IA percorrendo a rede) serve de abertura.
+
 **Sequência sugerida da série:** 01 → 02 → 03 → 04 → 05 → 07 → 06 → 08 → 09 (01 e 02 feitos; 05 com código e painel prontos; o 03 fecha o trio do armazém, em versão simples: modelo pronto + regra)
 
 ---
