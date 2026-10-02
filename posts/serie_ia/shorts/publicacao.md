@@ -1,10 +1,11 @@
 # Materiais para postar os shorts "IA sem mistério"
 
-Um bloco por vídeo (`parte1.mp4` a `parte4.mp4`), com o que colar em cada rede.
+Um bloco por vídeo (`parte1.mp4` a `parte4.mp4`), com o que colar em cada rede: YouTube Shorts, Reels (Instagram e Facebook) e TikTok.
 
 **Vale para todos**
 - **YouTube Shorts:** o título aceita até 100 caracteres; os daqui têm menos de 60, para não cortar na tela. As tags vão no campo "Tags" do YouTube Studio; as hashtags ficam no fim da descrição (as três primeiras aparecem acima do título).
 - **Reels (Instagram e Facebook):** a primeira linha da legenda é o que aparece antes do "mais", então ela repete a pergunta do vídeo.
+- **TikTok:** legenda curta, com a pergunta na primeira linha e "parte N de 4" para quem quiser ver a série. O título do vídeo no TikTok é a própria legenda. Se o aplicativo pedir uma capa com texto, use a pergunta do vídeo.
 - **Capa:** use o quadro da abertura (a pergunta em letras grandes), no primeiro segundo de cada vídeo.
 - **Playlist no YouTube:** "IA sem mistério", na ordem das partes.
 - **Onde está `[LINK]`**, cole o link da parte seguinte ou da playlist depois de publicar. Na parte 4, o link da playlist.
@@ -50,6 +51,13 @@ Parte 1 da série IA sem mistério. Segue para ver a próxima: por que a IA erra
 A sua imaginação é o limite. 🚀
 
 #ia #inteligenciaartificial #iagenerativa #tecnologia #produtividade #dicasdeia #aprendaia #iaparainiciantes #inovacao #reels
+```
+
+### TikTok
+```
+Como a IA escreve um texto? 🧠 Igual ao teclado do celular: ela adivinha a próxima palavra, uma de cada vez. Por isso o começo do seu pedido é tudo. Parte 1 de 4 da série IA sem mistério. Segue para ver a parte 2: por que a IA erra contas.
+
+#ia #inteligenciaartificial #iagenerativa #aprendanotiktok #tecnologia #dicasdeia #produtividade
 ```
 
 ---
@@ -98,6 +106,13 @@ A sua imaginação é o limite. 🚀
 #ia #inteligenciaartificial #iagenerativa #tokens #tecnologia #produtividade #dicasdeia #aprendaia #inovacao #reels
 ```
 
+### TikTok
+```
+Por que a IA erra contas? 🧠 Ela não lê palavras: lê peças chamadas tokens, e cada token vira um número. Numa conta grande, ela adivinha o resultado. A solução: ela escreve a conta e um computador calcula. Parte 2 de 4 da série IA sem mistério.
+
+#ia #inteligenciaartificial #iagenerativa #tokens #aprendanotiktok #tecnologia #dicasdeia
+```
+
 ---
 
 ## Parte 3 · Por que a IA esquece o que você disse
@@ -142,6 +157,13 @@ Parte 3 da série IA sem mistério. Na próxima: como a IA decide o que importa.
 A sua imaginação é o limite. 🚀
 
 #ia #inteligenciaartificial #iagenerativa #tecnologia #produtividade #dicasdeia #aprendaia #gestaodoconhecimento #inovacao #reels
+```
+
+### TikTok
+```
+Por que a IA esquece o que você disse? 🧠 Ela não tem memória: relê a conversa inteira a cada mensagem, e essa leitura tem limite. É a janela de contexto. Dica: assunto novo, conversa nova. Parte 3 de 4 da série IA sem mistério.
+
+#ia #inteligenciaartificial #iagenerativa #aprendanotiktok #tecnologia #dicasdeia #produtividade
 ```
 
 ---
@@ -190,9 +212,16 @@ A sua imaginação é o limite. 🚀
 #ia #inteligenciaartificial #iagenerativa #prompt #tecnologia #produtividade #dicasdeia #aprendaia #inovacao #reels
 ```
 
+### TikTok
+```
+Como a IA decide o que importa? 🧠 Com um mecanismo chamado atenção: um holofote que ilumina mais umas palavras que outras. Quanto mais texto, mais disputa. Dica: documento em cima, pedido embaixo. Parte 4 de 4 da série IA sem mistério.
+
+#ia #inteligenciaartificial #iagenerativa #prompt #aprendanotiktok #tecnologia #dicasdeia
+```
+
 ---
 
-## Comentário fixado (opcional, nas duas redes)
+## Comentário fixado (opcional, nas três redes)
 ```
 Quer as fontes de tudo o que aparece na série? Me pede aqui que eu mando. 👇
 ```
