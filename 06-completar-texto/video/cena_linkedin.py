@@ -220,29 +220,29 @@ def quadro(t):
     a = janela(t, T4, T5)
     if a > 0:
         k = ease((t - T4 - 0.5) / 0.6) * a
-        rrect(s, CARD + (int(255 * k),), (90, 300, 300, 300), 22)
+        rrect(s, CARD + (int(255 * k),), (90, 350, 300, 300), 22)
         for i in range(36):                                            # a rede do vídeo: pequena
-            pygame.draw.circle(s, mix(INK, RED_SOFT, k), (150 + (i % 6) * 36, 360 + (i // 6) * 36), 7)
-        text(s, "a deste vídeo", font("sans-sb", 28), FG, (240, 620), "midtop", k)
-        text(s, "treinada num computador comum", font("sans", 22), BODY, (240, 660), "midtop", k)
+            pygame.draw.circle(s, mix(INK, RED_SOFT, k), (150 + (i % 6) * 36, 410 + (i // 6) * 36), 7)
+        text(s, "a deste vídeo", font("sans-sb", 28), FG, (240, 730), "midtop", k)
+        text(s, "treinada num computador comum", font("sans", 22), BODY, (240, 770), "midtop", k)
         cresce = ease((t - T4 - 2.0) / 2.4) * a
         if cresce > 0:
-            lado = 300 + 250 * cresce
-            x0, y0 = 760 - lado / 2, 450 - lado / 2
+            lado = 300 + 130 * cresce
+            x0, y0 = 760 - lado / 2, 500 - lado / 2
             rrect(s, CARD + (int(255 * a),), (x0, y0, lado, lado), 22)
             passo_ = 15
             for gx in range(int(x0 + 14), int(x0 + lado - 8), passo_):
                 for gy in range(int(y0 + 14), int(y0 + lado - 8), passo_):
                     pygame.draw.circle(s, mix(INK, RED, 0.35 + 0.65 * abs(math.sin(gx * 0.31 + gy * 0.17 + t * 1.5))), (gx, gy), 3)
-            text(s, "as grandes", font("sans-sb", 28), FG, (760, 750), "midtop", cresce)
-            text(s, "leram uma parte enorme da internet", font("sans", 22), BODY, (760, 790), "midtop", cresce)
-        text(s, "a mesma tarefa", font("mono-md", 20), MUTE, (W // 2, 250), "midtop", ease((t - T4 - 3.4) / 0.5) * a)
+            text(s, "as grandes", font("sans-sb", 28), FG, (760, 730), "midtop", cresce)
+            text(s, "leram uma parte enorme da internet", font("sans", 22), BODY, (760, 770), "midtop", cresce)
+        text(s, "a mesma tarefa", font("mono-md", 20), MUTE, (W // 2, 850), "midtop", ease((t - T4 - 3.4) / 0.5) * a)
 
     # ----- 5 · na prática -----
     a = janela(t, T5, T6)
     if a > 0:
         for i, (pedido, rot, y0, ini, abertura, cor) in enumerate((
-                ("Faça um relatório.", "PEDIDO VAGO: QUALQUER CONTINUAÇÃO SERVE", 250, T5 + 0.5, 1.5, (150, 150, 162)),
+                ("Faça um relatório.", "PEDIDO VAGO: QUALQUER CONTINUAÇÃO SERVE", 250, T5 + 0.5, 1.1, (150, 150, 162)),
                 ("", "COMEÇO CLARO: POUCAS CONTINUAÇÕES POSSÍVEIS", 570, T5 + 4.2, 0.22, VERDE))):
             k = ease((t - ini) / 0.5) * a
             if k <= 0:
@@ -263,7 +263,7 @@ def quadro(t):
                 origem = (650, y0 + 159)
             kl = ease((t - ini - (0.6 if i == 0 else 2.3)) / 0.8)
             if kl > 0:
-                leque(s, origem, 13 if i == 0 else 5, abertura, 330, mix(INK, cor, a), kl, i * 3.1)
+                leque(s, origem, 13 if i == 0 else 5, abertura, 250, mix(INK, cor, a), kl, i * 3.1)
 
     # ----- 6 · fechamento -----
     a = ease((t - T6 - 0.3) / 0.6)

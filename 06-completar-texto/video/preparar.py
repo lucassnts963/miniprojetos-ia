@@ -12,7 +12,7 @@ import demo  # noqa: E402
 
 FRASE = "A manutenção preventiva é"
 COMPARA = "A bomba hidráulica"
-SEMENTE_PASSOS, SEMENTE_COMPARA = 3, 1        # sorteios usados no vídeo (trocar aqui muda o exemplo)
+SEMENTE_PASSOS, SEMENTE_COMPARA = 0, 1        # sorteios usados no vídeo (trocar aqui muda o exemplo)
 
 d = dict(frase=FRASE, compara=COMPARA)
 d["pedacos"] = demo.proximo(dict(texto=FRASE))["pedacos"]
