@@ -1,44 +1,46 @@
-# Post LinkedIn: "Como uma LLM funciona", parte 1 (terça 06/10, vai junto com `video/linkedin_completar.mp4`)
+# Post LinkedIn: "IA sem mistério", parte 1 (terça 06/10, vai com o carrossel)
 
-**Carrossel (alternativa ao vídeo, a decidir):** `carrossel/01.png` a `08.png` (1080x1350), `carrossel.pdf` e `panorama.png`. Painel contínuo: a frase escrita pela máquina anda sobre a linha vermelha e atravessa as emendas. Quadros: capa → o teclado do celular → apostar no próximo pedaço → escolhe um, aposta de novo → contar x rede → a escala → na prática → fechamento. Para refazer: `python carrossel/carrossel.py`. Use o carrossel **ou** o vídeo.
+**Carrossel:** `carrossel/01.png` a `08.png` (1080x1350), `carrossel.pdf` e `panorama.png`. Escrito para quem nunca ouviu falar do assunto. Para refazer: `python carrossel/carrossel.py`.
+- Quadros: capa → o teclado do celular → adivinhar a próxima palavra → escolhe uma e repete → de onde vêm os palpites → o cuidado (ela escreve na hora, pode errar) → na prática → fechamento.
+- No rodapé, uma frase só atravessa os 8 quadros, palavra por palavra: "Uma IA que escreve é uma máquina que adivinha a próxima palavra, uma de cada vez, até o texto ficar pronto." É a explicação e o exemplo ao mesmo tempo.
+- Poste as 8 imagens na ordem, para o efeito contínuo.
 
-Vídeo de 58 s, com trilha lo-fi: o teclado do celular → apostar no próximo pedaço (contando) → escolher e apostar de novo → contagem x rede neural → a escala → na prática (pedido vago x começo claro) → fechamento.
-
-Miniatura: `video/miniatura_linkedin.png` (quadro aos 20 s): a frase sendo completada, com as apostas em barras. É o quadro que responde à pergunta de abertura (o que a IA faz quando "responde").
+**Vídeo (versão anterior, não usada no post):** `video/linkedin_completar.mp4`. Fica guardado; a ideia pode virar o vídeo do YouTube.
 
 Você já pediu algo para uma IA e recebeu uma resposta genérica, que servia para qualquer empresa menos para a sua?
 
 O problema quase nunca é a ferramenta. É não saber o que ela faz de verdade.
 
-Acredito que o caminho para dominar qualquer tecnologia é conhecer a origem dela e como ela funciona. Quem entende o mecanismo sabe o que pedir, como pedir e quando desconfiar. Por isso, começo hoje uma série curta: como funciona a IA que escreve. 🧠
+Acredito que o caminho para dominar qualquer tecnologia é conhecer a origem dela e como ela funciona. Por isso, começo hoje uma série curta: IA sem mistério. 🧠
 
-Parte 1: ela é uma máquina de completar texto.
+Parte 1: como a IA escreve um texto.
 
-Você já usa uma versão simples disso todo dia: o teclado do celular, sugerindo a próxima palavra.
+Você já viu a ideia no teclado do celular. Digita "Bom" e ele sugere "dia". Ele não entende a conversa: só sabe o que costuma vir depois.
 
 A IA que escreve faz a mesma coisa, levada ao extremo:
 ✅ olha o texto que já existe;
-✅ aposta em qual pedaço vem depois;
-✅ escolhe um, cola no texto e aposta de novo.
+✅ dá um palpite para a próxima palavra;
+✅ escolhe uma, cola no texto e repete.
 
-Só isso. Resumir, traduzir, responder, programar: para ela, tudo é continuar um texto.
+Uma palavra de cada vez, até o texto ficar pronto. No carrossel, a frase do rodapé é escrita exatamente assim: arraste e leia.
 
-Para não ficar só na teoria, construí uma em miniatura, do zero, e deixei as apostas à mostra. É o que aparece no vídeo. Primeiro do jeito antigo, só contando o que costuma vir depois: ela enxerga poucas palavras para trás e perde o fio da conversa. Depois com uma rede que pesa o texto inteiro: o assunto se mantém.
+De onde vêm os palpites? Ela leu uma quantidade enorme de textos e, de tanto ler, aprendeu o que costuma vir depois do quê.
 
-A minha é minúscula, e erra bastante. As grandes leram uma parte enorme do que a humanidade escreveu. Mas a tarefa é a mesma.
+⚠️ Um cuidado importante
+Ela não consulta um arquivo de respostas. O texto é escrito na hora. Por isso sai tão natural, e por isso ela pode escrever algo errado com a mesma segurança de quando acerta.
 
 💡 O que muda na prática
-Se ela continua o que você começa, o começo é tudo. Pedido vago aceita qualquer continuação, e você recebe a mais comum. Antes de pedir, diga:
-• o papel: quem ela deve ser;
-• o contexto: os dados e a situação;
-• o formato: como você quer a resposta.
+Se ela continua o que você começa, o começo é tudo. Pedido vago recebe a resposta mais comum. Antes de pedir, diga:
+• quem ela deve ser;
+• qual é a situação;
+• como você quer a resposta.
 
 🏭 Na indústria: em vez de "faça um relatório", dizer que ela é o planejador de manutenção, entregar as paradas do mês e pedir um resumo em tópicos para a diretoria.
 🛒 No comércio: em vez de "responda este cliente", entregar o histórico do pedido, a política de troca e o tom da sua marca.
 
 As aplicações são inúmeras. E, como gosto de dizer: a sua imaginação é o limite. 🚀
 
-Qual foi o pedido que você fez a uma IA e que voltou mais longe do que você esperava? Me conta nos comentários 👇
+Qual pedido você fez a uma IA e a resposta veio genérica demais? Me conta nos comentários 👇
 
 #InteligenciaArtificial #IA #Produtividade #Industria40 #Inovacao #TransformacaoDigital
 
@@ -46,9 +48,8 @@ Qual foi o pedido que você fez a uma IA e que voltou mais longe do que você es
 
 # Legenda curta: Stories / Status / Reels
 
-A IA que escreve é uma máquina de completar texto. 🧠
-Ela aposta no próximo pedaço, escolhe um e aposta de novo.
-Por isso o começo é tudo: diga o papel, o contexto e o formato.
+A IA que escreve adivinha a próxima palavra. Uma de cada vez. 🧠
+Por isso o começo é tudo: diga quem ela deve ser, a situação e como quer a resposta.
 A sua imaginação é o limite. 🚀
 
 #IA #InteligenciaArtificial #Produtividade
@@ -56,15 +57,10 @@ A sua imaginação é o limite. 🚀
 ---
 
 # O que sustenta cada frase
-- **"Aposta em qual pedaço vem depois, escolhe um e aposta de novo":** é o funcionamento das LLMs (geração de um token por vez). "Pedaço" é o token: menor que uma palavra, assunto da parte 2.
-- **"Para ela, tudo é continuar um texto":** vale para o modelo em si. Os produtos em volta acrescentam busca, ferramentas e memória; isso fica para as próximas partes. Se perguntarem, é simplificação assumida.
-- **"Construí uma em miniatura, do zero":** `06-completar-texto/` (pedaços, contagem, rede, painel na bancada).
-- **"Só contando, perde o fio; a rede mantém o assunto":** é o que o vídeo mostra, com textos gerados de verdade pelos dois métodos a partir de "A bomba hidráulica". A contagem pula para IBGE e habitantes; a rede segue falando de eixo, energia e máquina. Nos números, a rede acerta mais que a contagem, mas por margem pequena (README do projeto).
-- **"A minha é minúscula, e erra bastante":** é verdade e está no vídeo: os textos gerados fazem sentido na forma, não no conteúdo ("a manutenção preventiva é o processo de reparação…", "a bomba hidráulica é uma subárea da mecânica…").
-- **"Pedido vago recebe a continuação mais comum":** consequência do mecanismo, dita como orientação. O leque de continuações no vídeo é uma ilustração, não uma medição.
-- **Regras:** sem números; "LLM" aparece só no nome da série, no vídeo; o texto fala "IA que escreve". Os termos novos ("pedaço") vêm explicados na mesma frase.
-
-# Vídeo e coerência com o texto
-- Teclado do celular (abertura), as três etapas (ideia e truque), contagem x rede (salto), "as grandes leram uma parte enorme" (escala), papel/contexto/formato com o exemplo do planejador de manutenção (na prática), assinatura (fechamento).
-- As barras de apostas e os textos vêm do modelo treinado (`video/preparar.py` → `dados.json`). Se retreinar o modelo, rode `preparar.py` e renderize de novo.
-- O exemplo do comércio está só no texto, não no vídeo.
+- **"Dá um palpite para a próxima palavra, escolhe uma e repete":** é o funcionamento das LLMs. **Simplificação assumida:** na verdade ela trabalha com pedaços menores que palavras. É o assunto da parte 2, que corrige isso de propósito ("por que ela erra contas simples").
+- **A frase do rodapé e as barras de palpites são ilustração**, não saída de um modelo. O post não diz que foram geradas por IA; diz que é assim que ela escreve.
+- **"Leu uma quantidade enorme de textos":** o treino. "Aprendeu o que costuma vir depois do quê" é a descrição honesta do que o treino otimiza.
+- **"Não consulta um arquivo de respostas":** vale para o modelo em si. Produtos com busca na internet ou em documentos acrescentam uma consulta antes; mesmo assim, o texto final é escrito palavra por palavra. Se perguntarem, é isso.
+- **"Pode escrever algo errado com a mesma segurança":** dá para mostrar na bancada (projeto 06, minichat), que faz exatamente isso.
+- **"Pedido vago recebe a resposta mais comum":** consequência do mecanismo, dita como orientação.
+- **Regras:** sem números, sem nome de ferramenta, sem sigla. O projeto 06 (a miniatura treinada do zero) não aparece neste post; fica para o YouTube e para as próximas partes.

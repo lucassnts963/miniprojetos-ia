@@ -2,7 +2,7 @@
 
 Uma LLM faz uma coisa só: aposta em qual pedaço de texto vem depois. Este projeto constrói essa máquina em tamanho pequeno, para ver por dentro: os pedaços de texto, as apostas, a atenção, e um minichat que é a mesma máquina completando uma conversa.
 
-**Estado:** código, treino e painel da bancada prontos. Post e vídeo do LinkedIn prontos (`post_linkedin.md`, `video/linkedin_completar.mp4`). Falta o vídeo do YouTube.
+**Estado:** código, treino e painel da bancada prontos. Post e carrossel do LinkedIn prontos (`post_linkedin.md`, `carrossel/`). Falta o vídeo do YouTube.
 
 ## Testar ao vivo
 ```bash
