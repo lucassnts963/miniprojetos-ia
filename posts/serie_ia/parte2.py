@@ -113,23 +113,26 @@ texto(cx + 71, y + 58, "?", "b", 44, RED_SOFT, "mm")
 y = corpo(4, y + 124, "Conta pequena ela viu muitas vezes e acerta. Conta grande, ela nunca viu igual.", tam=36, tipo="sb", cor=FG)
 corpo(4, y, "Contar letras de uma palavra dá o mesmo problema: ela vê pedaços, não letras.", tam=36)
 
-# ---------------- 6 · o que ela faz bem ----------------
-topo(5, "O OUTRO LADO")
-y = titulo(5, ["Com texto,", "ela é ótima"])
-y = corpo(5, y, "O mesmo mecanismo que atrapalha na conta é o que a faz tão boa com linguagem.", tam=38)
+# ---------------- 6 · como resolveram ----------------
+topo(5, "COMO RESOLVERAM")
+y = titulo(5, ["Ela escreve a conta.", "Um computador", "calcula."], tam=62)
+y = corpo(5, y, "Escrever é com ela. Então as IAs de hoje ganharam uma ferramenta: em vez de adivinhar o resultado, ela escreve a conta como um pequeno programa, um computador executa e devolve o número certo.", tam=33)
 x0 = 5 * LADO + MARGEM
-for j, t in enumerate(("resumir um documento longo", "reescrever num tom melhor", "explicar um assunto difícil",
-                       "organizar anotações soltas")):
-    caixa(x0, y + 20 + j * 92, 912, 76, 16, CARD, VERDE)
-    texto(x0 + 28, y + 58 + j * 92, t, "md", 34, FG, "lm")
+for j, (rot, val, cor, mono) in enumerate((("1 · ela escreve a conta", "48392 * 7615", LINE, True),
+                                           ("2 · o computador executa", "368505080", AZUL, True),
+                                           ("3 · ela responde com o número certo", "O resultado é 368.505.080.", VERDE, False))):
+    yy = y + 6 + j * 132
+    rotulo(x0, yy, rot, RED_SOFT if j == 0 else MUTE)
+    caixa(x0, yy + 38, 912, 74, 16, CARD, cor)
+    texto(x0 + 28, yy + 75, val, "mono" if mono else "md", 32, FG, "lm")
 
 # ---------------- 7 · na prática ----------------
 topo(6, "NA PRÁTICA")
-y = titulo(6, ["Número exato?", "Peça a conta,", "não o resultado."], tam=64)
-y = corpo(6, y, "Para tudo o que precisa bater:", tam=37)
+y = titulo(6, ["Quando o número", "importa"])
+y = corpo(6, y, "A ferramenta existe, mas nem sempre ela é usada. Vale conferir:", tam=37)
 x0 = 6 * LADO + MARGEM
-for j, (cab, det) in enumerate((("peça a fórmula ou a planilha", "ela monta a conta; a planilha calcula"),
-                                ("peça para usar a calculadora", "muitas IAs têm uma, e avisam quando usam"),
+for j, (cab, det) in enumerate((("veja se ela fez a conta de verdade", "em geral dá para abrir e ver o programa que rodou"),
+                                ("se não fez, peça", "“calcule usando código” ou “monte a planilha”"),
                                 ("confira o que for crítico", "horas, custos, estoque, totais de pedido"))):
     caixa(x0, y + 14 + j * 124, 912, 108, 16, CARD, LINE)
     texto(x0 + 28, y + 46 + j * 124, cab, "sb", 34, FG, "lm")
@@ -138,7 +141,7 @@ for j, (cab, det) in enumerate((("peça a fórmula ou a planilha", "ela monta a 
 # ---------------- 8 · fechamento ----------------
 topo(7, "E VOCÊ?")
 y = titulo(7, ["A sua imaginação", "é o limite."], tam=84)
-y = corpo(7, y, "Texto é com ela. Número exato é com a calculadora.", tam=42, tipo="sb", cor=FG)
+y = corpo(7, y, "Ela escreve a conta. Quem calcula é o computador.", tam=42, tipo="sb", cor=FG)
 y = corpo(7, y + 10, "Já pegou uma IA errando uma conta ou um total?", tam=42)
 y = corpo(7, y + 10, "Me conta nos comentários.", tam=42, tipo="sb", cor=FG)
 rotulo(7 * LADO + MARGEM, y + 50, "Na parte 3: por que ela esquece o que você disse.", RED_SOFT)
