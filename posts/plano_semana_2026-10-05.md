@@ -80,3 +80,6 @@ Cada post entrega: texto (`posts/serie_llm/epNN.md`), a peça visual, a legenda 
 
 Cada parte termina anunciando a seguinte, então a ordem não pode mudar sem refazer o último quadro.
 Os carrosséis novos usam `posts/serie_ia/base.py`.
+
+## Shorts (Reels e YouTube Shorts)
+Um short vertical por parte (1080x1920, cerca de 52 s, animado, com trilha lo-fi), em `posts/serie_ia/shorts/parte1.mp4` a `parte4.mp4`. Gerador: `posts/serie_ia/shorts.py`. Mesmo roteiro e mesmos termos dos carrosséis; a legenda curta de cada `parteN.md` serve de descrição. Trilhas: "Tranquil Mindscape" nas partes 1 e 3, "Lucid" nas partes 2 e 4 (HoliznaCC0, CC0).
