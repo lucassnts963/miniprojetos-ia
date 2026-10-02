@@ -9,6 +9,7 @@ Série do [@elucas.dev](https://youtube.com/@elucas.dev) mostrando aplicações 
 | 03 | [Pessoa em área de risco](03-area-de-risco/) | visão computacional com um detector pronto: avisa quando alguém entra numa área desenhada na imagem (em andamento). |
 | 04 | [Espelho do trocador](04-espelho-trocador/) | conta os tubos numa foto do espelho e separa aberto, obstruído e tamponado; com painel para corrigir e rotular (em exploração). |
 | 05 | [Carro autônomo](05-carro-autonomo/) | uma rede neural pequena aprende a dirigir sozinha numa pista, por neuroevolução. Roda no [mundo simulado](mundo/), um motor 2D reaproveitável (paredes, obstáculos, sensores e colisão). |
+| 06 | [Máquina de completar texto](06-completar-texto/) | uma LLM em miniatura treinada do zero: aposta no próximo pedaço de texto, mostra a rede por dentro (atenção e palpite por camada) e conversa num minichat. |
 
 Ideias e regras da série: [IDEIAS.md](IDEIAS.md).
 

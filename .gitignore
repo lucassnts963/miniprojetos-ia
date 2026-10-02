@@ -32,3 +32,8 @@ inbox/
 
 # cérebro treinado do carro (gerado por treinar.py ou pelo painel)
 05-carro-autonomo/cerebro.npz
+
+# 06: texto de treino (Wikipédia) e modelo treinado; baixar_textos.py e treinar.py refazem
+06-completar-texto/dados/
+06-completar-texto/modelo/
+06-completar-texto/video/dados.json

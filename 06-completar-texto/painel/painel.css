@@ -1,0 +1,107 @@
+/* o atributo hidden vence o display dos blocos abaixo */
+.ct [hidden] { display: none !important; }
+
+.ct {
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1.25fr) minmax(0, 1fr);
+  grid-template-areas: "ctrl texto apostas" "ctrl rede rede" "ctrl medida medida";
+  gap: 16px;
+  max-width: 1500px;
+  align-items: start;
+}
+.ct .ctrl { grid-area: ctrl; display: flex; flex-direction: column; gap: 8px; }
+.ct .texto { grid-area: texto; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
+.ct .apostas { grid-area: apostas; min-width: 0; }
+.ct .medida { grid-area: medida; min-width: 0; }
+.ct .rede { grid-area: rede; min-width: 0; }
+.ct #ct-rede { display: block; width: 100%; margin: 6px 0 8px; }
+.ct .rede > .dica { margin: 0; font-size: 12px; }
+
+.ct h1 { margin: 0; color: var(--fg); font-size: 21px; font-weight: 600; letter-spacing: -0.015em; }
+.ct .ctrl .dica { margin: 0; }
+.ct .ctrl .rot { margin-top: 10px; }
+.ct .linha { display: flex; align-items: center; gap: 8px; }
+.ct .ctrl .linha .dica { flex: 0 0 96px; white-space: nowrap; cursor: help; }
+.ct input[type="range"] { flex: 1; min-width: 0; accent-color: var(--red); }
+.ct .ms { font: 12px var(--mono); color: var(--mute); min-width: 62px; text-align: right; white-space: nowrap; }
+.ct #ct-gerar { margin-top: 8px; padding: 11px; font-size: 15px; }
+.ct .acoes .btn { flex: 1; font-size: 13px; padding: 8px 6px; }
+.ct .status { font-size: 13px; color: var(--mute); min-height: 18px; }
+.ct .status.erro { color: var(--red-soft); }
+.ct .seg { display: flex; background: var(--ink); border: 1px solid var(--line); border-radius: 9px; padding: 3px; }
+.ct .seg button { flex: 1; background: none; border: 0; padding: 7px 10px; border-radius: 7px; color: var(--mute); cursor: pointer; font-size: 13px; }
+.ct .seg button.on { background: var(--card-2); color: var(--fg); }
+.ct .exemplos { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.ct .exemplos .link { text-align: left; font-size: 13px; }
+
+.ct textarea {
+  width: 100%; box-sizing: border-box; resize: vertical; background: var(--ink); color: var(--fg);
+  border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; font: 17px/1.5 inherit;
+}
+.ct textarea:focus { outline: none; border-color: var(--red); }
+.ct .texto .rot { margin-top: 8px; }
+.ct .pedacos {
+  background: rgba(0, 0, 0, 0.25); border: 1px solid var(--line); border-radius: 10px; padding: 14px;
+  min-height: 150px; font: 16px/2.05 var(--mono); white-space: pre-wrap; word-break: break-word;
+}
+.ct .p {
+  padding: 3px 1px; border-radius: 4px; margin-right: 2px; color: var(--fg);
+  background: rgba(255, 255, 255, 0.07); box-shadow: inset 0 -3px 0 rgba(88, 214, 141, calc(var(--o, 0) * 0.95));
+}
+.ct .p.ger { background: rgba(229, 72, 77, calc(var(--f, 0.5) * 0.55)); }
+.ct .p i, .ct .aposta i:not([style]) { font-style: normal; color: var(--mute); opacity: 0.6; }
+.ct .leg { margin: 0; font-size: 12px; }
+.ct .leg .q { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: -2px; margin: 0 5px 0 0; }
+.ct .leg .q1 { background: rgba(255, 255, 255, 0.14); }
+.ct .leg .q2 { background: rgba(229, 72, 77, 0.5); margin-left: 12px; }
+.ct .leg .q3 { background: none; box-shadow: inset 0 -3px 0 #58d68d; margin-left: 12px; }
+
+.ct .aposta {
+  display: flex; align-items: center; gap: 10px; width: 100%; background: none; border: 1px solid transparent;
+  border-radius: 8px; padding: 5px 8px; cursor: pointer; color: var(--fg); text-align: left;
+}
+.ct .aposta:hover { background: var(--card-2); }
+.ct .aposta.on { border-color: var(--red); background: rgba(229, 72, 77, 0.12); }
+.ct .aposta .nome { flex: 0 0 132px; font: 15px var(--mono); white-space: pre; overflow: hidden; text-overflow: ellipsis; }
+.ct .aposta .barra { flex: 1; height: 10px; background: var(--ink); border-radius: 5px; overflow: hidden; }
+.ct .aposta .barra i { display: block; height: 100%; background: var(--red); border-radius: 5px; opacity: 1; }
+.ct .apostas > .dica { margin: 10px 0 0; font-size: 12px; }
+.ct .c-topo .dica { font-size: 12px; }
+
+.ct table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 13px; }
+.ct th { text-align: right; font-weight: 500; color: var(--mute); font-size: 12px; padding: 4px 6px; }
+.ct td { padding: 6px; border-top: 1px solid var(--line); color: var(--body); text-align: right; font-family: var(--mono); }
+.ct td:first-child { text-align: left; font-family: inherit; }
+.ct tr.on td { color: var(--fg); font-weight: 600; }
+.ct .medida .dica { margin: 0; font-size: 12px; }
+.ct code { font-family: var(--mono); color: var(--fg); }
+
+@media (max-width: 1100px) {
+  .ct { grid-template-columns: minmax(0, 1fr); grid-template-areas: "texto" "apostas" "rede" "ctrl" "medida"; }
+}
+
+.ct .bloco { display: flex; flex-direction: column; gap: 10px; }
+.ct .ctrl > .btn.sec { font-size: 13px; padding: 8px 6px; }
+.ct .conversa {
+  display: flex; flex-direction: column; gap: 10px; min-height: 180px; max-height: 340px; overflow-y: auto;
+  background: rgba(0, 0, 0, 0.25); border: 1px solid var(--line); border-radius: 10px; padding: 14px;
+}
+.ct .conversa .vazio { margin: auto 0; }
+.ct .fala { max-width: 88%; padding: 9px 13px; border-radius: 14px; font-size: 15px; line-height: 1.45; color: var(--fg); }
+.ct .fala.eu { align-self: flex-end; background: rgba(229, 72, 77, 0.22); border: 1px solid rgba(229, 72, 77, 0.45); }
+.ct .fala.ia { align-self: flex-start; background: var(--card-2); border: 1px solid var(--line); display: flex; gap: 10px; }
+.ct .fala.ia b {
+  flex: 0 0 26px; height: 26px; border-radius: 50%; background: var(--red); color: var(--ink);
+  font-size: 11px; display: flex; align-items: center; justify-content: center;
+}
+.ct #ct-form input {
+  flex: 1; min-width: 0; background: var(--ink); color: var(--fg); border: 1px solid var(--line);
+  border-radius: 10px; padding: 11px 14px; font: 15px inherit;
+}
+.ct #ct-form input:focus { outline: none; border-color: var(--red); }
+.ct #ct-form .btn { padding: 10px 18px; }
+.ct .spin {
+  display: inline-block; width: 12px; height: 12px; border: 2px solid var(--line); border-top-color: var(--red);
+  border-radius: 50%; animation: ct-gira 0.8s linear infinite; vertical-align: -2px;
+}
+@keyframes ct-gira { to { transform: rotate(360deg); } }

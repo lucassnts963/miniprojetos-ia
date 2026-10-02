@@ -60,22 +60,27 @@ Mesmo cenário do 02 (armazém e logística), agora com câmera. Versão simples
 - **Visual:** a pista vista de cima, a população inteira correndo, os sensores do líder e a rede acendendo.
 - **Gancho:** o mesmo raciocínio serve para AGV, empilhadeira autônoma e robô de limpeza: treinar no simulado antes de arriscar o equipamento de verdade.
 
+#### 06 · Máquina de completar texto (código e painel prontos: `06-completar-texto/`)
+- **O que faz:** uma LLM em miniatura treinada do zero em artigos em português: aposta no próximo pedaço de texto, continua frases e conversa num minichat. Compara a rede com o método antigo (só contar).
+- **Série:** é o episódio 1 de "Como uma LLM funciona" (plano em `posts/plano_semana_2026-10-05.md`). Gera vídeo curto do LinkedIn e vídeo do YouTube.
+- **Visual:** as apostas em barras, o texto crescendo pedaço por pedaço, a rede por dentro (atenção e palpite por camada) e o minichat.
+
 ### Médias (2 a 3 dias)
 
-#### 06 · Manutenção preditiva simulada
+#### 07 · Manutenção preditiva simulada
 - Simular vibração e temperatura de um motor. Uma rede pequena aprende a avisar **antes** da falha.
 - **Visual:** gráfico ao vivo com o alerta acendendo antes da quebra.
 
-#### 07 · Roteador de LLM (modelo pequeno antes da API)
+#### 08 · Roteador de LLM (modelo pequeno antes da API)
 - Um classificador decide se a pergunta é simples (ele mesmo responde) ou complexa (vai para o ChatGPT ou o Claude).
 - **Visual:** contador de custo, "tudo na LLM" contra "roteado".
 - É o argumento de custo do post da cobrinha, provado na prática.
 
-#### 08 · Previsão de demanda para reposição de estoque
+#### 09 · Previsão de demanda para reposição de estoque
 - Uma rede pequena prevê a venda da próxima semana e sugere o ponto de reposição.
 - **Visual:** curva prevista contra a real, com a reposição marcada.
 
-#### 09 · Detector de pedido fora do padrão
+#### 10 · Detector de pedido fora do padrão
 - Marca pedidos com quantidade, valor ou horário estranhos (fraude ou erro de digitação).
 - **Visual:** lista de pedidos passando, com os suspeitos piscando em vermelho.
 
