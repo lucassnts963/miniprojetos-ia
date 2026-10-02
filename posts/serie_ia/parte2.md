@@ -13,17 +13,17 @@ Esta é a parte 2 da série IA sem mistério. 🧠 Na parte 1, vimos que a IA es
 
 Ela não lê palavras. Lê pedaços.
 
-Antes de chegar à IA, todo texto é cortado em pedaços menores:
-✅ palavra comum vira um pedaço só;
-✅ palavra rara é montada com vários pedaços;
-✅ cada pedaço é trocado por um número, e é só isso que ela enxerga.
+Antes de chegar à IA, todo texto é picado em pedaços, como peças de montar. Cada peça tem nome: token. E o corte também: tokenização.
+✅ palavra comum vira um token só;
+✅ palavra rara é montada com vários tokens;
+✅ cada token é trocado por um número, e é só isso que ela enxerga.
 
-Ela nunca vê letras. E um número grande também é cortado em pedaços.
+Ela nunca vê letras. E um número grande também vira tokens.
 
-Por isso, diante de uma conta, a IA não calcula: ela adivinha os pedaços do resultado, do mesmo jeito que adivinha palavras. Conta pequena ela já viu muitas vezes e acerta. Conta grande, que ela nunca viu igual, é palpite. Contar as letras de uma palavra dá o mesmo problema.
+Por isso, diante de uma conta, a IA não calcula: ela adivinha os tokens do resultado, do mesmo jeito que adivinha palavras. Conta pequena ela já viu muitas vezes e acerta. Conta grande, que ela nunca viu igual, é palpite. Contar as letras de uma palavra dá o mesmo problema.
 
 🔧 Como resolveram
-Escrever é com ela. Então as IAs de hoje ganharam uma ferramenta: em vez de adivinhar o resultado, ela escreve a conta como um pequeno programa, um computador executa e devolve o número certo. Ela só redige a resposta.
+Escrever é com ela. Então as IAs de hoje ganharam uma calculadora de bolso, chamada execução de código: em vez de adivinhar o resultado, ela escreve a conta como um pequeno programa, um computador executa e devolve o número certo. Ela só redige a resposta.
 
 É por isso que a mesma IA que erra uma multiplicação "de cabeça" analisa uma planilha inteira sem tropeçar: nessa hora, quem calcula não é ela.
 
@@ -69,4 +69,5 @@ A sua imaginação é o limite. 🚀
 - **"Conta pequena ela acerta; conta grande é palpite":** descrição correta em geral. Os modelos atuais acertam bastante coisa, e erram mais em multiplicações com muitos dígitos. O post não diz que ela sempre erra.
 - **"Contar letras dá o mesmo problema":** consequência de ela ver pedaços e não letras; é um tropeço conhecido.
 - **Coerência com a parte 1:** lá o gancho foi "por que ela erra contas simples". Aqui o título é "por que a IA erra contas" e o texto fala em conta grande, que é o que se sustenta.
+- **Termos técnicos (regra da série):** token, tokenização, vocabulário e execução de código, cada um com a sua metáfora (peças de montar, calculadora de bolso).
 - **Regras:** sem números no texto do post (os do carrossel são os exemplos de pedaço e de conta, sem medida de desempenho), sem nome de ferramenta, sem sigla.

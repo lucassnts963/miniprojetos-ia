@@ -67,6 +67,7 @@ Cada post entrega: texto (`posts/serie_llm/epNN.md`), a peça visual, a legenda 
 ## Atualização em 02/10: o que mudou no plano
 - **Nome da série:** "IA sem mistério" (sem sigla), para quem nunca viu o assunto.
 - **Formato:** só carrossel no LinkedIn (painel contínuo, com uma frase única no rodapé). O vídeo curto foi descartado; o tema fica para um vídeo longo no YouTube.
+- **Termos técnicos valem nesta série, sempre com uma metáfora lúdica** (decisão do Lucas em 02/10): token = peça de montar, janela de contexto = mesa de trabalho, memória = caderno de anotações, atenção = holofote, execução de código = calculadora de bolso, prompt = o seu pedido. A parte 1 já estava agendada e ficou sem termos.
 - **Palavra primeiro, pedaço depois:** a parte 1 fala em "próxima palavra"; a parte 2 corrige para "pedaços".
 
 | Dia | Parte | Situação | Onde está |

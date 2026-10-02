@@ -13,7 +13,7 @@ Esta é a parte 3 da série IA sem mistério. 🧠
 
 A IA não tem memória. Entre uma resposta e outra, nada fica guardado nela. A cada mensagem sua, ela recebe a conversa inteira de novo e relê tudo.
 
-Pense numa mesa de trabalho:
+Pense numa mesa de trabalho. O nome técnico dela é janela de contexto:
 ✅ ela só enxerga o que está em cima da mesa;
 ✅ cabe muito papel, mas não cabe tudo;
 ✅ quando a conversa fica longa demais, as partes mais antigas são resumidas ou saem da mesa.
@@ -21,7 +21,7 @@ Pense numa mesa de trabalho:
 É aí que o combinado do início some. E numa conversa nova, a mesa começa vazia: o que você explicou ontem, em outro lugar, não está lá.
 
 🔧 Como resolveram
-As IAs de hoje ganharam um caderno de anotações. Elas guardam anotações sobre você e o seu trabalho e colocam essas anotações na mesa quando a conversa começa. Não é lembrança: é texto, relido como todo o resto. E você pode ver e apagar o que está anotado.
+As IAs de hoje ganharam um caderno de anotações, o recurso de memória. Elas guardam anotações sobre você e o seu trabalho e colocam essas anotações na mesa quando a conversa começa. Não é lembrança: é texto, relido como todo o resto. E você pode ver e apagar o que está anotado.
 
 💡 O que muda na prática
 Cuide do que está na mesa:
@@ -59,4 +59,5 @@ A sua imaginação é o limite. 🚀
 - **"Ganharam um caderno de anotações; você pode ver e apagar":** o ChatGPT tem memórias salvas, que o usuário vê, edita e apaga, e a opção de usar o histórico de conversas ([ajuda da OpenAI](https://help.openai.com/en/articles/8590148-memory-faq)). O post não cita marcas. Os detalhes mudam de produto para produto e de plano para plano.
 - **"Não é lembrança: é texto relido":** descrição correta do mecanismo (as anotações entram no contexto). O desenho do caderno é ilustração.
 - **Ponte com o post da base de conhecimento (segunda):** a última frase antes da assinatura.
-- **Regras:** sem números, sem nome de ferramenta, sem sigla.
+- **Termos técnicos (regra da série):** janela de contexto (a mesa) e memória (o caderno).
+- **Regras:** sem números e sem nome de ferramenta.

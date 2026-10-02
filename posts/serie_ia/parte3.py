@@ -42,12 +42,12 @@ fala(x0, y + 210, "Resuma a parada de ontem.", True, 440)
 fala(x0, y + 284, "sua mensagem nova", True, 330)
 
 # ---------------- 3 · a leitura tem limite ----------------
-topo(2, "O LIMITE")
+topo(2, "O LIMITE · JANELA DE CONTEXTO")
 y = titulo(2, ["A leitura tem", "um tamanho", "máximo"])
-y = corpo(2, y, "Pense numa mesa de trabalho. Cabe muito papel, mas não cabe tudo. A IA só enxerga o que está em cima da mesa naquela hora.", tam=37)
+y = corpo(2, y, "Pense numa mesa de trabalho. Cabe muito papel, mas não cabe tudo. A IA só enxerga o que está em cima da mesa. O nome técnico da mesa: janela de contexto.", tam=37)
 x0 = 2 * LADO + MARGEM
 caixa(x0, y + 30, 912, 250, 20, CARD, RED, 3)
-rotulo(x0 + 24, y + 48, "A MESA: O QUE ELA ENXERGA", RED_SOFT)
+rotulo(x0 + 24, y + 48, "A MESA: A JANELA DE CONTEXTO", RED_SOFT)
 for j in range(5):
     caixa(x0 + 40 + j * 168, y + 100 + (j % 2) * 18, 150, 150, 12, CARD_2, LINE)
     for i, fr in enumerate((0.8, 0.55, 0.7)):
@@ -81,9 +81,9 @@ for j, (rot, cheia) in enumerate((("ONTEM", True), ("HOJE", False))):
         texto(xx + 220, y + 193, "vazia", "md", 34, MUTE, "mm")
 
 # ---------------- 6 · como resolveram ----------------
-topo(5, "COMO RESOLVERAM")
+topo(5, "COMO RESOLVERAM · MEMÓRIA")
 y = titulo(5, ["Um caderno", "de anotações"])
-y = corpo(5, y, "As IAs de hoje ganharam um caderno: guardam anotações sobre você e o seu trabalho e colocam essas anotações na mesa quando a conversa começa.", tam=35)
+y = corpo(5, y, "As IAs de hoje ganharam um caderno, o recurso de memória: guardam anotações sobre você e o seu trabalho e colocam essas anotações na mesa quando a conversa começa.", tam=35)
 y = corpo(5, y, "Não é lembrança. É texto, relido como todo o resto. E você pode ver e apagar o que está anotado.", tam=35, tipo="sb", cor=FG)
 x0 = 5 * LADO + MARGEM
 caixa(x0, y + 16, 400, 200, 18, CARD, VERDE)
@@ -101,7 +101,7 @@ texto(x0 + 550, y + 165, "sua mensagem nova", "md", 24, FG, "lm")
 # ---------------- 7 · na prática ----------------
 topo(6, "NA PRÁTICA")
 y = titulo(6, ["Cuide do que", "está na mesa"])
-y = corpo(6, y, "Ela trabalha com o que enxerga. O resto, para ela, não existe.", tam=37)
+y = corpo(6, y, "Ela trabalha com o que está na janela de contexto. O resto, para ela, não existe.", tam=37)
 x0 = 6 * LADO + MARGEM
 for j, (cab, det) in enumerate((("assunto novo, conversa nova", "menos papel velho disputando espaço"),
                                 ("conversa longa? peça um resumo e recomece", "leve o resumo e as regras para a conversa nova"),

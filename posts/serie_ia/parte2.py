@@ -57,17 +57,17 @@ rotulo(MARGEM, 1040, "arraste: a frase aqui embaixo já está cortada  →", RED
 # ---------------- 2 · ela lê pedaços ----------------
 topo(1, "COMO ELA LÊ")
 y = titulo(1, ["Ela não lê", "palavras.", "Lê pedaços."])
-y = corpo(1, y, "Antes de chegar à IA, todo texto é cortado em pedaços menores. Assim:", tam=38)
+y = corpo(1, y, "Antes de chegar à IA, todo texto é picado em pedaços, como peças de montar. Cada peça tem nome: token.", tam=38)
 x0 = LADO + MARGEM
 rotulo(x0, y + 14, "O QUE VOCÊ ESCREVE")
 texto(x0, y + 54, "a manutenção preventiva", "md", 46, FG)
-rotulo(x0, y + 150, "O QUE ELA RECEBE", RED_SOFT)
+rotulo(x0, y + 150, "O QUE ELA RECEBE: TOKENS", RED_SOFT)
 blocos(" a manutenção preventiva", 46, x0, y + 190)
 
 # ---------------- 3 · comum x rara ----------------
-topo(2, "A REGRA DO CORTE")
+topo(2, "A REGRA DO CORTE · TOKENIZAÇÃO")
 y = titulo(2, ["Palavra comum:", "um pedaço.", "Palavra rara: vários."], tam=62)
-y = corpo(2, y, "O que aparece muito nos textos vira um pedaço só. O que aparece pouco é montado com pedaços menores.", tam=36)
+y = corpo(2, y, "O corte tem nome: tokenização. O que aparece muito nos textos vira uma peça só. O que aparece pouco é montado com peças menores.", tam=36)
 x0 = 2 * LADO + MARGEM
 rotulo(x0, y + 8, "COMUNS")
 yy = y + 48
@@ -82,8 +82,8 @@ for w in (" almoxarifado", " empilhadeira", " paquímetro"):
 
 # ---------------- 4 · vira número ----------------
 topo(3, "O QUE ELA ENXERGA")
-y = titulo(3, ["Cada pedaço", "vira um número"])
-y = corpo(3, y, "A IA nunca vê letras. Cada pedaço é trocado pelo número dele numa lista, e ela trabalha só com esses números.", tam=37)
+y = titulo(3, ["Cada token", "vira um número"])
+y = corpo(3, y, "A IA nunca vê letras. Cada token é trocado pelo número dele numa lista, o vocabulário, e ela trabalha só com esses números.", tam=37)
 x0 = 3 * LADO + MARGEM
 cx = x0
 for p, i, _ in cortar(" a bomba parou de novo"):
@@ -99,7 +99,7 @@ rotulo(x0, y + 250, "é isto que chega até ela")
 # ---------------- 5 · por isso ela tropeça ----------------
 topo(4, "POR ISSO ELA TROPEÇA")
 y = titulo(4, ["Ela não calcula.", "Adivinha."])
-y = corpo(4, y, "Um número grande também é cortado em pedaços. A IA não faz a conta: ela adivinha os pedaços do resultado, como adivinha palavras.", tam=36)
+y = corpo(4, y, "Um número grande também vira tokens. A IA não faz a conta: ela adivinha os tokens do resultado, como adivinha palavras.", tam=36)
 x0 = 4 * LADO + MARGEM
 cx = x0
 for p in ("48", "392", " × ", "7", "615", " = "):
@@ -111,12 +111,12 @@ for p in ("48", "392", " × ", "7", "615", " = "):
 caixa(cx + 6, y + 24, 130, 68, 9, NADA, RED, 4)
 texto(cx + 71, y + 58, "?", "b", 44, RED_SOFT, "mm")
 y = corpo(4, y + 124, "Conta pequena ela viu muitas vezes e acerta. Conta grande, ela nunca viu igual.", tam=36, tipo="sb", cor=FG)
-corpo(4, y, "Contar letras de uma palavra dá o mesmo problema: ela vê pedaços, não letras.", tam=36)
+corpo(4, y, "Contar letras de uma palavra dá o mesmo problema: ela vê tokens, não letras.", tam=36)
 
 # ---------------- 6 · como resolveram ----------------
-topo(5, "COMO RESOLVERAM")
+topo(5, "COMO RESOLVERAM · EXECUÇÃO DE CÓDIGO")
 y = titulo(5, ["Ela escreve a conta.", "Um computador", "calcula."], tam=62)
-y = corpo(5, y, "Escrever é com ela. Então as IAs de hoje ganharam uma ferramenta: em vez de adivinhar o resultado, ela escreve a conta como um pequeno programa, um computador executa e devolve o número certo.", tam=33)
+y = corpo(5, y, "Escrever é com ela. Então as IAs de hoje ganharam uma calculadora de bolso, a execução de código: em vez de adivinhar o resultado, ela escreve a conta como um pequeno programa, um computador executa e devolve o número certo.", tam=33)
 x0 = 5 * LADO + MARGEM
 for j, (rot, val, cor, mono) in enumerate((("1 · ela escreve a conta", "48392 * 7615", LINE, True),
                                            ("2 · o computador executa", "368505080", AZUL, True),

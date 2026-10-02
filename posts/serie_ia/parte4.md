@@ -11,7 +11,7 @@ Ela leu. Só não deu o peso que você esperava.
 
 Esta é a parte 4 da série IA sem mistério. 🧠
 
-Antes de escrever cada palavra, a IA olha tudo o que veio antes e decide quanto cada trecho pesa. Esse mecanismo tem nome: atenção.
+Antes de escrever cada palavra, a IA olha tudo o que veio antes e decide quanto cada trecho pesa, como um holofote que ilumina mais umas palavras que outras. O nome técnico é atenção.
 
 É ele que faz a IA ligar os pontos. Em "o técnico trocou o selo da bomba porque ele estava gasto", é a atenção que liga "ele" ao selo, e não ao técnico.
 
@@ -21,7 +21,7 @@ Mas a atenção tem limite:
 ✅ em textos longos, o que está no começo e no fim é mais aproveitado; o meio é mais fácil de passar batido.
 
 🔧 A dica de quem fabrica
-Com textos longos, coloque o material primeiro e o seu pedido por último. O pedido fica onde a IA presta mais atenção.
+Com textos longos, coloque o material primeiro e o seu pedido, o prompt, por último. Ele fica onde a IA presta mais atenção.
 
 💡 O que muda na prática
 Organização não é capricho. É o que faz a sua instrução pesar:
@@ -58,4 +58,5 @@ A sua imaginação é o limite. 🚀
 - **"Material primeiro, pedido por último":** recomendação da documentação da Anthropic para textos longos, que relata melhora na qualidade das respostas com a pergunta no fim ([documentação](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices)). O post diz "quem fabrica" e não cita a marca; a fonte é de um fabricante só.
 - **"Um pedido de cada vez", "destaque", "mostre um exemplo":** boas práticas coerentes com o mecanismo; não são resultado de medição minha.
 - **Gancho final:** "Na próxima semana: por que ela inventa" (parte 5 do plano).
-- **Regras:** sem números, sem nome de ferramenta, sem sigla.
+- **Termos técnicos (regra da série):** atenção (o holofote) e prompt (o seu pedido).
+- **Regras:** sem números e sem nome de ferramenta.

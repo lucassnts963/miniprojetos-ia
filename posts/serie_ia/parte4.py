@@ -37,9 +37,9 @@ corpo(0, y + 16, "A diferença está em como ela distribui a atenção.", tam=42
 rotulo(MARGEM, 1040, "arraste e leia a frase aqui embaixo  →", RED_SOFT)
 
 # ---------------- 2 · ela pesa ----------------
-topo(1, "O MECANISMO")
+topo(1, "O MECANISMO · ATENÇÃO")
 y = titulo(1, ["Ela dá peso", "a cada palavra"])
-y = corpo(1, y, "Antes de escrever a próxima palavra, a IA olha tudo o que veio antes e decide quanto cada trecho pesa. Esse mecanismo tem nome: atenção.", tam=37)
+y = corpo(1, y, "Antes de escrever a próxima palavra, a IA olha tudo o que veio antes e decide quanto cada trecho pesa, como um holofote que ilumina mais umas palavras que outras. O nome técnico: atenção.", tam=37)
 x0 = LADO + MARGEM
 rotulo(x0, y + 12, "QUANTO CADA PALAVRA PESA PARA A PRÓXIMA")
 yy = pesos(x0, y + 56, [("A", 0.05), ("bomba", 0.9), ("parou", 0.7), ("porque", 0.3), ("o", 0.05), ("selo", 1.0), ("estava", 0.25)], None, 38)
@@ -87,14 +87,14 @@ rotulo(x0, y + 290, "quanto mais alto, mais a IA aproveita a informação")
 # ---------------- 6 · a dica dos fabricantes ----------------
 topo(5, "A DICA DE QUEM FABRICA")
 y = titulo(5, ["Documento em cima.", "Pedido embaixo."], tam=62)
-y = corpo(5, y, "Os próprios fabricantes recomendam: com textos longos, coloque o material primeiro e o seu pedido por último. O pedido fica onde a IA presta mais atenção.", tam=35)
+y = corpo(5, y, "Os próprios fabricantes recomendam: com textos longos, coloque o material primeiro e o seu pedido, o prompt, por último. Ele fica onde a IA presta mais atenção.", tam=35)
 x0 = 5 * LADO + MARGEM
 caixa(x0, y + 16, 912, 150, 18, CARD, LINE)
 rotulo(x0 + 24, y + 32, "1 · O MATERIAL")
 for i, fr in enumerate((0.92, 0.8, 0.88)):
     caixa(x0 + 24, y + 78 + i * 24, 864 * fr, 10, 5, (90, 90, 100), NADA, 0)
 caixa(x0, y + 182, 912, 110, 18, CARD, RED, 3)
-rotulo(x0 + 24, y + 198, "2 · O SEU PEDIDO", RED_SOFT)
+rotulo(x0 + 24, y + 198, "2 · O SEU PEDIDO (O PROMPT)", RED_SOFT)
 texto(x0 + 24, y + 256, "Com base no relatório acima, liste as três causas.", "md", 30, FG, "lm")
 
 # ---------------- 7 · na prática ----------------
