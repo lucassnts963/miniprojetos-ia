@@ -4,6 +4,7 @@ Post fora da numeração dos miniprojetos: não tem código nem painel, é um m�
 
 **Carrossel:** `carrossel_llm_wiki/01.png` a `08.png` (1080x1350), mais `carrossel.pdf` e `panorama.png`. É um painel contínuo cortado em 8: a linha vermelha e as ilustrações atravessam as emendas. Para refazer: `python posts/carrossel_llm_wiki.py`.
 - Para o efeito contínuo, poste as **8 imagens, na ordem**, como post de várias fotos. O PDF (documento) mostra uma página por vez, com espaço entre elas.
+- **Vídeo:** `carrossel_llm_wiki/video.mp4` (1080x1350, 58 s, com a trilha lo-fi): a câmera desliza pelo mesmo painel, parando em cada quadro. Para refazer: `python posts/video_llm_wiki.py`. Use o carrossel **ou** o vídeo no post, não os dois; o vídeo serve também para Stories/Reels.
 - Quadros: capa → o problema → a ideia → como funciona → adaptações (gente aprova) → adaptações (acompanha o trabalho) → onde se aplica → fechamento.
 
 Onde está o conhecimento da sua empresa: num lugar que qualquer pessoa consulta, ou na cabeça de quem está há mais tempo na casa?
@@ -69,8 +70,3 @@ A sua imaginação é o limite. 🚀
 - **Setores:** indústria, PCM, planejamento, construção e projetos têm uso real no vault (equipamentos, manutenções, diários, contratos). Comercial, administrativo, direito e saúde são **aplicações possíveis**, não casos testados: o texto diz "onde isso se aplica", sem afirmar resultado.
 - **Saúde e direito:** a ressalva de dados sensíveis está no texto de propósito. Se alguém perguntar, a resposta honesta é que dado de paciente ou de cliente exige ambiente e contrato adequados.
 - Sem números e sem nomes de ferramenta (regra dos posts). O nome do Karpathy fica como crédito da ideia.
-
-# Vídeo (ainda não feito): sugestões
-- **Cena animada:** documentos soltos (e-mail, ata, relatório, foto) entram numa caixa, passam por um "aprovado" e viram páginas ligadas entre si; uma pergunta acende o caminho até a resposta, com a fonte destacada.
-- **Gravação de tela** de uma base de demonstração, com conteúdo fictício. Não gravar o vault real: ele tem dados pessoais e de terceiros.
-- Qualquer que seja, o vídeo precisa mostrar o que o texto afirma: a aprovação antes de entrar e a resposta apontando para a fonte.
