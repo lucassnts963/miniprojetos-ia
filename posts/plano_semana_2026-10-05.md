@@ -61,3 +61,21 @@ Cada post entrega: texto (`posts/serie_llm/epNN.md`), a peça visual, a legenda 
 - **Analogia tem limite.** "Completar texto" explica muito, mas não tudo; onde a analogia falha, dizer que é simplificação.
 - **Cinco posts por semana é um ritmo alto.** Se apertar, o formato mais barato é o carrossel; o vídeo fica para os episódios que pedem movimento (pedaços de texto, atenção).
 - **Vídeo do YouTube:** a série pode virar um vídeo longo depois, juntando os episódios. Fica anotado, sem data.
+
+---
+
+## Atualização em 02/10: o que mudou no plano
+- **Nome da série:** "IA sem mistério" (sem sigla), para quem nunca viu o assunto.
+- **Formato:** só carrossel no LinkedIn (painel contínuo, com uma frase única no rodapé). O vídeo curto foi descartado; o tema fica para um vídeo longo no YouTube.
+- **Palavra primeiro, pedaço depois:** a parte 1 fala em "próxima palavra"; a parte 2 corrige para "pedaços".
+
+| Dia | Parte | Situação | Onde está |
+|---|---|---|---|
+| seg 05/10 | Base de conhecimento viva (carrossel) | agendado | `posts/carrossel_llm_wiki/` |
+| ter 06/10 | 1 · Como a IA escreve um texto | **agendado** | `06-completar-texto/post_linkedin.md` + `carrossel/` |
+| qua 07/10 | 2 · Por que a IA erra contas (ela lê pedaços) | pronto para agendar | `posts/serie_ia/parte2.md` + `parte2/` |
+| qui 08/10 | 3 · Por que ela esquece o que você disse (só vê a conversa) | a fazer | |
+| sex 09/10 | 4 · Como ela decide o que importa (atenção) | a fazer | |
+
+Cada parte termina anunciando a seguinte, então a ordem não pode mudar sem refazer o último quadro.
+Os carrosséis novos usam `posts/serie_ia/base.py`.
