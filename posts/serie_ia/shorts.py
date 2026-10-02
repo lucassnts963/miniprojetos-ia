@@ -532,9 +532,63 @@ P4 = [
 PARTES = {1: P1, 2: P2, 3: P3, 4: P4}
 TROCA = 0.4                                               # segundos de transição entre cenas
 
+# ---------------- narração ----------------
+# Com narr/parteN.mp3 + narr/parteN.json (feito por shorts/transcrever.py), cada cena dura o tempo da fala dela.
+# Âncora = as primeiras palavras de cada cena na narração (a cena 1 começa no zero).
+ANCORAS = {
+    1: ["voce ja viu", "faz o mesmo", "escolhe uma", "de onde", "mas cuidado", "por isso", "a sua imaginacao"],
+    2: ["porque ela nao", "esse corte", "e cada token", "por isso numa", "a solucao", "na pratica", "a sua imaginacao"],
+    3: ["porque ela nao", "e essa leitura", "em conversa longa", "e numa conversa", "a solucao foi", "na pratica", "a sua imaginacao"],
+    4: ["com um mecanismo", "e assim que", "mas o peso", "e as pesquisas", "por isso a", "na pratica", "a sua imaginacao"],
+}
+RECUO = {(1, 1): 2}                                       # "A IA faz o mesmo": a cena começa duas palavras antes da âncora
+ATRASO = 0.5                                              # a fala entra meio segundo depois do começo do vídeo
+ANTES = 0.35                                              # a cena troca um pouco antes de a fala dela começar
+
+
+def _limpa(w):
+    import unicodedata
+    w = unicodedata.normalize("NFD", w.lower())
+    return "".join(c for c in w if c.isalnum())
+
+
+def narracao(parte):
+    """-> (caminho do mp3, duração de cada cena seguindo a fala) ou None se não houver narração."""
+    base = os.path.join(SAIDA, "narr", f"parte{parte}")
+    if not (os.path.exists(base + ".mp3") and os.path.exists(base + ".json")):
+        return None
+    import json
+    with open(base + ".json", encoding="utf-8") as f:
+        d = json.load(f)
+    palavras = [(_limpa(w[2]), w[0]) for w in d["palavras"]]
+    inicios, pos = [0.0], 0
+    for k, ancora in enumerate(ANCORAS[parte]):
+        alvo = ancora.split()
+        achou = next((i for i in range(pos, len(palavras) - len(alvo) + 1)
+                      if [w for w, _ in palavras[i:i + len(alvo)]] == alvo), None)
+        if achou is None:
+            raise ValueError(f"parte {parte}: não achei a âncora '{ancora}' na narração")
+        i = max(0, achou - RECUO.get((parte, k), 0))
+        inicios.append(palavras[i][1] + ATRASO - ANTES)
+        pos = achou + len(alvo)
+    fim = d["duracao"] + ATRASO + 1.8                     # respiro no fechamento
+    return base + ".mp3", [b - a for a, b in zip(inicios, inicios[1:] + [fim])]
+
+
+_cache = {}
+
+
+def cenas_de(parte):
+    """As cenas da parte, com a duração da fala quando há narração: [(duração, duração original, ...)]"""
+    if parte not in _cache:
+        n = narracao(parte)
+        duracoes = n[1] if n else [c[0] for c in PARTES[parte]]
+        _cache[parte] = [(d,) + c for d, c in zip(duracoes, PARTES[parte])]
+    return _cache[parte]
+
 
 def quadro(parte, t):
-    cenas = PARTES[parte]
+    cenas = cenas_de(parte)
     total = sum(c[0] for c in cenas)
     s = FUNDO.copy()
     pygame.draw.circle(s, RED, (M + 12, 230), 12)
@@ -543,10 +597,11 @@ def quadro(parte, t):
     rrect(s, (255, 255, 255, 20), (M, 280, W - 2 * M, 6), 3)
     rrect(s, RED, (M, 280, (W - 2 * M) * min(1, t / total), 6), 3)
     ini = 0.0
-    for dur, olho, tit, leg, fn in cenas:
+    for dur, original, olho, tit, leg, fn in cenas:
         tl = t - ini
         if 0 <= tl < dur:
             a = min(ease(tl / TROCA), ease((dur - tl) / TROCA))
+            tl *= max(1.0, original / dur)                # cena mais curta que a original: a animação acelera para caber
             text(s, olho, font("mono-md", 32), RED_SOFT, (M, 370), "topleft", a)
             for i, l in enumerate(tit):
                 text(s, l, font("sans-b", 80), FG, (M, 424 + i * 92), "topleft", a)
@@ -566,7 +621,7 @@ def quadro(parte, t):
 def renderizar(parte):
     import trilha
     os.makedirs(SAIDA, exist_ok=True)
-    total = sum(c[0] for c in PARTES[parte])
+    total = sum(c[0] for c in cenas_de(parte))
     out = os.path.join(SAIDA, f"parte{parte}.mp4")
     p = subprocess.Popen([trilha.FFMPEG, "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
                           "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
@@ -575,7 +630,22 @@ def renderizar(parte):
         p.stdin.write(pygame.image.tobytes(quadro(parte, n / FPS), "RGB"))
     p.stdin.close()
     p.wait()
-    trilha.colocar(out, "lucid.mp3" if parte % 2 == 0 else "tranquil_mindscape.mp3")
+    musica = os.path.join(trilha.AQUI, "lucid.mp3" if parte % 2 == 0 else "tranquil_mindscape.mp3")
+    n = narracao(parte)
+    if not n:
+        trilha.colocar(out, musica)
+        return
+    # narração na frente (-16 LUFS), trilha lo-fi baixa por trás, com fade no começo e no fim
+    tmp = out[:-4] + "_tmp.mp4"
+    filtro = (f"[1:a]adelay={int(ATRASO * 1000)}:all=1,loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000[voz];"
+              f"[2:a]atrim=0:{total:.3f},asetpts=PTS-STARTPTS,loudnorm=I=-16:TP=-1.5:LRA=11,volume=0.13,"
+              f"afade=t=in:st=0:d=1,afade=t=out:st={total - 2.5:.3f}:d=2.5,aresample=48000[mus];"
+              f"[voz][mus]amix=inputs=2:duration=longest:normalize=0,atrim=0:{total:.3f}[a]")
+    subprocess.run([trilha.FFMPEG, "-v", "error", "-y", "-i", out, "-i", n[0], "-i", musica, "-filter_complex", filtro,
+                    "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-t", f"{total:.3f}", tmp],
+                   check=True)
+    os.replace(tmp, out)
+    print(f"OK {out}  ({total:.1f} s, com narração)")
 
 
 if __name__ == "__main__":

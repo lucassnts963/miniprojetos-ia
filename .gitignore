@@ -39,3 +39,4 @@ inbox/
 06-completar-texto/video/dados.json
 posts/serie_ia/__pycache__/
 posts/serie_ia/shorts/narr/*.mp3
+posts/serie_ia/shorts/narr/*.json
