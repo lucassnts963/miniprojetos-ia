@@ -1,6 +1,10 @@
 # Post LinkedIn: base de conhecimento viva (LLM Wiki)
 
-Post fora da numeração dos miniprojetos: não tem código nem painel, é um método de trabalho. Vem depois do post 02 ("nem tudo precisa de IA"). Ainda sem vídeo (sugestões no fim).
+Post fora da numeração dos miniprojetos: não tem código nem painel, é um método de trabalho. Vem depois do post 02 ("nem tudo precisa de IA").
+
+**Carrossel:** `carrossel_llm_wiki/01.png` a `08.png` (1080x1350), mais `carrossel.pdf` e `panorama.png`. É um painel contínuo cortado em 8: a linha vermelha e as ilustrações atravessam as emendas. Para refazer: `python posts/carrossel_llm_wiki.py`.
+- Para o efeito contínuo, poste as **8 imagens, na ordem**, como post de várias fotos. O PDF (documento) mostra uma página por vez, com espaço entre elas.
+- Quadros: capa → o problema → a ideia → como funciona → adaptações (gente aprova) → adaptações (acompanha o trabalho) → onde se aplica → fechamento.
 
 Onde está o conhecimento da sua empresa: num lugar que qualquer pessoa consulta, ou na cabeça de quem está há mais tempo na casa?
 
