@@ -1,5 +1,7 @@
 # Post LinkedIn: "Como uma LLM funciona", parte 1 (terça 06/10, vai junto com `video/linkedin_completar.mp4`)
 
+**Carrossel (alternativa ao vídeo, a decidir):** `carrossel/01.png` a `08.png` (1080x1350), `carrossel.pdf` e `panorama.png`. Painel contínuo: a frase escrita pela máquina anda sobre a linha vermelha e atravessa as emendas. Quadros: capa → o teclado do celular → apostar no próximo pedaço → escolhe um, aposta de novo → contar x rede → a escala → na prática → fechamento. Para refazer: `python carrossel/carrossel.py`. Use o carrossel **ou** o vídeo.
+
 Vídeo de 58 s, com trilha lo-fi: o teclado do celular → apostar no próximo pedaço (contando) → escolher e apostar de novo → contagem x rede neural → a escala → na prática (pedido vago x começo claro) → fechamento.
 
 Miniatura: `video/miniatura_linkedin.png` (quadro aos 20 s): a frase sendo completada, com as apostas em barras. É o quadro que responde à pergunta de abertura (o que a IA faz quando "responde").
