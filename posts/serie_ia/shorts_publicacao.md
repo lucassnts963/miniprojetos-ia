@@ -1,6 +1,6 @@
 # Materiais para postar os shorts "IA sem mistério"
 
-Um bloco por vídeo (`parte1.mp4` a `parte4.mp4`), com o que colar em cada rede: YouTube Shorts, Reels (Instagram e Facebook) e TikTok.
+Um bloco por vídeo (`parte1/short.mp4` a `parte4/short.mp4`), com o que colar em cada rede: YouTube Shorts, Reels (Instagram e Facebook) e TikTok.
 
 **Vale para todos**
 - **YouTube Shorts:** o título aceita até 100 caracteres; os daqui têm menos de 60, para não cortar na tela. As tags vão no campo "Tags" do YouTube Studio; as hashtags ficam no fim da descrição (as três primeiras aparecem acima do título).

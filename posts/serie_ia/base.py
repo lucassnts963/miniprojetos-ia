@@ -1,7 +1,7 @@
 """Peças comuns dos carrosséis da série "IA sem mistério" (painel contínuo de 8 quadros de 1080x1350).
 
 Cada parte importa este módulo, desenha os quadros e chama salvar(pasta). A frase do rodapé (fio) atravessa
-os 8 quadros. A parte 1 foi feita antes deste módulo e fica em 06-completar-texto/carrossel/.
+os 8 quadros. Cada parte fica na sua pasta (parteN/carrossel.py). A parte 1 foi feita antes deste módulo e traz as próprias funções.
 """
 import math
 import os

@@ -1,9 +1,12 @@
 """Carrossel "IA sem mistério", parte 7 — até quando a IA sabe das coisas: a data de corte (o treino é uma fotografia).
 
-    C:/dev/venv/Scripts/python.exe posts/serie_ia/parte7.py   ->  posts/serie_ia/parte7/
+    C:/dev/venv/Scripts/python.exe posts/serie_ia/parte7/carrossel.py   ->  as imagens saem nesta pasta
 """
 import os
 
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))   # base.py fica na pasta da série
 from base import (BODY, CARD, CARD_2, FG, LADO, LINE, MARGEM, MUTE, NADA, RED, RED_SOFT, VERDE, caixa, cartoes, circulo,
                   corpo, fecho, linha, rodape, rotulo, salvar, texto, titulo, topo)
 
@@ -80,4 +83,4 @@ cartoes(6, y, [("assunto recente: peça para buscar", "e confira as fontes que e
 
 fecho("O que não estava na foto, ela só sabe se você mostrar.", "Qual informação desatualizada uma IA já te passou como atual?",
       "Na parte 8: precisa sempre da IA mais potente?")
-salvar(os.path.join(os.path.dirname(os.path.abspath(__file__)), "parte7"))
+salvar(os.path.dirname(os.path.abspath(__file__)))

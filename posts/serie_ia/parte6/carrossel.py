@@ -2,11 +2,14 @@
 
 As fatias da roleta e as barras são ilustração do mecanismo.
 
-    C:/dev/venv/Scripts/python.exe posts/serie_ia/parte6.py   ->  posts/serie_ia/parte6/
+    C:/dev/venv/Scripts/python.exe posts/serie_ia/parte6/carrossel.py   ->  as imagens saem nesta pasta
 """
 import math
 import os
 
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))   # base.py fica na pasta da série
 import base
 from base import (BODY, CARD, CARD_2, FG, K, LADO, LINE, MARGEM, MUTE, NADA, RED, RED_SOFT, VERDE, caixa, cartoes,
                   circulo, corpo, fecho, linha, rodape, rotulo, salvar, texto, titulo, topo)
@@ -95,4 +98,4 @@ cartoes(6, y, [("tarefa repetitiva: trave o formato", "modelo de resposta e um e
 
 fecho("Não é bug: é sorteio. E dá para domar.", "Você já recebeu duas respostas opostas para a mesma pergunta?",
       "Na parte 7: até quando a IA sabe das coisas.")
-salvar(os.path.join(os.path.dirname(os.path.abspath(__file__)), "parte6"))
+salvar(os.path.dirname(os.path.abspath(__file__)))

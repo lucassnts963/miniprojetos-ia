@@ -1,9 +1,12 @@
 """Carrossel "IA sem mistério", parte 3 — por que a IA esquece o que você disse: ela só vê o que está na conversa.
 
-    C:/dev/venv/Scripts/python.exe posts/serie_ia/parte3.py   ->  posts/serie_ia/parte3/
+    C:/dev/venv/Scripts/python.exe posts/serie_ia/parte3/carrossel.py   ->  as imagens saem nesta pasta
 """
 import os
 
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))   # base.py fica na pasta da série
 from base import (BODY, CARD, CARD_2, CINZA, FG, LADO, LINE, MARGEM, MUTE, NADA, RED, RED_SOFT, VERDE, VINHO, caixa,
                   corpo, fundo_e_fio, rotulo, salvar, texto, titulo, topo)
 
@@ -119,4 +122,4 @@ y = corpo(7, y + 10, "Me conta nos comentários.", tam=42, tipo="sb", cor=FG)
 rotulo(7 * LADO + MARGEM, y + 50, "Na parte 4: como ela decide o que importa.", RED_SOFT)
 texto(7 * LADO + MARGEM, 1050, "@elucas.dev", "mono", 26, MUTE)
 
-salvar(os.path.join(os.path.dirname(os.path.abspath(__file__)), "parte3"))
+salvar(os.path.dirname(os.path.abspath(__file__)))

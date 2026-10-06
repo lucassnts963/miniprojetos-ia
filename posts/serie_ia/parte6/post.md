@@ -1,6 +1,6 @@
 # Post LinkedIn: "IA sem mistério", parte 6 (quarta 14/10, vai com o carrossel)
 
-**Carrossel:** `parte6/01.png` a `08.png` (1080x1350), `carrossel.pdf` e `panorama.png`. Para refazer: `python posts/serie_ia/parte6.py`.
+**Carrossel:** `01.png` a `08.png` (nesta pasta) (1080x1350), `carrossel.pdf` e `panorama.png`. Para refazer: `python posts/serie_ia/parte6/carrossel.py`.
 - Quadros: capa → ela gira uma roleta (amostragem) → o botão da ousadia (temperatura) → nem no mínimo sai idêntico → a variação é uma ferramenta → você controla pelo pedido → na prática → fechamento.
 - Frase do rodapé: "A IA não escolhe sempre o palpite mais forte: ela sorteia entre os mais prováveis, e por isso cada resposta sai um pouco diferente."
 

@@ -2,10 +2,13 @@
 
 O exemplo da resposta inventada é fictício, escrito para ilustrar.
 
-    C:/dev/venv/Scripts/python.exe posts/serie_ia/parte5.py   ->  posts/serie_ia/parte5/
+    C:/dev/venv/Scripts/python.exe posts/serie_ia/parte5/carrossel.py   ->  as imagens saem nesta pasta
 """
 import os
 
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))   # base.py fica na pasta da série
 from base import (BODY, CARD, CARD_2, FG, LADO, LINE, MARGEM, MUTE, NADA, RED, RED_SOFT, VERDE, caixa, cartoes, corpo,
                   fecho, rodape, rotulo, salvar, texto, titulo, topo)
 
@@ -82,4 +85,4 @@ cartoes(6, y, [("entregue o documento", "resposta com consulta inventa menos"),
 
 fecho("Bem escrito não quer dizer verdadeiro.", "Qual foi a invenção mais convincente que uma IA já te entregou?",
       "Na parte 6: por que a mesma pergunta dá respostas diferentes.")
-salvar(os.path.join(os.path.dirname(os.path.abspath(__file__)), "parte5"))
+salvar(os.path.dirname(os.path.abspath(__file__)))

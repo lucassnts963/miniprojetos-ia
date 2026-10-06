@@ -1,6 +1,6 @@
 # Post LinkedIn: "IA sem mistério", parte 8 (sexta 16/10, vai com o carrossel)
 
-**Carrossel:** `parte8/01.png` a `08.png` (1080x1350), `carrossel.pdf` e `panorama.png`. Para refazer: `python posts/serie_ia/parte8.py`.
+**Carrossel:** `01.png` a `08.png` (nesta pasta) (1080x1350), `carrossel.pdf` e `panorama.png`. Para refazer: `python posts/serie_ia/parte8/carrossel.py`.
 - Quadros: capa → modelo → capacidade, velocidade e custo → monte a frota → a dica de quem fabrica → a IA sob medida → na prática → fechamento da temporada.
 - Frase do rodapé: "Existem IAs de vários tamanhos: a maior resolve mais, mas custa mais e demora mais, e muita tarefa do dia a dia cabe na menor."
 

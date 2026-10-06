@@ -3,10 +3,10 @@
 Um áudio por short. Cole o bloco de cada parte no ElevenLabs v3 (Stability "Natural" ou "Creative"), gere e salve como:
 
 ```
-posts/serie_ia/shorts/narr/parte1.mp3
-posts/serie_ia/shorts/narr/parte2.mp3
-posts/serie_ia/shorts/narr/parte3.mp3
-posts/serie_ia/shorts/narr/parte4.mp3
+posts/serie_ia/parte1/narracao.mp3
+posts/serie_ia/parte2/narracao.mp3
+posts/serie_ia/parte3/narracao.mp3
+posts/serie_ia/parte4/narracao.mp3
 ```
 
 - Cada linha do bloco é uma cena do vídeo, na mesma ordem. Mantenha as quebras de linha: elas dão a pausa entre as cenas.

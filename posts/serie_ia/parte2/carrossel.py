@@ -4,11 +4,14 @@ Os cortes das palavras são reais: vêm do cortador de texto do projeto 06 (06-c
 Cada IA tem o seu jeito de cortar; os cortes de uma IA comercial são outros, mas a ideia é a mesma.
 A frase do rodapé também aparece cortada em pedaços, atravessando os 8 quadros.
 
-    C:/dev/venv/Scripts/python.exe posts/serie_ia/parte2.py   ->  posts/serie_ia/parte2/
+    C:/dev/venv/Scripts/python.exe posts/serie_ia/parte2/carrossel.py   ->  as imagens saem nesta pasta
 """
 import os
 import sys
 
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))   # base.py fica na pasta da série
 from base import (BODY, CARD, CINZA, FG, LADO, LINE, MARGEM, MUTE, NADA, RAIZ, RED, RED_SOFT, VERDE, VINHO, caixa, chip,
                   chips, corpo, fundo_e_fio, larg, rotulo, salvar, texto, titulo, topo)
 
@@ -147,4 +150,4 @@ y = corpo(7, y + 10, "Me conta nos comentários.", tam=42, tipo="sb", cor=FG)
 rotulo(7 * LADO + MARGEM, y + 50, "Na parte 3: por que ela esquece o que você disse.", RED_SOFT)
 texto(7 * LADO + MARGEM, 1050, "@elucas.dev", "mono", 26, MUTE)
 
-salvar(os.path.join(os.path.dirname(os.path.abspath(__file__)), "parte2"))
+salvar(os.path.dirname(os.path.abspath(__file__)))

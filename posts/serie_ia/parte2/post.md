@@ -1,6 +1,6 @@
 # Post LinkedIn: "IA sem mistério", parte 2 (quarta 07/10, vai com o carrossel)
 
-**Carrossel:** `parte2/01.png` a `08.png` (1080x1350), `carrossel.pdf` e `panorama.png`. Para refazer: `python posts/serie_ia/parte2.py`.
+**Carrossel:** `01.png` a `08.png` (nesta pasta) (1080x1350), `carrossel.pdf` e `panorama.png`. Para refazer: `python posts/serie_ia/parte2/carrossel.py`.
 - Quadros: capa → ela lê pedaços → a regra do corte → cada pedaço vira um número → por isso ela tropeça → como resolveram (ela escreve a conta, um computador calcula) → na prática → fechamento.
 - No rodapé, a frase atravessa os 8 quadros já cortada em pedaços: "A IA não lê palavras: ela corta o texto em pedaços, troca cada pedaço por um número e adivinha o próximo."
 - Poste as 8 imagens na ordem.

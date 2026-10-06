@@ -1,6 +1,6 @@
 # Post LinkedIn: "IA sem mistério", parte 4 (sexta 09/10, vai com o carrossel)
 
-**Carrossel:** `parte4/01.png` a `08.png` (1080x1350), `carrossel.pdf` e `panorama.png`. Para refazer: `python posts/serie_ia/parte4.py`.
+**Carrossel:** `01.png` a `08.png` (nesta pasta) (1080x1350), `carrossel.pdf` e `panorama.png`. Para refazer: `python posts/serie_ia/parte4/carrossel.py`.
 - Quadros: capa → ela dá peso a cada palavra (atenção) → é assim que ela liga os pontos → mais texto, mais disputa → o meio se perde → a dica de quem fabrica (documento em cima, pedido embaixo) → na prática → fechamento.
 - Frase do rodapé: "Para escrever cada palavra, a IA olha tudo o que veio antes e dá mais peso ao que parece importar."
 - Poste as 8 imagens na ordem.

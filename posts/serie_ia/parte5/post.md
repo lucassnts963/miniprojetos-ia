@@ -1,6 +1,6 @@
 # Post LinkedIn: "IA sem mistério", parte 5 (terça 13/10, vai com o carrossel)
 
-**Carrossel:** `parte5/01.png` a `08.png` (1080x1350), `carrossel.pdf` e `panorama.png`. Para refazer: `python posts/serie_ia/parte5.py`.
+**Carrossel:** `01.png` a `08.png` (nesta pasta) (1080x1350), `carrossel.pdf` e `panorama.png`. Para refazer: `python posts/serie_ia/parte5/carrossel.py`.
 - Quadros: capa → ela sempre completa o texto → alucinação → o aluno que chuta na prova → o perigo mora no detalhe específico → como resolveram (prova com consulta) → na prática → fechamento.
 - Frase do rodapé: "Quando não sabe, a IA não deixa em branco: ela escreve a resposta mais provável, como um aluno que chuta na prova."
 

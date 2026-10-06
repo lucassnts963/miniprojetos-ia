@@ -3,7 +3,7 @@
 Cada short é uma lista de cenas animadas: (duração, rótulo, título, legenda, função que desenha).
 Os cortes em tokens e os números da parte 2 são os do cortador do projeto 06; os pesos e palpites são ilustração.
 
-    ferramentas/venv-video/Scripts/python.exe posts/serie_ia/shorts.py 1          # -> posts/serie_ia/shorts/parte1.mp4
+    ferramentas/venv-video/Scripts/python.exe posts/serie_ia/shorts.py 1          # -> posts/serie_ia/parte1/short.mp4
     ferramentas/venv-video/Scripts/python.exe posts/serie_ia/shorts.py todos
     ferramentas/venv-video/Scripts/python.exe posts/serie_ia/shorts.py 2 --still 21.5
 """
@@ -18,7 +18,6 @@ import pygame  # noqa: E402
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 RAIZ = os.path.dirname(os.path.dirname(AQUI))
-SAIDA = os.path.join(AQUI, "shorts")
 sys.path.insert(0, os.path.join(RAIZ, "ferramentas", "youtube"))
 sys.path.insert(0, os.path.join(RAIZ, "ferramentas", "musica"))
 from tema import BODY, CARD, CARD_2, FG, INK, MUTE, RED, RED_SOFT, ease, font, mix, rrect, text  # noqa: E402
@@ -533,7 +532,7 @@ PARTES = {1: P1, 2: P2, 3: P3, 4: P4}
 TROCA = 0.4                                               # segundos de transição entre cenas
 
 # ---------------- narração ----------------
-# Com narr/parteN.mp3 + narr/parteN.json (feito por shorts/transcrever.py), cada cena dura o tempo da fala dela.
+# Com parteN/narracao.mp3 + parteN/narracao.json (feito por transcrever.py), cada cena dura o tempo da fala dela.
 # Âncora = as primeiras palavras de cada cena na narração (a cena 1 começa no zero).
 ANCORAS = {
     1: ["voce ja viu", "faz o mesmo", "escolhe uma", "de onde", "mas cuidado", "por isso", "a sua imaginacao"],
@@ -554,7 +553,7 @@ def _limpa(w):
 
 def narracao(parte):
     """-> (caminho do mp3, duração de cada cena seguindo a fala) ou None se não houver narração."""
-    base = os.path.join(SAIDA, "narr", f"parte{parte}")
+    base = os.path.join(AQUI, f"parte{parte}", "narracao")
     if not (os.path.exists(base + ".mp3") and os.path.exists(base + ".json")):
         return None
     import json
@@ -620,9 +619,8 @@ def quadro(parte, t):
 
 def renderizar(parte):
     import trilha
-    os.makedirs(SAIDA, exist_ok=True)
     total = sum(c[0] for c in cenas_de(parte))
-    out = os.path.join(SAIDA, f"parte{parte}.mp4")
+    out = os.path.join(AQUI, f"parte{parte}", "short.mp4")
     p = subprocess.Popen([trilha.FFMPEG, "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
                           "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
                           "-pix_fmt", "yuv420p", "-movflags", "+faststart", "-an", out], stdin=subprocess.PIPE)
@@ -652,8 +650,7 @@ if __name__ == "__main__":
     alvo = sys.argv[1] if len(sys.argv) > 1 else "todos"
     if "--still" in sys.argv:
         t = float(sys.argv[sys.argv.index("--still") + 1])
-        os.makedirs(SAIDA, exist_ok=True)
-        pygame.image.save(quadro(int(alvo), t), os.path.join(SAIDA, f"_q{alvo}_{t}.png"))
+        pygame.image.save(quadro(int(alvo), t), os.path.join(AQUI, f"parte{alvo}", f"_quadro_{t}.png"))
     else:
         for parte in ([1, 2, 3, 4] if alvo == "todos" else [int(alvo)]):
             renderizar(parte)

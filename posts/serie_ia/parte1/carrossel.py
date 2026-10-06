@@ -5,7 +5,7 @@ O que costura tudo é uma frase só, no rodapé, que atravessa os 8 quadros: a p
 ("Uma IA que escreve é uma máquina que adivinha a próxima palavra, ..."), escrita palavra por palavra.
 É didático: a frase e os palpites são ilustração, não saída do modelo do projeto.
 
-    C:/dev/venv/Scripts/python.exe posts/serie_ia/parte1.py   ->  posts/serie_ia/parte1/
+    C:/dev/venv/Scripts/python.exe posts/serie_ia/parte1/carrossel.py   ->  as imagens saem nesta pasta
 
 Feito antes do base.py das outras partes, por isso traz as próprias funções de desenho.
 """
@@ -14,9 +14,9 @@ import os
 
 from PIL import Image, ImageDraw, ImageFont
 
-RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 FONTES = os.path.join(RAIZ, "ferramentas", "youtube", "fonts")
-AQUI = os.path.join(os.path.dirname(os.path.abspath(__file__)), "parte1")      # pasta de saída
+AQUI = os.path.dirname(os.path.abspath(__file__))      # pasta de saída
 
 N, LADO, ALT, K, MARGEM = 8, 1080, 1350, 2, 84
 INK, CARD, CARD_2 = (12, 12, 15), (22, 22, 26), (31, 31, 36)

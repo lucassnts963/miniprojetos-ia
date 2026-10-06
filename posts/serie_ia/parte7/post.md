@@ -1,6 +1,6 @@
 # Post LinkedIn: "IA sem mistério", parte 7 (quinta 15/10, vai com o carrossel)
 
-**Carrossel:** `parte7/01.png` a `08.png` (1080x1350), `carrossel.pdf` e `panorama.png`. Para refazer: `python posts/serie_ia/parte7.py`.
+**Carrossel:** `01.png` a `08.png` (nesta pasta) (1080x1350), `carrossel.pdf` e `panorama.png`. Para refazer: `python posts/serie_ia/parte7/carrossel.py`.
 - Quadros: capa → o treino é uma fotografia → data de corte → a sua empresa não saiu na foto → ela nem sempre avisa → como resolveram (o jornal do dia em cima da mesa) → na prática → fechamento.
 - Frase do rodapé: "O que a IA sabe vem do treino, e o treino parou numa data: dali em diante, só sabe o que você mostrar ou o que ela buscar."
 

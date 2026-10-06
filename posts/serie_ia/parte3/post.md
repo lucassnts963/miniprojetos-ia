@@ -1,6 +1,6 @@
 # Post LinkedIn: "IA sem mistério", parte 3 (quinta 08/10, vai com o carrossel)
 
-**Carrossel:** `parte3/01.png` a `08.png` (1080x1350), `carrossel.pdf` e `panorama.png`. Para refazer: `python posts/serie_ia/parte3.py`.
+**Carrossel:** `01.png` a `08.png` (nesta pasta) (1080x1350), `carrossel.pdf` e `panorama.png`. Para refazer: `python posts/serie_ia/parte3/carrossel.py`.
 - Quadros: capa → ela não tem memória → a leitura tem um tamanho máximo (a mesa) → conversa longa: o começo sai da mesa → conversa nova: mesa vazia → como resolveram (o caderno de anotações) → na prática → fechamento.
 - Frase do rodapé: "A IA não guarda nada: a cada resposta ela relê a conversa inteira, e o que não cabe na leitura fica de fora."
 - Poste as 8 imagens na ordem.

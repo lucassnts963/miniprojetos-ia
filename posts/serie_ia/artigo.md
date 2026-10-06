@@ -112,4 +112,4 @@ As aplicações são inúmeras. E, como gosto de dizer: a sua imaginação é o 
 - **O que li de cada fonte:** os resultados de busca e os resumos das páginas, não o texto integral de cada artigo científico. As afirmações usadas são as que aparecem nos resumos: Shannon e as contagens, a previsão do próximo token, a queda de precisão em multiplicações longas, o efeito do meio do texto e as descrições oficiais das ferramentas.
 - **O que é opinião ou prática minha, sem fonte:** "o começo é tudo", "um pedido de cada vez", "destaque o que não pode faltar" e "mostre um exemplo". São orientações coerentes com o mecanismo, não resultados de medição.
 - **Marcas:** os posts do LinkedIn não citam fabricantes. Aqui elas aparecem só nas fontes.
-- **Carrosséis e posts de cada parte:** `parte1.md` a `parte4.md` e as pastas `parte1/` a `parte4/`.
+- **Carrosséis e posts de cada parte:** as pastas `parte1/` a `parte4/` (em cada uma, `post.md` e as imagens).

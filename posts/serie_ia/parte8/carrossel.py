@@ -2,10 +2,13 @@
 
 As barras de capacidade, velocidade e custo são ilustração da troca, sem escala.
 
-    C:/dev/venv/Scripts/python.exe posts/serie_ia/parte8.py   ->  posts/serie_ia/parte8/
+    C:/dev/venv/Scripts/python.exe posts/serie_ia/parte8/carrossel.py   ->  as imagens saem nesta pasta
 """
 import os
 
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))   # base.py fica na pasta da série
 from base import (BODY, CARD, CARD_2, FG, LADO, LINE, MARGEM, MUTE, NADA, RED, RED_SOFT, VERDE, caixa, cartoes, corpo,
                   fecho, rodape, rotulo, salvar, texto, titulo, topo)
 
@@ -73,4 +76,4 @@ cartoes(6, y, [("muito volume, tarefa simples", "modelo pequeno: rápido e barat
 
 fecho("A maior nem sempre é a melhor escolha.", "Em qual tarefa da sua empresa uma IA menor já daria conta?",
       "Fim da primeira temporada da série.")
-salvar(os.path.join(os.path.dirname(os.path.abspath(__file__)), "parte8"))
+salvar(os.path.dirname(os.path.abspath(__file__)))

@@ -5,10 +5,10 @@ Segunda temporada? Não: é a segunda metade da primeira. A série "IA sem mist�
 | Dia | Post | Situação | Onde está |
 |---|---|---|---|
 | seg 12/10 | Base de conhecimento viva: vídeo | agendado | `posts/carrossel_llm_wiki/video.mp4` |
-| ter 13/10 | 5 · Por que a IA inventa (alucinação) | pronto, aguardando aprovação | `posts/serie_ia/parte5.md` + `parte5/` |
-| qua 14/10 | 6 · Mesma pergunta, respostas diferentes (temperatura) | pronto, aguardando aprovação | `posts/serie_ia/parte6.md` + `parte6/` |
-| qui 15/10 | 7 · Até quando a IA sabe das coisas (data de corte) | pronto, aguardando aprovação | `posts/serie_ia/parte7.md` + `parte7/` |
-| sex 16/10 | 8 · Precisa sempre da IA mais potente? (modelos) | pronto, aguardando aprovação | `posts/serie_ia/parte8.md` + `parte8/` |
+| ter 13/10 | 5 · Por que a IA inventa (alucinação) | pronto, aguardando aprovação | `posts/serie_ia/parte5/` |
+| qua 14/10 | 6 · Mesma pergunta, respostas diferentes (temperatura) | pronto, aguardando aprovação | `posts/serie_ia/parte6/` |
+| qui 15/10 | 7 · Até quando a IA sabe das coisas (data de corte) | pronto, aguardando aprovação | `posts/serie_ia/parte7/` |
+| sex 16/10 | 8 · Precisa sempre da IA mais potente? (modelos) | pronto, aguardando aprovação | `posts/serie_ia/parte8/` |
 
 ## Termo técnico e metáfora de cada parte
 | Parte | Termo | Metáfora |
