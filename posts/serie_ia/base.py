@@ -140,3 +140,27 @@ def salvar(pasta):
         q.save(os.path.join(pasta, f"{k + 1:02d}.png"))
     quadros[0].save(os.path.join(pasta, "carrossel.pdf"), save_all=True, append_images=quadros[1:], resolution=144)
     print("ok:", pasta)
+
+
+def cartoes(k, y, itens, passo=124):
+    """Lista de cartões (título + detalhe) num quadro. itens = [(título, detalhe)]"""
+    x0 = k * LADO + MARGEM
+    for j, (cab, det) in enumerate(itens):
+        caixa(x0, y + 14 + j * passo, 912, passo - 16, 16, CARD, LINE)
+        texto(x0 + 28, y + 46 + j * passo, cab, "sb", 34, FG, "lm")
+        texto(x0 + 28, y + 90 + j * passo, det, "sans", 28, BODY, "lm")
+
+
+def fecho(resumo, pergunta, gancho):
+    """Último quadro, igual em todas as partes."""
+    topo(7, "E VOCÊ?")
+    y = titulo(7, ["A sua imaginação", "é o limite."], tam=84)
+    y = corpo(7, y, resumo, tam=42, tipo="sb", cor=FG)
+    y = corpo(7, y + 10, pergunta, tam=42)
+    y = corpo(7, y + 10, "Me conta nos comentários.", tam=42, tipo="sb", cor=FG)
+    rotulo(7 * LADO + MARGEM, y + 50, gancho, RED_SOFT)
+    texto(7 * LADO + MARGEM, 1050, "@elucas.dev", "mono", 26, MUTE)
+
+
+def rodape(comeco, resto, tam=42):
+    fundo_e_fio([(p, CINZA) for p in comeco.split()] + [(p, VINHO) for p in resto.split()], tam=tam)
