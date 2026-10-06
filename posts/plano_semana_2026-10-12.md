@@ -25,7 +25,7 @@ Segunda temporada? Não: é a segunda metade da primeira. A série "IA sem mist�
 - As partes 5 e 7 voltam às partes 1 e 3 ("lembra da parte 1", "a janela de contexto").
 
 ## Ainda não feito para estas quatro partes
-- Shorts (Reels, YouTube Shorts, TikTok), roteiro de narração e materiais de publicação.
+- Narração dos shorts das partes 5 a 8: os vídeos já existem com a trilha (`parteN/short.mp4`), o roteiro está em `posts/serie_ia/shorts_narracao.md` e os materiais de publicação em `shorts_publicacao.md`. Faltam os áudios.
 - A inclusão das partes 5 a 8 no artigo com fontes (`posts/serie_ia/artigo.md`).
 
 ## Na fila, sem data

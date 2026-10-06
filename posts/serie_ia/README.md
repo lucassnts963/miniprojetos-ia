@@ -20,7 +20,7 @@ Como funciona a IA que escreve, em oito partes, para quem nunca viu o assunto. T
 | `01.png` a `08.png` | o carrossel (1080x1350), para postar na ordem |
 | `panorama.png`, `carrossel.pdf` | o painel inteiro e a versão em PDF |
 | `carrossel.py` | o gerador das imagens |
-| `short.mp4` | o short vertical narrado (partes 1 a 4) |
+| `short.mp4` | o short vertical: narrado nas partes 1 a 4; nas partes 5 a 8, só com a trilha até a narração chegar |
 | `narracao.mp3`, `narracao.json` | a narração e a transcrição com tempos (partes 1 a 4; ficam só locais, fora do git) |
 
 ## Na raiz da série

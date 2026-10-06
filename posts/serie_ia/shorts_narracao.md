@@ -7,6 +7,7 @@ posts/serie_ia/parte1/narracao.mp3
 posts/serie_ia/parte2/narracao.mp3
 posts/serie_ia/parte3/narracao.mp3
 posts/serie_ia/parte4/narracao.mp3
+… até posts/serie_ia/parte8/narracao.mp3
 ```
 
 - Cada linha do bloco é uma cena do vídeo, na mesma ordem. Mantenha as quebras de linha: elas dão a pausa entre as cenas.
@@ -140,10 +141,129 @@ Na prática: um pedido de cada vez, destaque o que importa, e mostre um exemplo.
 | 7 | os três cartões da prática |
 | 8 | fechamento |
 
+## Parte 5 · Por que a IA inventa
+
+```
+[curious] Por que a IA inventa?
+
+Porque ela escreve adivinhando a próxima palavra. E sempre existe uma próxima palavra.
+
+O nome disso é alucinação: um texto bem escrito, confiante... e errado.
+
+É como um aluno numa prova em que deixar em branco vale zero. Chutar compensa.
+
+O perigo mora no detalhe: datas, números, nomes, citações e links.
+
+[excited] A solução é a prova com consulta: ela busca nos documentos e mostra a fonte.
+
+Na prática: entregue o documento, peça a fonte, e confira o que for crítico.
+
+[warm] A sua imaginação é o limite.
+```
+
+| Linha | Cena do vídeo |
+|---|---|
+| 1 | abertura |
+| 2 | a frase com a lacuna que sempre se preenche |
+| 3 | a pergunta e a resposta inventada |
+| 4 | em branco vale zero, chute pontua |
+| 5 | datas, números, nomes, citações, links |
+| 6 | o documento, a resposta e a fonte |
+| 7 | os três cartões da prática |
+| 8 | fechamento |
+
+## Parte 6 · Mesma pergunta, respostas diferentes
+
+```
+[curious] Por que a mesma pergunta dá respostas diferentes?
+
+Porque a IA gira uma roleta. O palpite mais provável tem a fatia maior... mas nem sempre é o sorteado.
+
+O botão que controla esse sorteio se chama temperatura. Baixa: previsível. Alta: mais variado.
+
+E nem no mínimo a resposta sai sempre idêntica.
+
+Você controla pelo pedido: quanto mais ele define o resultado, menos sobra para o sorteio.
+
+Na prática: quer padrão, trave o formato. Quer ideias, peça várias.
+
+[warm] A sua imaginação é o limite.
+```
+
+| Linha | Cena do vídeo |
+|---|---|
+| 1 | abertura |
+| 2 | a roleta girando |
+| 3 | as duas roletas: temperatura baixa e alta |
+| 4 | três respostas para a mesma pergunta |
+| 5 | formato fixo e um exemplo |
+| 6 | os três cartões da prática |
+| 7 | fechamento |
+
+## Parte 7 · Até quando a IA sabe das coisas
+
+```
+[curious] Até quando a IA sabe das coisas?
+
+O treino dela é uma fotografia: tudo o que estava escrito até um certo dia.
+
+Esse dia se chama data de corte. O que veio depois... ela não viu.
+
+E a sua empresa não saiu na foto: procedimentos, contratos, histórico.
+
+[serious] O perigo é que ela nem sempre avisa. Pode dar informação velha com cara de nova.
+
+[excited] A solução: o jornal do dia em cima da mesa. Ela busca na internet, e você entrega o documento.
+
+Na prática: assunto recente, peça para buscar. Assunto interno, entregue o documento.
+
+[warm] A sua imaginação é o limite.
+```
+
+| Linha | Cena do vídeo |
+|---|---|
+| 1 | abertura |
+| 2 | o flash e a fotografia |
+| 3 | a linha do tempo com a data de corte |
+| 4 | os itens internos, "fora da foto" |
+| 5 | a pergunta e a resposta com informação velha |
+| 6 | a busca e o documento descendo para a mesa |
+| 7 | os três cartões da prática |
+| 8 | fechamento |
+
+## Parte 8 · Precisa sempre da IA mais potente?
+
+```
+[curious] Precisa sempre da IA mais potente?
+
+Não. Cada IA é um modelo, e eles vêm em vários tamanhos.
+
+O maior resolve mais... mas demora mais e custa mais.
+
+Pense numa frota: a moto para a tarefa simples, a van para o dia a dia, o caminhão para a carga pesada.
+
+A dica de quem fabrica: comece pelo menor, teste, e suba só se faltar.
+
+Na prática: muito volume e tarefa simples, modelo pequeno. Decisão difícil, modelo grande.
+
+[warm] A sua imaginação é o limite.
+```
+
+| Linha | Cena do vídeo |
+|---|---|
+| 1 | abertura |
+| 2 | os três tamanhos de modelo |
+| 3 | as barras de capacidade, velocidade e custo |
+| 4 | moto, van e caminhão |
+| 5 | os três passos: comece, teste, suba |
+| 6 | os três cartões da prática |
+| 7 | fechamento |
+
 ---
 
 ## Notas
 - **Tamanho:** cada bloco tem de 100 a 115 palavras. É uma estimativa para caber em 45 a 55 s; a duração real depende da voz e só dá para medir com o áudio gerado.
 - **Coerência com a tela:** a narração diz o mesmo que as legendas, com outras palavras. Quando o áudio entrar, as legendas de duas linhas podem sair ou ficar; decidimos vendo o resultado.
-- **Termos falados:** tokens, tokenização, execução de código, janela de contexto, memória, atenção. Cada um vem com a metáfora na mesma frase. Se a voz pronunciar "tokens" de um jeito estranho, escreva "tôquens" no texto.
+- **Partes 5 a 8:** os shorts já existem só com a trilha; quando as narrações chegarem, rodo a transcrição e o render de novo. Nas partes 6 e 8, mantenha a frase de abertura da segunda linha ("Porque a IA gira uma roleta", "Não. Cada IA é um modelo"): é por ela que a cena é localizada.
+- **Termos falados:** tokens, tokenização, execução de código, janela de contexto, memória, atenção, alucinação, temperatura, data de corte, modelo. Cada um vem com a metáfora na mesma frase. Se a voz pronunciar "tokens" de um jeito estranho, escreva "tôquens" no texto.
 - **Sem números** falados, e sem nome de ferramenta.

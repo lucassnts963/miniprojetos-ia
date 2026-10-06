@@ -528,7 +528,310 @@ P4 = [
     (4.5, "", [], ("", ""), fechamento("Texto organizado, atenção no lugar certo.")),
 ]
 
-PARTES = {1: P1, 2: P2, 3: P3, 4: P4}
+# =====================================================================================
+# PARTE 5 · por que a IA inventa
+# =====================================================================================
+def p5_completa(s, t, a):
+    bloco(s, (M, PALCO + 40, W - 2 * M, 250), a=a)
+    text(s, "A norma que trata", font("sans-md", 48), FG, (M + 40, PALCO + 110), "midleft", a)
+    text(s, "disso é a", font("sans-md", 48), FG, (M + 40, PALCO + 190), "midleft", a)
+    opcoes = ["NT-4471", "NR-309", "IT-0082", "NBR-7714"]                # sempre aparece alguma coisa
+    i = int(max(0, t - 1.2) / 0.9) % len(opcoes)
+    if t < 1.2:
+        lacuna(s, M + 290, PALCO + 152, 48, t, a, w=200)
+    else:
+        chip(s, opcoes[i], M + 290, PALCO + 152, 48, VINHO, a, mono=True)
+    text(s, "alguma palavra sempre vem depois", font("mono", 34), MUTE, (CX, PALCO + 350), "midtop", ap(t, 2.0) * a)
+
+
+def p5_alucinacao(s, t, a):
+    fala(s, "Qual norma trata desse ensaio?", PALCO + 20, True, a)
+    resposta = ["É a norma NT-4471, revisão C,", "item 8.3, publicada pela comissão…"]
+    k = ap(t, 1.0) * a
+    bloco(s, (M, PALCO + 140, W - 2 * M - 120, 220), CARD_2, LINHA, k)
+    n = int(max(0, t - 1.3) * 26)
+    for i, l in enumerate(resposta):
+        text(s, l[:max(0, n)], font("sans-md", 40), FG, (M + 34, PALCO + 200 + i * 62), "midleft", k)
+        n -= len(l)
+    kk = ap(t, 4.2) * a
+    bloco(s, (M, PALCO + 420, W - 2 * M, 110), CARD, RED, kk, esp=4)
+    text(s, "convincente. e inventada.", font("mono-md", 40), RED_SOFT, (CX, PALCO + 475), "center", kk)
+    text(s, "(exemplo fictício)", font("mono", 28), MUTE, (CX, PALCO + 560), "midtop", kk)
+
+
+def p5_aluno(s, t, a):
+    for j, (rot, val, cor) in enumerate((("deixar em branco", "zero", LINHA), ("chutar", "às vezes acerta", VERDE))):
+        k = ap(t, 0.3 + j * 1.2) * a
+        bloco(s, (M, PALCO + 30 + j * 250, W - 2 * M, 210), CARD, cor, k, esp=4)
+        text(s, rot, font("mono-md", 34), MUTE, (M + 40, PALCO + 90 + j * 250), "midleft", k)
+        text(s, val, font("sans-sb", 60), FG, (M + 40, PALCO + 170 + j * 250), "midleft", k)
+    pontos = int(max(0, t - 2.4) * 2.2)                                   # o placar de quem chuta sobe
+    text(s, f"+{pontos}", font("mono-md", 64), VERDE, (W - M - 40, PALCO + 420), "midright", ap(t, 2.4) * a)
+    text(s, "+0", font("mono-md", 64), MUTE, (W - M - 40, PALCO + 170), "midright", ap(t, 1.0) * a)
+
+
+def p5_detalhe(s, t, a):
+    itens = ["datas", "números", "nomes", "citações", "links"]
+    for j, it in enumerate(itens):
+        k = ap(t, 0.3 + j * 0.5) * a
+        x = M + (j % 2) * 470
+        y = PALCO + 40 + (j // 2) * 150
+        bloco(s, (x, y, 440, 120), CARD, RED, k, esp=4)
+        text(s, it, font("sans-md", 48), FG, (x + 36, y + 60), "midleft", k)
+
+
+def p5_consulta(s, t, a):
+    k = ap(t, 0.3) * a
+    bloco(s, (M, PALCO + 20, W - 2 * M, 200), CARD_2, LINHA, k)
+    text(s, "DOCUMENTO", font("mono-md", 30), MUTE, (M + 30, PALCO + 42), "topleft", k)
+    for i, fr in enumerate((0.9, 0.7, 0.8)):
+        rrect(s, (RED if i == 1 and t > 1.6 else (90, 90, 100)) + (int(255 * k),), (M + 30, PALCO + 100 + i * 34, (W - 2 * M - 60) * fr, 14), 7)
+    seta(s, CX, PALCO + 280, ap(t, 1.6) * a)
+    kk = ap(t, 2.2) * a
+    bloco(s, (M, PALCO + 340, W - 2 * M, 290), CARD, VERDE, kk, esp=4)
+    text(s, "A troca do selo ficou pendente", font("sans-md", 42), FG, (M + 34, PALCO + 400), "midleft", kk)
+    text(s, "desde a última parada.", font("sans-md", 42), FG, (M + 34, PALCO + 456), "midleft", kk)
+    k3 = ap(t, 3.4) * a
+    bloco(s, (M + 34, PALCO + 520, 560, 76), (30, 50, 40), VERDE, k3, 38)
+    text(s, "fonte: relatório da parada", font("mono-md", 32), VERDE, (M + 64, PALCO + 558), "midleft", k3)
+
+
+P5 = [
+    (4.0, "", [], ("", ""), abertura(["Por que a IA", "inventa?"], "tem explicação, e tem como reduzir")),
+    (7.0, "O MECANISMO", ["Ela sempre", "completa o texto"], ("Ela adivinha a próxima palavra.", "E sempre existe uma."), p5_completa),
+    (7.5, "O NOME DISSO", ["Alucinação"], ("Texto bem escrito,", "confiante e errado."), p5_alucinacao),
+    (7.0, "POR QUE ACONTECE", ["O aluno que", "chuta na prova"], ("Se em branco vale zero,", "chutar compensa."), p5_aluno),
+    (6.0, "ONDE MORA O PERIGO", ["No detalhe", "específico"], ("O geral ela costuma acertar.", "O risco está no detalhe raro."), p5_detalhe),
+    (7.5, "COMO RESOLVERAM", ["Prova com", "consulta"], ("Ela busca nos documentos", "e mostra a fonte."), p5_consulta),
+    (7.5, "NA PRÁTICA", ["Tire o chute", "da jogada"], ("Você não elimina a alucinação.", "Você reduz e confere."),
+     pratica([("entregue o documento", "com consulta, ela inventa menos"), ("peça a fonte", "e abra: link inventado não abre"),
+              ("“não sei” é resposta válida", "diga isso no pedido")])),
+    (4.5, "", [], ("", ""), fechamento("Bem escrito não quer dizer verdadeiro.")),
+]
+
+# =====================================================================================
+# PARTE 6 · mesma pergunta, respostas diferentes
+# =====================================================================================
+def roleta(s, cx, cy, r, fatias, ponteiro, a=1.0):
+    """fatias = [(tamanho, cor, rótulo)], somando 1; ponteiro = ângulo em graus (0 = para cima, sentido horário)."""
+    if a <= 0:
+        return
+    tmp = pygame.Surface((2 * r + 8, 2 * r + 8), pygame.SRCALPHA)
+    c, ang = r + 4, -90.0
+    for v, cor, rot in fatias:
+        pts = [(c, c)] + [(c + r * math.cos(math.radians(ang + 360 * v * i / 40)), c + r * math.sin(math.radians(ang + 360 * v * i / 40))) for i in range(41)]
+        pygame.draw.polygon(tmp, cor, pts)
+        pygame.draw.polygon(tmp, INK, pts, 4)
+        if rot:
+            m = math.radians(ang + 180 * v)
+            img = font("sans-md", 34).render(rot, True, FG)
+            tmp.blit(img, img.get_rect(center=(c + math.cos(m) * r * 0.6, c + math.sin(m) * r * 0.6)))
+        ang += 360 * v
+    pa = math.radians(ponteiro - 90)
+    pygame.draw.line(tmp, FG, (c, c), (c + math.cos(pa) * r * 0.8, c + math.sin(pa) * r * 0.8), 8)
+    pygame.draw.circle(tmp, FG, (c, c), 18)
+    tmp.set_alpha(int(255 * a))
+    s.blit(tmp, (cx - c, cy - c))
+
+
+FAT = [(0.55, (150, 50, 56), "próxima"), (0.25, (110, 60, 66), "resposta"), (0.12, (80, 62, 68), "melhor"), (0.08, (60, 60, 68), "")]
+
+
+def gira(t, paradas, cada=1.8):
+    """Ponteiro que gira e para: a cada `cada` segundos, descansa num dos ângulos de `paradas`."""
+    i = int(t / cada)
+    k = min(1.0, (t - i * cada) / (cada * 0.6))
+    de = paradas[(i - 1) % len(paradas)] if i else 0
+    ate = paradas[i % len(paradas)] + 720
+    return de + (ate - de) * ease(k)
+
+
+def p6_roleta(s, t, a):
+    roleta(s, CX, PALCO + 300, 270, FAT, gira(t, [80, 250, 120, 330]), a)
+    text(s, "a fatia maior sai mais vezes. não sempre.", font("mono", 34), MUTE, (CX, PALCO + 610), "midtop", ap(t, 2.0) * a)
+
+
+def p6_temperatura(s, t, a):
+    baixa = [(0.9, (150, 50, 56), ""), (0.07, (110, 60, 66), ""), (0.03, (60, 60, 68), "")]
+    alta = [(0.4, (150, 50, 56), ""), (0.3, (110, 60, 66), ""), (0.18, (80, 62, 68), ""), (0.12, (60, 60, 68), "")]
+    for j, (rot, fat, leg, par) in enumerate((("TEMPERATURA BAIXA", baixa, "previsível", [100, 200, 60]), ("TEMPERATURA ALTA", alta, "variado", [60, 200, 290, 340]))):
+        k = ap(t, 0.3 + j * 1.6) * a
+        cx = M + 230 + j * 470
+        text(s, rot, font("mono-md", 30), MUTE if j == 0 else RED_SOFT, (cx, PALCO + 20), "midtop", k)
+        roleta(s, cx, PALCO + 280, 190, fat, gira(max(0, t - 0.3 - j * 1.6), par, 1.4), k)
+        text(s, leg, font("sans-sb", 46), FG, (cx, PALCO + 510), "midtop", k)
+
+
+def p6_minimo(s, t, a):
+    for j, txt in enumerate(("O relatório aponta três causas.", "O relatório indica três causas.", "São três as causas apontadas.")):
+        k = ap(t, 0.4 + j * 1.1) * a
+        bloco(s, (M, PALCO + 40 + j * 150, W - 2 * M, 120), a=k)
+        text(s, txt, font("sans-md", 42), FG, (M + 34, PALCO + 100 + j * 150), "midleft", k)
+    text(s, "mesma pergunta, três respostas válidas", font("mono", 34), MUTE, (CX, PALCO + 520), "midtop", ap(t, 3.6) * a)
+
+
+def p6_pedido(s, t, a):
+    bloco(s, (M, PALCO + 30, W - 2 * M, 480), CARD, VERDE, a, esp=4)
+    for j, (rot, l1, l2) in enumerate((("formato fixo", "Responda numa tabela:", "causa, evidência, ação."), ("um exemplo", "Siga o modelo do", "relatório abaixo."))):
+        k = ap(t, 0.5 + j * 1.5) * a
+        text(s, rot, font("mono-md", 32), RED_SOFT, (M + 36, PALCO + 64 + j * 220), "topleft", k)
+        text(s, l1, font("sans-md", 44), FG, (M + 36, PALCO + 114 + j * 220), "topleft", k)
+        text(s, l2, font("sans-md", 44), FG, (M + 36, PALCO + 170 + j * 220), "topleft", k)
+
+
+P6 = [
+    (4.0, "", [], ("", ""), abertura(["Mesma pergunta,", "respostas", "diferentes?"], "não é bug")),
+    (8.0, "O MECANISMO · AMOSTRAGEM", ["Ela gira", "uma roleta"], ("A cada palavra, ela sorteia", "entre os palpites mais prováveis."), p6_roleta),
+    (8.0, "O BOTÃO", ["Temperatura"], ("É o botão da ousadia:", "baixa, previsível; alta, variado."), p6_temperatura),
+    (6.5, "UM DETALHE", ["Nem no mínimo", "sai idêntico"], ("Dá para reduzir a variação,", "não para zerar."), p6_minimo),
+    (7.5, "COMO DOMAR", ["Você controla", "pelo pedido"], ("Quanto mais ele define o resultado,", "menos sobra para o sorteio."), p6_pedido),
+    (7.5, "NA PRÁTICA", ["Use o sorteio", "a seu favor"], ("Decida antes: você quer", "padrão ou quer opções?"),
+     pratica([("quer padrão: trave o formato", "modelo de resposta e um exemplo"), ("quer ideias: peça várias", "a variação trabalha para você"),
+              ("decisão importante", "pergunte duas vezes e compare")])),
+    (4.5, "", [], ("", ""), fechamento("Não é bug: é sorteio. E dá para domar.")),
+]
+
+# =====================================================================================
+# PARTE 7 · até quando a IA sabe das coisas
+# =====================================================================================
+def p7_foto(s, t, a):
+    k = ap(t, 0.8, 0.5) * a
+    clarao = max(0.0, 1 - abs(t - 0.7) / 0.25)                            # o flash da câmera
+    if clarao > 0:
+        rrect(s, (255, 255, 255, int(170 * clarao * a)), (M, PALCO, W - 2 * M, 560), 30)
+    ang = -4 * ap(t, 0.8, 0.6)
+    foto = pygame.Surface((640, 520), pygame.SRCALPHA)
+    pygame.draw.rect(foto, (236, 236, 239), (0, 0, 640, 520), border_radius=14)
+    pygame.draw.rect(foto, CARD_2, (30, 30, 580, 380))
+    for i, fr in enumerate((0.8, 0.6, 0.72, 0.5, 0.66, 0.58)):
+        pygame.draw.rect(foto, (90, 90, 100), (64, 70 + i * 52, 512 * fr, 16), border_radius=8)
+    foto.blit(font("mono", 30).render("tudo o que ela leu", True, (60, 60, 68)), (150, 440))
+    foto = pygame.transform.rotozoom(foto, ang, 1.0)
+    foto.set_alpha(int(255 * k))
+    s.blit(foto, foto.get_rect(center=(CX, PALCO + 300)))
+
+
+def p7_corte(s, t, a):
+    y = PALCO + 260
+    x0, x1, xc = M, W - M, M + 560
+    k = ap(t, 0.4, 1.4)
+    pygame.draw.line(s, mix(INK, RED, a), (x0, y), (x0 + (xc - x0) * k, y), 12)
+    text(s, "o que ela leu", font("sans-md", 44), FG, ((x0 + xc) / 2, y - 70), "center", ap(t, 0.8) * a)
+    k2 = ap(t, 2.0)
+    if k2 > 0:
+        pygame.draw.circle(s, mix(INK, RED, a), (xc, y), int(24 * k2))
+        text(s, "data de corte", font("mono-md", 36), RED_SOFT, (xc, y + 70), "center", k2 * a)
+    k3 = ap(t, 3.0, 1.0)
+    if k3 > 0:
+        pygame.draw.line(s, mix(INK, (70, 70, 80), a), (xc, y), (xc + (x1 - xc) * k3, y), 12)
+        text(s, "não viu", font("sans-md", 44), MUTE, ((xc + x1) / 2, y - 70), "center", k3 * a)
+        text(s, "hoje", font("mono-md", 36), FG, (x1, y + 70), "midright", ap(t, 3.8) * a)
+
+
+def p7_empresa(s, t, a):
+    for j, it in enumerate(("procedimentos internos", "contratos e propostas", "histórico de equipamentos", "decisões e atas")):
+        k = ap(t, 0.3 + j * 0.6) * a
+        y = PALCO + 30 + j * 140
+        bloco(s, (M, y, W - 2 * M, 114), a=k)
+        text(s, it, font("sans-md", 44), FG, (M + 36, y + 57), "midleft", k)
+        text(s, "fora da foto", font("mono", 30), RED_SOFT, (W - M - 36, y + 57), "midright", ap(t, 1.0 + j * 0.6) * a)
+
+
+def p7_avisa(s, t, a):
+    k = ap(t, 0.4) * a
+    fala(s, "Qual é a regra em vigor?", PALCO + 30, True, k)
+    kk = ap(t, 1.6) * a
+    bloco(s, (M, PALCO + 160, W - 2 * M - 100, 130), CARD_2, LINHA, kk)
+    text(s, "A regra em vigor é a de…", font("sans-md", 42), FG, (M + 34, PALCO + 225), "midleft", kk)
+    k3 = ap(t, 3.0) * a
+    bloco(s, (M, PALCO + 360, W - 2 * M, 130), CARD, RED, k3, esp=4)
+    text(s, "informação velha, com cara de nova", font("sans-md", 40), FG, (CX, PALCO + 425), "center", k3)
+
+
+def p7_jornal(s, t, a):
+    bloco(s, (M, PALCO + 300, W - 2 * M, 380), CARD, RED, a, esp=4)
+    text(s, "A MESA · JANELA DE CONTEXTO", font("mono-md", 30), RED_SOFT, (M + 30, PALCO + 322), "topleft", a)
+    for j, (rot, cor) in enumerate((("busca na internet, com fontes", (30, 50, 40)), ("o seu documento", (30, 50, 40)), ("sua pergunta", (70, 30, 34)))):
+        k = ap(t, 0.6 + j * 1.3, 0.7)
+        if k <= 0:
+            continue
+        y = PALCO + 390 + j * 96 - (1 - k) * (360 + j * 96)
+        bloco(s, (M + 30, y, W - 2 * M - 60, 78), cor, None, a * min(1, k * 2), 16)
+        text(s, rot, font("sans-md", 38), FG, (M + 60, y + 39), "midleft", a * min(1, k * 2))
+    text(s, "a informação nova entra pela conversa", font("mono", 32), MUTE, (CX, PALCO + 40), "midtop", ap(t, 0.3) * a)
+    text(s, "a foto continua a mesma", font("mono", 32), MUTE, (CX, PALCO + 90), "midtop", ap(t, 0.3) * a)
+
+
+P7 = [
+    (4.0, "", [], ("", ""), abertura(["Até quando", "a IA sabe", "das coisas?"], "o conhecimento dela tem data")),
+    (6.5, "A ORIGEM", ["O treino é uma", "fotografia"], ("Tudo o que estava escrito", "até um certo dia."), p7_foto),
+    (7.0, "O NOME TÉCNICO", ["Data de corte"], ("É o dia em que a foto foi tirada.", "O que veio depois, ela não viu."), p7_corte),
+    (6.5, "MAIS IMPORTANTE", ["A sua empresa", "não saiu na foto"], ("O que é interno nunca esteve", "nos textos que ela leu."), p7_empresa),
+    (6.5, "O PERIGO", ["Ela nem sempre", "avisa"], ("Pode responder com", "o que tinha na foto."), p7_avisa),
+    (7.5, "COMO RESOLVERAM", ["O jornal do dia", "em cima da mesa"], ("Ela busca na internet,", "e você entrega o documento."), p7_jornal),
+    (7.5, "NA PRÁTICA", ["Isso estava", "na foto?"], ("Se não estava, a informação", "tem de entrar pela conversa."),
+     pratica([("assunto recente: peça para buscar", "e confira as fontes"), ("assunto interno: entregue o documento", "ela não tem como saber"),
+              ("regra, preço e prazo", "confirme a data da informação")])),
+    (4.5, "", [], ("", ""), fechamento("O que não estava na foto, só se você mostrar.")),
+]
+
+# =====================================================================================
+# PARTE 8 · precisa sempre da IA mais potente?
+# =====================================================================================
+def p8_modelo(s, t, a):
+    base_y = PALCO + 480
+    for j, (rot, lado) in enumerate((("pequeno", 150), ("médio", 240), ("grande", 340))):
+        k = ap(t, 0.4 + j * 0.9, 0.6)
+        if k <= 0:
+            continue
+        x = M + 20 + (0, 220, 530)[j]
+        l = lado * k
+        bloco(s, (x, base_y - l, l, l), CARD, RED if j == 2 else LINHA, a * k, esp=4 if j == 2 else 2)
+        text(s, rot, font("sans-md", 40), FG, (x + lado / 2, base_y + 30), "midtop", a * k)
+
+
+def p8_troca(s, t, a):
+    for j, (rot, vals) in enumerate((("PEQUENO", (0.4, 1.0, 0.2)), ("GRANDE", (1.0, 0.45, 1.0)))):
+        y0 = PALCO + 20 + j * 330
+        k0 = ap(t, 0.3 + j * 1.8) * a
+        text(s, rot, font("mono-md", 34), MUTE if j == 0 else RED_SOFT, (M, y0), "topleft", k0)
+        for i, (nome, v) in enumerate(zip(("capacidade", "velocidade", "custo"), vals)):
+            k = ap(t, 0.5 + j * 1.8 + i * 0.25, 0.8)
+            yy = y0 + 64 + i * 80
+            text(s, nome, font("sans", 36), BODY, (M, yy + 24), "midleft", k0)
+            rrect(s, (255, 255, 255, int(18 * k0)), (M + 250, yy, W - 2 * M - 250, 48), 24)
+            rrect(s, (RED if i == 2 else VERDE) + (int(255 * k0),), (M + 250, yy, max(48, (W - 2 * M - 250) * v * k), 48), 24)
+
+
+def p8_frota(s, t, a):
+    cartoes(s, [("a moto: modelo pequeno", "classificar, separar, extrair um dado"), ("a van: modelo médio", "redigir, revisar, responder"),
+                ("o caminhão: modelo grande", "análise longa, problema difícil")], PALCO + 30, t, a, espera=1.3)
+
+
+def p8_dica(s, t, a):
+    for j, (num, txt) in enumerate((("1", "comece pelo menor"), ("2", "teste com os seus casos"), ("3", "suba só onde faltar"))):
+        k = ap(t, 0.4 + j * 1.4) * a
+        y = PALCO + 40 + j * 180
+        pygame.draw.circle(s, mix(INK, RED, k), (M + 50, y + 60), 46)
+        text(s, num, font("sans-b", 48), INK, (M + 50, y + 60), "center", k)
+        text(s, txt, font("sans-md", 50), FG, (M + 130, y + 60), "midleft", k)
+        if j < 2:
+            pygame.draw.line(s, mix(INK, LINHA, ap(t, 1.0 + j * 1.4) * a), (M + 50, y + 112), (M + 50, y + 190), 4)
+
+
+P8 = [
+    (4.0, "", [], ("", ""), abertura(["Precisa sempre", "da IA mais", "potente?"], "IA também tem tamanho")),
+    (6.5, "O NOME TÉCNICO", ["Modelo"], ("Cada IA é um modelo, e eles vêm", "em vários tamanhos."), p8_modelo),
+    (8.0, "A TROCA", ["Capacidade,", "velocidade e custo"], ("O maior resolve mais,", "mas demora mais e custa mais."), p8_troca),
+    (8.0, "A METÁFORA", ["Monte a frota"], ("Cada veículo", "para a sua carga."), p8_frota),
+    (7.5, "A DICA DE QUEM FABRICA", ["Comece pelo menor.", "Suba se faltar."], ("Muita tarefa do dia a dia", "cabe no modelo pequeno."), p8_dica),
+    (7.5, "NA PRÁTICA", ["Escolha pelo", "tamanho da tarefa"], ("Antes da ferramenta,", "olhe para a carga."),
+     pratica([("muito volume, tarefa simples", "modelo pequeno: rápido e barato"), ("pouco volume, decisão difícil", "modelo grande: vale o custo"),
+              ("na dúvida, teste", "com os seus casos reais")])),
+    (4.5, "", [], ("", ""), fechamento("A maior nem sempre é a melhor escolha.")),
+]
+
+PARTES = {1: P1, 2: P2, 3: P3, 4: P4, 5: P5, 6: P6, 7: P7, 8: P8}
 TROCA = 0.4                                               # segundos de transição entre cenas
 
 # ---------------- narração ----------------
@@ -539,8 +842,12 @@ ANCORAS = {
     2: ["porque ela nao", "esse corte", "e cada token", "por isso numa", "a solucao", "na pratica", "a sua imaginacao"],
     3: ["porque ela nao", "e essa leitura", "em conversa longa", "e numa conversa", "a solucao foi", "na pratica", "a sua imaginacao"],
     4: ["com um mecanismo", "e assim que", "mas o peso", "e as pesquisas", "por isso a", "na pratica", "a sua imaginacao"],
+    5: ["porque ela escreve", "o nome disso", "e como um", "o perigo mora", "a solucao e", "na pratica", "a sua imaginacao"],
+    6: ["gira uma roleta", "o botao que", "e nem no", "voce controla", "na pratica", "a sua imaginacao"],
+    7: ["o treino dela", "esse dia se", "e a sua empresa", "o perigo e", "a solucao", "na pratica", "a sua imaginacao"],
+    8: ["e um modelo", "o maior resolve", "pense numa frota", "a dica de", "na pratica", "a sua imaginacao"],
 }
-RECUO = {(1, 1): 2}                                       # "A IA faz o mesmo": a cena começa duas palavras antes da âncora
+RECUO = {(1, 1): 2, (6, 0): 3, (8, 0): 3}                                       # "A IA faz o mesmo": a cena começa duas palavras antes da âncora
 ATRASO = 0.5                                              # a fala entra meio segundo depois do começo do vídeo
 ANTES = 0.35                                              # a cena troca um pouco antes de a fala dela começar
 
@@ -628,7 +935,7 @@ def renderizar(parte):
         p.stdin.write(pygame.image.tobytes(quadro(parte, n / FPS), "RGB"))
     p.stdin.close()
     p.wait()
-    musica = os.path.join(trilha.AQUI, "lucid.mp3" if parte % 2 == 0 else "tranquil_mindscape.mp3")
+    musica = os.path.join(trilha.AQUI, ("tranquil_mindscape.mp3", "lucid.mp3", "tokyo_sunset.mp3", "when_i_was_human.mp3")[(parte - 1) % 4] if parte > 4 else ("lucid.mp3" if parte % 2 == 0 else "tranquil_mindscape.mp3"))
     n = narracao(parte)
     if not n:
         trilha.colocar(out, musica)
@@ -652,5 +959,5 @@ if __name__ == "__main__":
         t = float(sys.argv[sys.argv.index("--still") + 1])
         pygame.image.save(quadro(int(alvo), t), os.path.join(AQUI, f"parte{alvo}", f"_quadro_{t}.png"))
     else:
-        for parte in ([1, 2, 3, 4] if alvo == "todos" else [int(alvo)]):
+        for parte in (sorted(PARTES) if alvo == "todos" else [int(x) for x in alvo.split(",")]):
             renderizar(parte)

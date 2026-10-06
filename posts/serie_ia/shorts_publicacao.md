@@ -1,6 +1,6 @@
 # Materiais para postar os shorts "IA sem mistério"
 
-Um bloco por vídeo (`parte1/short.mp4` a `parte4/short.mp4`), com o que colar em cada rede: YouTube Shorts, Reels (Instagram e Facebook) e TikTok.
+Um bloco por vídeo (`parte1/short.mp4` a `parte8/short.mp4`), com o que colar em cada rede: YouTube Shorts, Reels (Instagram e Facebook) e TikTok.
 
 **Vale para todos**
 - **YouTube Shorts:** o título aceita até 100 caracteres; os daqui têm menos de 60, para não cortar na tela. As tags vão no campo "Tags" do YouTube Studio; as hashtags ficam no fim da descrição (as três primeiras aparecem acima do título).
@@ -8,7 +8,7 @@ Um bloco por vídeo (`parte1/short.mp4` a `parte4/short.mp4`), com o que colar e
 - **TikTok:** legenda curta, com a pergunta na primeira linha e "parte N de 4" para quem quiser ver a série. O título do vídeo no TikTok é a própria legenda. Se o aplicativo pedir uma capa com texto, use a pergunta do vídeo.
 - **Capa:** use o quadro da abertura (a pergunta em letras grandes), no primeiro segundo de cada vídeo.
 - **Playlist no YouTube:** "IA sem mistério", na ordem das partes.
-- **Onde está `[LINK]`**, cole o link da parte seguinte ou da playlist depois de publicar. Na parte 4, o link da playlist.
+- **Onde está `[LINK]`**, cole o link da parte seguinte ou da playlist depois de publicar. Nas partes 4 e 8, o link da playlist.
 - Sem números e sem nomes de ferramenta, como nos posts.
 
 ---
@@ -55,7 +55,7 @@ A sua imaginação é o limite. 🚀
 
 ### TikTok
 ```
-Como a IA escreve um texto? 🧠 Igual ao teclado do celular: ela adivinha a próxima palavra, uma de cada vez. Por isso o começo do seu pedido é tudo. Parte 1 de 4 da série IA sem mistério. Segue para ver a parte 2: por que a IA erra contas.
+Como a IA escreve um texto? 🧠 Igual ao teclado do celular: ela adivinha a próxima palavra, uma de cada vez. Por isso o começo do seu pedido é tudo. Parte 1 de 8 da série IA sem mistério. Segue para ver a parte 2: por que a IA erra contas.
 
 #ia #inteligenciaartificial #iagenerativa #aprendanotiktok #tecnologia #dicasdeia #produtividade
 ```
@@ -108,7 +108,7 @@ A sua imaginação é o limite. 🚀
 
 ### TikTok
 ```
-Por que a IA erra contas? 🧠 Ela não lê palavras: lê peças chamadas tokens, e cada token vira um número. Numa conta grande, ela adivinha o resultado. A solução: ela escreve a conta e um computador calcula. Parte 2 de 4 da série IA sem mistério.
+Por que a IA erra contas? 🧠 Ela não lê palavras: lê peças chamadas tokens, e cada token vira um número. Numa conta grande, ela adivinha o resultado. A solução: ela escreve a conta e um computador calcula. Parte 2 de 8 da série IA sem mistério.
 
 #ia #inteligenciaartificial #iagenerativa #tokens #aprendanotiktok #tecnologia #dicasdeia
 ```
@@ -161,7 +161,7 @@ A sua imaginação é o limite. 🚀
 
 ### TikTok
 ```
-Por que a IA esquece o que você disse? 🧠 Ela não tem memória: relê a conversa inteira a cada mensagem, e essa leitura tem limite. É a janela de contexto. Dica: assunto novo, conversa nova. Parte 3 de 4 da série IA sem mistério.
+Por que a IA esquece o que você disse? 🧠 Ela não tem memória: relê a conversa inteira a cada mensagem, e essa leitura tem limite. É a janela de contexto. Dica: assunto novo, conversa nova. Parte 3 de 8 da série IA sem mistério.
 
 #ia #inteligenciaartificial #iagenerativa #aprendanotiktok #tecnologia #dicasdeia #produtividade
 ```
@@ -214,9 +214,221 @@ A sua imaginação é o limite. 🚀
 
 ### TikTok
 ```
-Como a IA decide o que importa? 🧠 Com um mecanismo chamado atenção: um holofote que ilumina mais umas palavras que outras. Quanto mais texto, mais disputa. Dica: documento em cima, pedido embaixo. Parte 4 de 4 da série IA sem mistério.
+Como a IA decide o que importa? 🧠 Com um mecanismo chamado atenção: um holofote que ilumina mais umas palavras que outras. Quanto mais texto, mais disputa. Dica: documento em cima, pedido embaixo. Parte 4 de 8 da série IA sem mistério.
 
 #ia #inteligenciaartificial #iagenerativa #prompt #aprendanotiktok #tecnologia #dicasdeia
+```
+
+---
+
+## Parte 5 · Por que a IA inventa
+
+### YouTube Shorts
+**Título (escolha um)**
+1. Por que a IA inventa? O que é alucinação
+2. A IA chuta como um aluno na prova
+3. IA sem mistério #5: alucinação
+
+**Descrição**
+```
+Por que a IA inventa? Porque ela escreve adivinhando a próxima palavra, e sempre existe uma próxima palavra. O nome disso é alucinação: um texto bem escrito, confiante e errado.
+
+É como um aluno numa prova em que deixar em branco vale zero: chutar compensa. O perigo mora no detalhe, como datas, números, nomes, citações e links.
+
+Na prática: entregue o documento, peça a fonte e confira o que for crítico.
+
+Parte 5 da série IA sem mistério.
+Próxima parte: por que a mesma pergunta dá respostas diferentes → [LINK]
+
+#IA #InteligenciaArtificial #Shorts
+```
+
+**Tags**
+```
+inteligência artificial, IA, alucinação, alucinação de IA, IA inventa, IA erra, fontes, como usar IA, LLM, como funciona a IA, IA generativa, IA no trabalho, IA sem mistério, elucas.dev
+```
+
+### Reels (Instagram e Facebook)
+```
+Por que a IA inventa? 🧠
+
+Porque ela nunca deixa em branco. Escreve a resposta mais provável, como um aluno que chuta na prova. O nome disso é alucinação: texto bem escrito, confiante e errado.
+
+O perigo mora no detalhe: datas, números, nomes, citações e links.
+
+Dica: entregue o documento, peça a fonte e confira o que for crítico.
+
+Parte 5 da série IA sem mistério. Na próxima: por que a mesma pergunta dá respostas diferentes.
+
+A sua imaginação é o limite. 🚀
+
+#ia #inteligenciaartificial #iagenerativa #alucinacao #tecnologia #produtividade #dicasdeia #aprendaia #inovacao #reels
+```
+
+### TikTok
+```
+Por que a IA inventa? 🧠 Ela nunca deixa em branco: chuta, como um aluno na prova. O nome disso é alucinação. Dica: entregue o documento e peça a fonte. Parte 5 de 8 da série IA sem mistério.
+
+#ia #inteligenciaartificial #iagenerativa #alucinacao #aprendanotiktok #tecnologia #dicasdeia
+```
+
+---
+
+## Parte 6 · Mesma pergunta, respostas diferentes
+
+### YouTube Shorts
+**Título (escolha um)**
+1. Por que a IA dá respostas diferentes? Temperatura
+2. A IA gira uma roleta a cada palavra
+3. IA sem mistério #6: temperatura
+
+**Descrição**
+```
+Por que a mesma pergunta dá respostas diferentes? Porque a IA gira uma roleta a cada palavra: o palpite mais provável tem a fatia maior, mas nem sempre é o sorteado.
+
+O botão que controla esse sorteio se chama temperatura. Baixa: previsível. Alta: mais variado. E nem no mínimo a resposta sai sempre idêntica.
+
+Na prática: quer padrão, trave o formato e mostre um exemplo. Quer ideias, peça várias.
+
+Parte 6 da série IA sem mistério.
+Próxima parte: até quando a IA sabe das coisas → [LINK]
+
+#IA #InteligenciaArtificial #Shorts
+```
+
+**Tags**
+```
+inteligência artificial, IA, temperatura, temperatura da IA, respostas diferentes, amostragem, prompt, como escrever prompt, LLM, como funciona a IA, IA generativa, como usar IA, IA sem mistério, elucas.dev
+```
+
+### Reels (Instagram e Facebook)
+```
+Por que a mesma pergunta dá respostas diferentes? 🧠
+
+Porque a IA gira uma roleta a cada palavra. O palpite mais provável tem a fatia maior, mas nem sempre é o sorteado.
+
+O botão desse sorteio se chama temperatura: baixa, previsível; alta, variado.
+
+Dica: quer padrão, trave o formato. Quer ideias, peça várias.
+
+Parte 6 da série IA sem mistério. Na próxima: até quando a IA sabe das coisas.
+
+A sua imaginação é o limite. 🚀
+
+#ia #inteligenciaartificial #iagenerativa #prompt #tecnologia #produtividade #dicasdeia #aprendaia #inovacao #reels
+```
+
+### TikTok
+```
+Mesma pergunta, respostas diferentes? 🧠 A IA gira uma roleta a cada palavra. O botão desse sorteio se chama temperatura. Dica: quer padrão, trave o formato; quer ideias, peça várias. Parte 6 de 8 da série IA sem mistério.
+
+#ia #inteligenciaartificial #iagenerativa #prompt #aprendanotiktok #tecnologia #dicasdeia
+```
+
+---
+
+## Parte 7 · Até quando a IA sabe das coisas
+
+### YouTube Shorts
+**Título (escolha um)**
+1. Até quando a IA sabe das coisas? Data de corte
+2. O conhecimento da IA tem data
+3. IA sem mistério #7: data de corte
+
+**Descrição**
+```
+Até quando a IA sabe das coisas? O treino dela é uma fotografia: tudo o que estava escrito até um certo dia. Esse dia se chama data de corte. O que veio depois, ela não viu.
+
+E a sua empresa não saiu na foto: procedimentos, contratos e histórico nunca estiveram nos textos que ela leu. O perigo é que ela nem sempre avisa.
+
+Na prática: assunto recente, peça para buscar. Assunto interno, entregue o documento.
+
+Parte 7 da série IA sem mistério.
+Próxima parte: precisa sempre da IA mais potente? → [LINK]
+
+#IA #InteligenciaArtificial #Shorts
+```
+
+**Tags**
+```
+inteligência artificial, IA, data de corte, knowledge cutoff, IA desatualizada, IA com busca, documentos, LLM, como funciona a IA, IA generativa, como usar IA, IA no trabalho, IA sem mistério, elucas.dev
+```
+
+### Reels (Instagram e Facebook)
+```
+Até quando a IA sabe das coisas? 🧠
+
+O treino dela é uma fotografia: tudo o que estava escrito até um certo dia. Esse dia se chama data de corte.
+
+E a sua empresa não saiu na foto: procedimentos, contratos, histórico.
+
+Dica: assunto recente, peça para buscar. Assunto interno, entregue o documento.
+
+Parte 7 da série IA sem mistério. Na próxima: precisa sempre da IA mais potente?
+
+A sua imaginação é o limite. 🚀
+
+#ia #inteligenciaartificial #iagenerativa #tecnologia #produtividade #dicasdeia #aprendaia #gestaodoconhecimento #inovacao #reels
+```
+
+### TikTok
+```
+Até quando a IA sabe das coisas? 🧠 O treino é uma fotografia, e o dia da foto se chama data de corte. A sua empresa não saiu na foto. Dica: assunto interno, entregue o documento. Parte 7 de 8 da série IA sem mistério.
+
+#ia #inteligenciaartificial #iagenerativa #aprendanotiktok #tecnologia #dicasdeia #produtividade
+```
+
+---
+
+## Parte 8 · Precisa sempre da IA mais potente?
+
+### YouTube Shorts
+**Título (escolha um)**
+1. Precisa sempre da IA mais potente?
+2. IA tem tamanho: moto, van ou caminhão
+3. IA sem mistério #8: qual modelo usar
+
+**Descrição**
+```
+Precisa sempre da IA mais potente? Não. Cada IA é um modelo, e eles vêm em vários tamanhos. O maior resolve mais, mas demora mais e custa mais.
+
+Pense numa frota: a moto para a tarefa simples, a van para o dia a dia, o caminhão para a carga pesada. A dica de quem fabrica: comece pelo menor, teste e suba só se faltar.
+
+Na prática: muito volume e tarefa simples, modelo pequeno. Decisão difícil, modelo grande.
+
+Parte 8 da série IA sem mistério, a última desta temporada.
+Série completa → [LINK]
+
+#IA #InteligenciaArtificial #Shorts
+```
+
+**Tags**
+```
+inteligência artificial, IA, modelo de IA, qual IA usar, modelo pequeno, modelo grande, custo de IA, LLM, como funciona a IA, IA generativa, como usar IA, IA no trabalho, IA sem mistério, elucas.dev
+```
+
+### Reels (Instagram e Facebook)
+```
+Precisa sempre da IA mais potente? 🧠
+
+Não. IA tem tamanho. A maior resolve mais, mas demora mais e custa mais.
+
+Pense numa frota: moto para a tarefa simples, van para o dia a dia, caminhão para a carga pesada.
+
+Dica: comece pelo modelo menor, teste com os seus casos e suba só se faltar.
+
+Parte 8 da série IA sem mistério, a última desta temporada. Volta nas anteriores para ver a série toda.
+
+A sua imaginação é o limite. 🚀
+
+#ia #inteligenciaartificial #iagenerativa #tecnologia #produtividade #dicasdeia #aprendaia #inovacao #negocios #reels
+```
+
+### TikTok
+```
+Precisa sempre da IA mais potente? 🧠 Não: IA tem tamanho. Moto para a tarefa simples, caminhão para a carga pesada. Dica: comece pelo modelo menor e suba só se faltar. Parte 8 de 8 da série IA sem mistério.
+
+#ia #inteligenciaartificial #iagenerativa #aprendanotiktok #tecnologia #dicasdeia #produtividade
 ```
 
 ---
